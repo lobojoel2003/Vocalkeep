@@ -24,7 +24,7 @@ chrono = { version = "0.4", default-features = false, features = ["clock", "serd
 uuid = { version = "1", features = ["v4", "serde"] }
 zip = { version = "9", default-features = false, features = ["deflate-flate2-zlib-rs"] }
 cpal = "0.18"
-parking_lot = "0.12"
+parking_lot = "0.13"
 dirs = "6"
 env_logger = "0.11"
 tempfile = "3"
