@@ -1,0 +1,125 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vocalkeep"
+# Kept equal to ../VERSION and vocalkeep.__version__ by scripts/bump-version.sh (CI checks).
+version = "0.1.0"
+description = "Turn a Vocalkeep voice bank into a Piper text-to-speech voice and install it as a system voice."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "The Vocalkeep contributors" }]
+keywords = [
+  "voice banking",
+  "text-to-speech",
+  "tts",
+  "piper",
+  "als",
+  "mnd",
+  "aac",
+  "accessibility",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Intended Audience :: Healthcare Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = ["numpy>=1.24", "soxr>=0.3", "onnx>=1.15"]
+
+[project.optional-dependencies]
+# Speaking with a finished voice, and the espeak-ng data the packages need.
+runtime = ["piper-tts>=1.3"]
+# Training needs piper1-gpl installed from git with its monotonic_align extension built; see
+# README.md ("Training on a computer with a graphics card") or run `vocalkeep doctor`.
+train = []
+dev = ["pytest>=7.4", "ruff>=0.5", "mypy>=1.8"]
+
+[project.scripts]
+vocalkeep = "vocalkeep.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/lobojoel2003/Vocalkeep"
+Source = "https://github.com/lobojoel2003/Vocalkeep"
+Issues = "https://github.com/lobojoel2003/Vocalkeep/issues"
+Documentation = "https://github.com/lobojoel2003/Vocalkeep/tree/main/pipeline#readme"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vocalkeep"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/vocalkeep", "tests", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "integration: needs a real Piper voice (set VOCALKEEP_TEST_VOICE) and piper-tts",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # bugbear
+  "UP",  # pyupgrade
+  "SIM", # simplify
+  "C4",  # comprehensions
+  "RUF", # ruff-specific
+  "PTH", # prefer pathlib
+  "PL",  # pylint subset
+  "S",   # bandit subset (security)
+]
+ignore = [
+  "PLR0911", # too many return statements
+  "PLR0912", # too many branches
+  "PLR0913", # too many arguments
+  "PLR0915", # too many statements
+  "PLR0917", # too many positional arguments
+  "PLR2004", # magic values: thresholds are documented where used
+  "PLC0415", # imports inside functions keep optional dependencies optional
+  "S603",    # subprocess without shell: commands are built from lists, never strings
+  "S607",    # partial executable paths (paplay, aplay) are looked up on PATH on purpose
+  "RUF001",  # ambiguous unicode in strings (typographic quotes in messages)
+  "RUF002",
+  "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S108", "PLR2004", "S310", "S324"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src"]
+strict = true
+warn_unreachable = true
+pretty = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["soxr", "soxr.*", "piper", "piper.*", "torch", "torch.*", "onnx", "onnx.*"]
+ignore_missing_imports = true
