@@ -1,0 +1,45 @@
+name: Something isn't working
+description: Tell us what went wrong. Plain words are perfect.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Please **don't attach voice recordings or your voice bank**:
+        they are personal. Describe what happened instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Vocalkeep version and build
+      description: In the app, Settings › About (for example "0.1.0 · build 42"). For the voice builder, run `vocalkeep --version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part?
+      options:
+        - Recording app
+        - Voice builder (training)
+        - Installing or using the finished voice
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Computer
+      description: For example "Windows 11", "Ubuntu 24.04", "macOS 15". For training, the graphics card too.
+  - type: textarea
+    id: output
+    attributes:
+      label: Error messages or output
+      description: If the voice builder printed an error, paste it here. `vocalkeep doctor` output helps too.
+      render: text

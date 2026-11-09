@@ -1,0 +1,26 @@
+name: Starting voice links
+
+# Every starting voice in the registry must still be downloadable from Hugging Face. Runs weekly
+# and whenever the registry changes, separately from CI so an outage elsewhere never blocks a release.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - pipeline/src/vocalkeep/data/base_models.json
+      - scripts/check_base_links.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Checkpoint downloads
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Every checkpoint link answers
+        run: python3 scripts/check_base_links.py

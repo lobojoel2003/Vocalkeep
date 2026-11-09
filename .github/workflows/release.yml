@@ -1,0 +1,247 @@
+name: Release
+
+# Publish a release in either of two ways (see docs/releasing.md):
+#
+#   - push a version tag that matches VERSION:
+#       git tag -a v0.1.0 -m "Vocalkeep 0.1.0" && git push origin v0.1.0
+#   - or open Actions > Release > Run workflow on main and tick "publish"; the tag v<VERSION> is
+#     created with the release. Unticked, it only builds the installers (a dry run).
+#
+# CI runs first. Then the desktop app is built for Linux, Windows and macOS, the training pipeline
+# is built as a Python wheel, and everything is attached to a GitHub Release whose notes come from
+# CHANGELOG.md, with SHA-256 checksums. The build number is the workflow run number.
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish a GitHub Release for the version in VERSION (unticked = build only)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  VOCALKEEP_BUILD_NUMBER: ${{ github.run_number }}
+  VOCALKEEP_GIT_SHA: ${{ github.sha }}
+
+jobs:
+  ci:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      version: ${{ steps.meta.outputs.version }}
+      tag: ${{ steps.meta.outputs.tag }}
+      prerelease: ${{ steps.meta.outputs.prerelease }}
+      publish: ${{ steps.meta.outputs.publish }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Version and tag
+        id: meta
+        env:
+          PUBLISH_INPUT: ${{ inputs.publish }}
+        run: |
+          version="$(tr -d '[:space:]' < VERSION)"
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            tag="$GITHUB_REF_NAME"
+            publish=true
+          else
+            tag="v$version"
+            publish="${PUBLISH_INPUT:-false}"
+            if [[ "$publish" == "true" && "$GITHUB_REF" != "refs/heads/main" ]]; then
+              echo "::error::Publish releases from main"; exit 1
+            fi
+            if [[ "$publish" == "true" ]] && git ls-remote --exit-code --tags origin "refs/tags/$tag" >/dev/null; then
+              echo "::error::$tag already exists. Bump the version with scripts/bump-version.sh first."; exit 1
+            fi
+          fi
+          if [[ "$publish" == "true" ]]; then
+            ./scripts/check-version.sh "$tag"
+          else
+            ./scripts/check-version.sh
+          fi
+          prerelease=false
+          [[ "$version" == *-* ]] && prerelease=true
+          {
+            echo "version=$version"
+            echo "tag=$tag"
+            echo "prerelease=$prerelease"
+            echo "publish=$publish"
+          } >> "$GITHUB_OUTPUT"
+          echo "Vocalkeep $version, build $VOCALKEEP_BUILD_NUMBER ($tag, publish=$publish)"
+      - name: Release notes from CHANGELOG.md
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          python3 scripts/release_notes.py "$VERSION" > notes.md || echo "Release build of Vocalkeep $VERSION." > notes.md
+          cat notes.md
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-notes
+          path: notes.md
+
+  desktop:
+    name: Desktop (${{ matrix.name }})
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux
+            os: ubuntu-22.04
+          - name: Windows
+            os: windows-latest
+          - name: macOS
+            os: macos-latest
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Linux build dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev libwebkit2gtk-4.1-dev libgtk-3-dev \
+            libayatana-appindicator3-dev librsvg2-dev libssl-dev patchelf libfuse2 file
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Install Rust toolchain (from rust-toolchain.toml)
+        run: rustup show active-toolchain || rustup toolchain install
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: release-${{ matrix.os }}
+      - name: Install frontend dependencies
+        working-directory: desktop
+        run: npm ci
+      - name: Build installers
+        working-directory: desktop
+        shell: bash
+        run: |
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            # CFBundleVersion carries the build number.
+            npm run tauri build -- --ci --config "{\"bundle\":{\"macOS\":{\"bundleVersion\":\"$VOCALKEEP_BUILD_NUMBER\"}}}"
+          else
+            npm run tauri build -- --ci
+          fi
+      - name: Collect installers
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          bundle=target/release/bundle
+          case "$RUNNER_OS" in
+            Linux)   cp "$bundle"/deb/*.deb "$bundle"/rpm/*.rpm "$bundle"/appimage/*.AppImage dist/ ;;
+            Windows) cp "$bundle"/msi/*.msi "$bundle"/nsis/*.exe dist/ ;;
+            macOS)   cp "$bundle"/dmg/*.dmg dist/ ;;
+          esac
+          ls -la dist
+      - uses: actions/upload-artifact@v7
+        with:
+          name: desktop-${{ matrix.name }}
+          path: dist/*
+          if-no-files-found: error
+
+  pipeline:
+    name: Pipeline wheel
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Build wheel and source distribution
+        run: |
+          python -m pip install build
+          python -m build pipeline --outdir dist
+          ls -la dist
+      - name: Smoke-test the wheel
+        env:
+          VERSION: ${{ needs.prepare.outputs.version }}
+        run: |
+          python -m venv /tmp/wheel-test
+          /tmp/wheel-test/bin/pip install dist/*.whl
+          /tmp/wheel-test/bin/vocalkeep --version | grep -F "$VERSION"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pipeline
+          path: dist/*
+          if-no-files-found: error
+
+  publish:
+    name: Publish release
+    needs: [ci, prepare, desktop, pipeline]
+    if: needs.prepare.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          path: artifacts
+      - name: Assemble files, checksums and notes
+        env:
+          VERSION: ${{ needs.prepare.outputs.version }}
+          TAG: ${{ needs.prepare.outputs.tag }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          find artifacts -type f ! -name notes.md -exec cp {} release/ \;
+          (cd release && sha256sum * > SHA256SUMS.txt && cat SHA256SUMS.txt)
+          {
+            cat artifacts/release-notes/notes.md
+            echo
+            echo "## Downloads"
+            echo
+            echo "**Recording app** (build $VOCALKEEP_BUILD_NUMBER):"
+            echo
+            echo "| Computer | File |"
+            echo "| --- | --- |"
+            echo "| Windows 10 and 11 | \`Vocalkeep_${VERSION}_x64-setup.exe\` (installs for you only, no admin needed) or \`Vocalkeep_${VERSION}_x64_en-US.msi\` |"
+            echo "| macOS 11+ (Apple silicon) | \`Vocalkeep_${VERSION}_aarch64.dmg\` |"
+            echo "| Debian, Ubuntu | \`Vocalkeep_${VERSION}_amd64.deb\` |"
+            echo "| Fedora, openSUSE | \`Vocalkeep-${VERSION}-1.x86_64.rpm\` |"
+            echo "| Any Linux | \`Vocalkeep_${VERSION}_amd64.AppImage\` |"
+            echo
+            echo "**Voice builder** (Python 3.10+, for the computer that trains the voice):"
+            echo
+            echo '```bash'
+            echo "pip install \"vocalkeep-${VERSION}-py3-none-any.whl[runtime]\""
+            echo '```'
+            echo
+            echo "Verify downloads with \`sha256sum -c SHA256SUMS.txt --ignore-missing\`."
+            echo "The installers are not code-signed yet: Windows may show a SmartScreen notice (More info › Run anyway) and macOS may need right-click › Open the first time."
+            echo
+            echo "Full changelog: https://github.com/${REPO}/blob/${TAG}/CHANGELOG.md"
+          } > body.md
+          cat body.md
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ needs.prepare.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          name: Vocalkeep ${{ needs.prepare.outputs.version }}
+          body_path: body.md
+          prerelease: ${{ needs.prepare.outputs.prerelease == 'true' }}
+          make_latest: ${{ needs.prepare.outputs.prerelease != 'true' }}
+          fail_on_unmatched_files: true
+          files: release/*

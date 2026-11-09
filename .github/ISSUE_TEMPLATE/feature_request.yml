@@ -1,0 +1,16 @@
+name: Idea or request
+description: Something that would make Vocalkeep better for you or someone you support.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would help?
+      description: Describe the situation and what you'd like to be able to do.
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who is it for?
+      description: For example "a person with ALS who tires after a few minutes", "a speech therapist", "a family member helping".

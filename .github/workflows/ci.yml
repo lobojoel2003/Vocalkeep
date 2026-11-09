@@ -1,0 +1,218 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+    tags-ignore: ["**"]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  # Shown in the app's About section.
+  VOCALKEEP_BUILD_NUMBER: ${{ github.run_number }}
+  VOCALKEEP_GIT_SHA: ${{ github.sha }}
+
+jobs:
+  consistency:
+    name: Versions and shared data
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Every manifest carries the version in VERSION
+        run: ./scripts/check-version.sh
+      - name: The pipeline's copy of shared/quality.json is up to date
+        run: python3 scripts/sync-shared.py --check
+      - name: Every prompt has phonemes
+        run: python3 scripts/annotate_prompts.py --check
+      - name: Test fixtures are reproducible
+        run: |
+          python3 scripts/make_fixtures.py
+          git diff --exit-code -- shared/fixtures
+
+  rust:
+    name: Rust (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Linux build dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev libwebkit2gtk-4.1-dev libgtk-3-dev \
+            libayatana-appindicator3-dev librsvg2-dev libssl-dev patchelf
+      - name: Install Rust toolchain (from rust-toolchain.toml)
+        run: rustup show active-toolchain || rustup toolchain install
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.os }}
+      - name: Placeholder frontend for the Tauri crate
+        shell: bash
+        run: mkdir -p desktop/dist && [ -f desktop/dist/index.html ] || echo '<!doctype html><title>Vocalkeep</title>' > desktop/dist/index.html
+      - name: Format
+        if: runner.os == 'Linux'
+        run: cargo fmt --all -- --check
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - name: Tests (quality checks, voice bank, prompts, progress, exports, app backend)
+        run: cargo test --workspace --locked
+      - name: Microphone end to end (a PulseAudio null sink stands in for the microphone)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install -y pulseaudio pulseaudio-utils libasound2-plugins
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=speakers sink_properties=device.description=Speakers
+          pactl set-default-sink speakers
+          pactl set-default-source speakers.monitor
+          cargo test -p vocalkeep-desktop --locked -- --ignored microphone
+
+  frontend:
+    name: Desktop interface
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: desktop
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - run: npm ci
+      - name: Format and lint
+        run: npm run lint
+      - name: Type-check
+        run: npm run check
+      - name: Unit tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: The demo backend is not in the production build
+        run: |
+          if grep -l "mockIPC\|installMockBackend" dist/assets/*.js; then
+            echo "::error::The development mock leaked into the production bundle"; exit 1
+          fi
+
+  pipeline:
+    name: Pipeline (Python ${{ matrix.python }}, ${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python: ["3.10", "3.11", "3.12", "3.13"]
+        include:
+          - os: windows-latest
+            python: "3.12"
+          - os: macos-latest
+            python: "3.12"
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: pipeline
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pipeline/pyproject.toml
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Type-check
+        run: mypy src
+      - name: Tests
+        run: python -m pytest -q
+      - name: Command-line smoke test
+        run: |
+          vocalkeep --version
+          vocalkeep bases --json
+          vocalkeep doctor --json
+
+  pipeline-package:
+    name: Pipeline package
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Build wheel and source distribution
+        run: |
+          python -m pip install build
+          python -m build pipeline --outdir dist
+      - name: Install the wheel in a clean environment
+        run: |
+          python -m venv /tmp/wheel-test
+          /tmp/wheel-test/bin/pip install dist/*.whl
+          /tmp/wheel-test/bin/vocalkeep --version
+          /tmp/wheel-test/bin/vocalkeep bases --json > /dev/null
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pipeline-dist
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 14
+
+  bundle:
+    name: Desktop bundle (Linux)
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    needs: [rust, frontend]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Linux build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2-dev libwebkit2gtk-4.1-dev libgtk-3-dev \
+            libayatana-appindicator3-dev librsvg2-dev libssl-dev patchelf
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - run: rustup show active-toolchain || rustup toolchain install
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: bundle
+      - name: Install frontend dependencies
+        working-directory: desktop
+        run: npm ci
+      - name: Build the .deb package
+        working-directory: desktop
+        run: npm run tauri build -- --ci --bundles deb
+      - name: Package contents
+        run: |
+          deb="$(ls target/release/bundle/deb/*.deb)"
+          dpkg-deb --info "$deb"
+          dpkg-deb --contents "$deb" | grep -E "usr/bin/vocalkeep-desktop|applications/Vocalkeep.desktop|icons"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vocalkeep-deb
+          path: target/release/bundle/deb/*.deb
+          if-no-files-found: error
+          retention-days: 14
