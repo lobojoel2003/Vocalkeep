@@ -390,8 +390,7 @@
       ],
       "recommended": false,
       "notes": "A voice with 904 speakers built on Lessac; Vocalkeep can't fine-tune multi-speaker voices yet.",
-      "checkpointUrl": "https://huggingface.co/datasets/rhasspy/piper-checkpoints/resolve/main/en/en_US/libritts_r/medium/epoch%3D404-step%3D1887300.ckpt",
-      "checkpointEpoch": 404,
+      "checkpointUrl": "https://huggingface.co/datasets/rhasspy/piper-checkpoints/resolve/main/en/en_US/libritts_r/medium/best.ckpt",
       "modelCard": "https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/libritts_r/medium/MODEL_CARD",
       "sources": [
         "https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/libritts_r/medium/MODEL_CARD",
