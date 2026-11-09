@@ -37,7 +37,9 @@ APP_KEYS = {
 
 
 def _raw_entries() -> list[dict]:
-    text = resources.files("vocalkeep").joinpath("data/base_models.json").read_text("utf-8")
+    text = (
+        resources.files("vocalkeep").joinpath("data/base_models.json").read_text(encoding="utf-8")
+    )
     data = json.loads(text)
     return data["bases"] if isinstance(data, dict) else data
 

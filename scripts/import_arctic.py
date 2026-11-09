@@ -66,7 +66,7 @@ def main() -> None:
     # Keep phonemes from a previous run so re-importing doesn't need eSpeak NG.
     old = {}
     if OUT.exists():
-        old = {p["id"]: p.get("ph") for p in json.loads(OUT.read_text())["prompts"]}
+        old = {p["id"]: p.get("ph") for p in json.loads(OUT.read_text(encoding="utf-8"))["prompts"]}
     for p in prompts:
         if old.get(p["id"]):
             p["ph"] = old[p["id"]]

@@ -56,7 +56,7 @@ def player(monkeypatch: pytest.MonkeyPatch) -> None:
 def system_conf(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     path = tmp_path / "etc" / "speechd.conf"
     path.parent.mkdir()
-    path.write_text(SYSTEM_CONF)
+    path.write_text(SYSTEM_CONF, encoding="utf-8")
     monkeypatch.setattr(linux, "SYSTEM_SPEECHD_CONF", path)
     return path
 
@@ -75,14 +75,16 @@ def test_linux_install_writes_everything(home: Path, voice, player, system_conf)
     )
     wrapper = data / "bin" / "vocalkeep-speak"
     assert wrapper.stat().st_mode & stat.S_IXUSR
-    script = wrapper.read_text()
+    script = wrapper.read_text(encoding="utf-8")
     assert script.startswith("#!/bin/sh\n")
     assert "PYTHON='/opt/py/bin/python3'" in script
     assert f"'{VID}') model='{target / (VID + '.onnx')}'; sample_rate=22050 ;;" in script
     assert "--output-raw" in script
     assert 'paplay --raw --rate="$sample_rate" --format=s16le --channels=1' in script
 
-    conf = (home / ".config" / "speech-dispatcher" / "modules" / f"{MODULE_NAME}.conf").read_text()
+    conf = (home / ".config" / "speech-dispatcher" / "modules" / f"{MODULE_NAME}.conf").read_text(
+        encoding="utf-8"
+    )
     assert f"GenericExecuteSynth \"printf %s \\'$DATA\\' | \\'{wrapper}\\'" in conf
     assert "\\'$VOICE\\' \\'$RATE\\'\"" in conf
     assert "\nGenericCmdDependency" not in conf  # unknown to older Speech Dispatcher releases
@@ -109,23 +111,25 @@ def test_existing_add_module_lines_get_ours(home: Path, voice, player, system_co
     user_conf = home / ".config" / "speech-dispatcher" / "speechd.conf"
     user_conf.parent.mkdir(parents=True)
     original = 'AddModule "espeak-ng" "sd_espeak-ng" "espeak-ng.conf"\nDefaultModule espeak-ng\n'
-    user_conf.write_text(original)
+    user_conf.write_text(original, encoding="utf-8")
     install_linux(voice)
-    text = user_conf.read_text()
+    text = user_conf.read_text(encoding="utf-8")
     assert f'AddModule "{MODULE_NAME}" "sd_generic" "{MODULE_NAME}.conf"' in text
     assert MARKER in text
     assert "DefaultModule espeak-ng\n" in text, "not the default unless asked"
     install_linux(voice)  # installing again doesn't add a second line
-    assert user_conf.read_text().count('AddModule "vocalkeep-generic"') == 1
+    assert user_conf.read_text(encoding="utf-8").count('AddModule "vocalkeep-generic"') == 1
     uninstall_linux(VID)
-    assert user_conf.read_text() == original
+    assert user_conf.read_text(encoding="utf-8") == original
 
 
 def test_system_add_module_lines_make_a_user_copy(home: Path, voice, player, system_conf) -> None:
-    system_conf.write_text('AddModule "espeak-ng" "sd_espeak-ng" "espeak-ng.conf"\n')
+    system_conf.write_text(
+        'AddModule "espeak-ng" "sd_espeak-ng" "espeak-ng.conf"\n', encoding="utf-8"
+    )
     install_linux(voice)
     user_conf = home / ".config" / "speech-dispatcher" / "speechd.conf"
-    text = user_conf.read_text()
+    text = user_conf.read_text(encoding="utf-8")
     assert text.startswith('AddModule "espeak-ng"')
     assert f'AddModule "{MODULE_NAME}"' in text
 
@@ -133,25 +137,25 @@ def test_system_add_module_lines_make_a_user_copy(home: Path, voice, player, sys
 def test_make_default(home: Path, voice, player, system_conf) -> None:
     install_linux(voice, make_default=True)
     user_conf = home / ".config" / "speech-dispatcher" / "speechd.conf"
-    text = user_conf.read_text()
+    text = user_conf.read_text(encoding="utf-8")
     assert text.startswith("# Global configuration"), "copied from the system file"
     assert f"DefaultModule {MODULE_NAME}\n" in text
     assert f'LanguageDefaultModule "en" "{MODULE_NAME}"' in text
     assert 'Include "clients/*.conf"' in text
     uninstall_linux(VID)
-    assert MODULE_NAME not in user_conf.read_text()
+    assert MODULE_NAME not in user_conf.read_text(encoding="utf-8")
 
 
 def test_make_default_disables_other_default(home: Path, voice, player, system_conf) -> None:
     user_conf = home / ".config" / "speech-dispatcher" / "speechd.conf"
     user_conf.parent.mkdir(parents=True)
-    user_conf.write_text("DefaultModule espeak-ng\n")
+    user_conf.write_text("DefaultModule espeak-ng\n", encoding="utf-8")
     install_linux(voice, make_default=True)
-    lines = user_conf.read_text().splitlines()
+    lines = user_conf.read_text(encoding="utf-8").splitlines()
     assert "#vocalkeep-disabled: DefaultModule espeak-ng" in lines
     assert "DefaultModule espeak-ng" not in lines
     uninstall_linux(VID)
-    assert user_conf.read_text() == "DefaultModule espeak-ng\n"
+    assert user_conf.read_text(encoding="utf-8") == "DefaultModule espeak-ng\n"
 
 
 def test_two_voices_and_uninstall(home: Path, tmp_path: Path, player, system_conf) -> None:
@@ -160,15 +164,15 @@ def test_two_voices_and_uninstall(home: Path, tmp_path: Path, player, system_con
     install_linux(first)
     install_linux(second)
     conf_path = home / ".config" / "speech-dispatcher" / "modules" / f"{MODULE_NAME}.conf"
-    conf = conf_path.read_text()
+    conf = conf_path.read_text(encoding="utf-8")
     assert f'AddVoice "en" "FEMALE1" "{VID}"' in conf
     assert 'AddVoice "en" "MALE1" "en_GB-sam-medium"' in conf
     assert f'DefaultVoice "{VID}"' in conf, "the first voice stays the default"
     install_linux(second, make_default=True)
-    assert 'DefaultVoice "en_GB-sam-medium"' in conf_path.read_text()
+    assert 'DefaultVoice "en_GB-sam-medium"' in conf_path.read_text(encoding="utf-8")
 
     uninstall_linux("en_GB-sam-medium")
-    conf = conf_path.read_text()
+    conf = conf_path.read_text(encoding="utf-8")
     assert "en_GB-sam-medium" not in conf and f'DefaultVoice "{VID}"' in conf
     uninstall_linux(VID)
     data = home / ".local" / "share" / "vocalkeep"
@@ -201,16 +205,16 @@ def test_wrapper_speaks_through_the_player(
     )
     assert proc.returncode == 0, proc.stderr
     assert raw.read_bytes() == b"\x01\x00" * len("Hello there")
-    assert (tmp_path / "rate").read_text().strip() == "22050"
-    args = json.loads((tmp_path / "args.json").read_text())
+    assert (tmp_path / "rate").read_text(encoding="utf-8").strip() == "22050"
+    args = json.loads((tmp_path / "args.json").read_text(encoding="utf-8"))
     assert args[args.index("-m", 2) + 1].endswith(f"{VID}.onnx")
     assert args[args.index("--length-scale") + 1] == "0.333"
     # Unknown voice ids fall back to the default voice; slow speech gets a longer scale.
     subprocess.run([str(wrapper), "nobody", "-100"], input=b"Hi", env=env, check=True)
-    args = json.loads((tmp_path / "args.json").read_text())
+    args = json.loads((tmp_path / "args.json").read_text(encoding="utf-8"))
     assert args[args.index("--length-scale") + 1] == "3.000"
     subprocess.run([str(wrapper)], input=b"Hi", env=env, check=True)
-    args = json.loads((tmp_path / "args.json").read_text())
+    args = json.loads((tmp_path / "args.json").read_text(encoding="utf-8"))
     assert args[args.index("--length-scale") + 1] == "1.000"
 
 
@@ -281,8 +285,8 @@ def test_instructions(voice, target: str, expected: str, capsys) -> None:
 
 
 def test_never_needs_root() -> None:
-    source = (
-        Path(linux.__file__).read_text() + Path(linux.__file__).with_name("windows.py").read_text()
-    )
+    source = Path(linux.__file__).read_text(encoding="utf-8") + Path(linux.__file__).with_name(
+        "windows.py"
+    ).read_text(encoding="utf-8")
     assert "sudo" not in source
     assert "/etc/speech-dispatcher" in source  # read only

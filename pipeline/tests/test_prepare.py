@@ -43,7 +43,7 @@ def test_prepare_writes_a_piper_dataset(bank_dir: Path, tmp_path: Path) -> None:
         file, text = line.split("|")
         assert file.endswith(".wav") and text == text.strip() and text
 
-    stored = json.loads((out / "dataset.json").read_text())
+    stored = json.loads((out / "dataset.json").read_text(encoding="utf-8"))
     assert stored == info
     assert info["format"] == "vocalkeep-dataset"
     assert info["sampleRate"] == 22050
@@ -118,10 +118,10 @@ def test_other_sample_rate(bank_dir: Path, tmp_path: Path) -> None:
 def test_refuses_a_folder_with_other_files(bank_dir: Path, tmp_path: Path) -> None:
     out = tmp_path / "busy"
     out.mkdir()
-    (out / "my-notes.txt").write_text("keep me")
+    (out / "my-notes.txt").write_text("keep me", encoding="utf-8")
     with pytest.raises(VocalkeepError, match="already has other files"):
         _prepare(bank_dir, out)
-    assert (out / "my-notes.txt").read_text() == "keep me"
+    assert (out / "my-notes.txt").read_text(encoding="utf-8") == "keep me"
 
 
 def test_preparing_again_replaces_the_dataset(bank_dir: Path, tmp_path: Path) -> None:

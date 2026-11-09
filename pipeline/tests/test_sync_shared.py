@@ -34,17 +34,17 @@ def test_check_fails_then_sync_fixes(tmp_path: Path) -> None:
     shutil.copy(SCRIPT, script)
     shared = tmp_path / "shared" / "quality.json"
     shared.parent.mkdir()
-    shared.write_text('{"version": 2}\n')
+    shared.write_text('{"version": 2}\n', encoding="utf-8")
     copy = tmp_path / "pipeline" / "src" / "vocalkeep" / "data" / "quality.json"
     copy.parent.mkdir(parents=True)
-    copy.write_text('{"version": 1}\n')
+    copy.write_text('{"version": 1}\n', encoding="utf-8")
 
     proc = _run(script, "--check")
     assert proc.returncode == 1
     assert "differs" in proc.stderr
     proc = _run(script)
     assert proc.returncode == 0
-    assert copy.read_text() == shared.read_text()
+    assert copy.read_text(encoding="utf-8") == shared.read_text(encoding="utf-8")
     assert _run(script, "--check").returncode == 0
     copy.unlink()
     assert _run(script, "--check").returncode == 1

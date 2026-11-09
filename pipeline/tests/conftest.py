@@ -257,7 +257,7 @@ def make_espeak_data(root: Path) -> Path:
     (data / "voices" / "gmw").mkdir(parents=True)
     (data / "phontab").write_bytes(b"\x00" * 16)
     (data / "en_dict").write_bytes(b"dict")
-    (data / "voices" / "gmw" / "en-US").write_text("name English (America)\n")
+    (data / "voices" / "gmw" / "en-US").write_text("name English (America)\n", encoding="utf-8")
     return data
 
 

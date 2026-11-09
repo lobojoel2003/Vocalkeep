@@ -223,8 +223,8 @@ def saywell_install(staging: Path) -> dict[str, str]:
     parts = safe_id.split("-")
     return {
         "id": safe_id,
-        "model": str(model.relative_to(staging)),
-        "tokens": str(tokens.relative_to(staging)),
+        "model": model.relative_to(staging).as_posix(),
+        "tokens": tokens.relative_to(staging).as_posix(),
         "card": "yes" if (root / "MODEL_CARD").is_file() else "no",
         "espeak": "yes" if espeak else "no",
         "name": parts[1].replace("_", " ").capitalize() if len(parts) > 1 else safe_id,

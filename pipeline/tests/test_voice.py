@@ -86,7 +86,9 @@ def test_load_voice_folder(tmp_path: Path) -> None:
 
 def test_load_plain_piper_voice(tmp_path: Path) -> None:
     onnx = tiny_onnx(tmp_path / "en_GB-alba-medium.onnx")
-    (tmp_path / "en_GB-alba-medium.onnx.json").write_text(json.dumps(piper_config()))
+    (tmp_path / "en_GB-alba-medium.onnx.json").write_text(
+        json.dumps(piper_config()), encoding="utf-8"
+    )
     v = load_voice(onnx)
     assert v.id == "en_GB-alba-medium"
     assert v.language == "en-GB"
@@ -104,6 +106,6 @@ def test_load_voice_errors(tmp_path: Path) -> None:
     onnx = tiny_onnx(tmp_path / "lonely" / "x.onnx")
     with pytest.raises(VocalkeepError, match="no settings file"):
         load_voice(onnx)
-    (tmp_path / "lonely" / "x.onnx.json").write_text(json.dumps({"audio": {}}))
+    (tmp_path / "lonely" / "x.onnx.json").write_text(json.dumps({"audio": {}}), encoding="utf-8")
     with pytest.raises(VocalkeepError, match="missing settings Piper needs"):
         load_voice(onnx)

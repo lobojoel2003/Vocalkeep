@@ -270,14 +270,14 @@ def test_run_training_with_a_fake_piper(
     assert stored["dataset"]["utterances"] == 4
     assert stored["command"][2:4] == ["piper.train", "fit"]
     assert (run_dir / "config.json").is_file()
-    assert "Epoch 2168" in (run_dir / "train.log").read_text()
+    assert "Epoch 2168" in (run_dir / "train.log").read_text(encoding="utf-8")
     events = [json.loads(line) for line in out.getvalue().splitlines()]
     stages = [e["stage"] for e in events if e["event"] == "stage"]
     assert stages == ["download", "train"]
     progress = [e for e in events if e["event"] == "progress" and e["stage"] == "train"]
     assert progress[-1]["fraction"] == 1.0
     assert any(e["message"].startswith("Epoch 2168 of 2169") for e in progress)
-    args = json.loads(Path(tmp_path / "fake-args.json").read_text())
+    args = json.loads(Path(tmp_path / "fake-args.json").read_text(encoding="utf-8"))
     assert args[args.index("--ckpt_path") + 1] == str(ckpt)
 
 
@@ -326,18 +326,18 @@ def test_interrupted_run_carries_on_from_last_checkpoint(
     run_training(plan_training(dataset_dir, "ljspeech", run_dir, **kwargs))
     stored = load_run(run_dir)
     stored["status"] = "stopped"
-    (run_dir / "run.json").write_text(json.dumps(stored))
+    (run_dir / "run.json").write_text(json.dumps(stored), encoding="utf-8")
     plan = plan_training(dataset_dir, "ljspeech", run_dir, **kwargs)
     run = run_training(plan)
     assert run["resumedFrom"] == str(
         run_dir / "training/lightning_logs/version_0/checkpoints/last.ckpt"
     )
-    args = json.loads(Path(tmp_path / "fake-args.json").read_text())
+    args = json.loads(Path(tmp_path / "fake-args.json").read_text(encoding="utf-8"))
     assert args[args.index("--ckpt_path") + 1].endswith("last.ckpt")
     assert args[args.index("--trainer.max_epochs") + 1] == "150"
     # A finished run with the same settings starts again from the base voice.
     run_training(plan_training(dataset_dir, "ljspeech", run_dir, **kwargs))
-    args = json.loads(Path(tmp_path / "fake-args.json").read_text())
+    args = json.loads(Path(tmp_path / "fake-args.json").read_text(encoding="utf-8"))
     assert args[args.index("--ckpt_path") + 1] == str(ckpt)
 
 
@@ -346,7 +346,7 @@ def test_run_dir_with_other_files_is_refused(
 ) -> None:
     run_dir = home / "run"
     run_dir.mkdir()
-    (run_dir / "thesis.docx").write_text("precious")
+    (run_dir / "thesis.docx").write_text("precious", encoding="utf-8")
     ckpt = tmp_path / "epoch=1-step=1.ckpt"
     ckpt.write_bytes(b"x")
     plan = plan_training(

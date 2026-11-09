@@ -50,7 +50,7 @@ def test_not_a_bank(tmp_path: Path) -> None:
         pass
     with pytest.raises(VocalkeepError, match="no voice bank"), open_bank(tmp_path / "missing"):
         pass
-    (tmp_path / "notes.txt").write_text("hi")
+    (tmp_path / "notes.txt").write_text("hi", encoding="utf-8")
     with (
         pytest.raises(VocalkeepError, match="isn't a voice bank"),
         open_bank(tmp_path / "notes.txt"),
@@ -60,27 +60,29 @@ def test_not_a_bank(tmp_path: Path) -> None:
 
 def test_damaged_manifest_falls_back_to_recovery_copy(tmp_path: Path) -> None:
     root = make_bank(tmp_path / "b", [TakeSpec("a")])
-    (root / "bank.json.bak").write_text((root / "bank.json").read_text())
-    (root / "bank.json").write_text("{ not json")
+    (root / "bank.json.bak").write_text(
+        (root / "bank.json").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    (root / "bank.json").write_text("{ not json", encoding="utf-8")
     with open_bank(root) as bank:
         assert bank.takes[0].prompt_id == "a"
 
 
 def test_damaged_manifest_without_backup(tmp_path: Path) -> None:
     root = make_bank(tmp_path / "b", [TakeSpec("a")])
-    (root / "bank.json").write_text("{ not json")
+    (root / "bank.json").write_text("{ not json", encoding="utf-8")
     with pytest.raises(VocalkeepError, match="damaged"), open_bank(root):
         pass
 
 
 def test_rejects_other_formats_and_newer_versions(tmp_path: Path) -> None:
     root = make_bank(tmp_path / "b", [TakeSpec("a")])
-    data = json.loads((root / "bank.json").read_text())
+    data = json.loads((root / "bank.json").read_text(encoding="utf-8"))
     data["version"] = 2
-    (root / "bank.json").write_text(json.dumps(data))
+    (root / "bank.json").write_text(json.dumps(data), encoding="utf-8")
     with pytest.raises(VocalkeepError, match="newer version"), open_bank(root):
         pass
-    (root / "bank.json").write_text('{"format": "other"}')
+    (root / "bank.json").write_text('{"format": "other"}', encoding="utf-8")
     with pytest.raises(VocalkeepError, match="not a Vocalkeep voice bank"), open_bank(root):
         pass
 

@@ -19,7 +19,7 @@ from vocalkeep.voice import SONATA_VOICE_PATTERN, missing_config_keys
 def make_run(root: Path, *, base: str = "en_US-ljspeech-medium", commercial: str = "yes") -> Path:
     run = root / "run"
     trainer_python = root / "trainer-python"
-    trainer_python.write_text("")
+    trainer_python.write_text("", encoding="utf-8")
     ckpt_dir = run / "training" / "lightning_logs" / "version_0" / "checkpoints"
     ckpt_dir.mkdir(parents=True)
     (ckpt_dir / "last.ckpt").write_bytes(b"fake checkpoint")
@@ -76,14 +76,14 @@ def test_export_makes_a_voice_folder(tmp_path: Path, fake_exporter) -> None:
     assert python == str(tmp_path / "trainer-python"), "the run's training Python is used"
     assert SONATA_VOICE_PATTERN.match(voice.onnx.name)
 
-    config = json.loads((voice.root / f"{vid}.onnx.json").read_text())
+    config = json.loads((voice.root / f"{vid}.onnx.json").read_text(encoding="utf-8"))
     assert not missing_config_keys(config)
     assert config["audio"] == {"sample_rate": 22050, "quality": "medium"}
     assert config["espeak"]["voice"] == "en-us"
     assert config["language"]["code"] == "en_GB"
     assert config["phoneme_id_map"]["_"] == [0]
 
-    info = json.loads((voice.root / "voice.json").read_text())
+    info = json.loads((voice.root / "voice.json").read_text(encoding="utf-8"))
     assert info["format"] == "vocalkeep-voice" and info["version"] == 1
     assert info["id"] == vid and info["name"] == "Zoë O'Brien"
     assert info["language"] == "en-GB" and info["gender"] == "female"
@@ -98,7 +98,7 @@ def test_export_makes_a_voice_folder(tmp_path: Path, fake_exporter) -> None:
     assert info["onnxSha256"] == hashlib.sha256(voice.onnx.read_bytes()).hexdigest()
     assert info["vocalkeepVersion"] and info["createdAt"]
 
-    card = (voice.root / "MODEL_CARD").read_text()
+    card = (voice.root / "MODEL_CARD").read_text(encoding="utf-8")
     assert "This is Zoë O'Brien's own voice. It belongs to Zoë O'Brien" in card
     assert "Vocalkeep" in card and "Piper" in card
     assert "LJ Speech" in card and "Public domain" in card
@@ -127,7 +127,7 @@ def test_export_from_another_computer_uses_this_python(tmp_path: Path, fake_expo
 def test_export_again_replaces_the_voice(tmp_path: Path, fake_exporter) -> None:
     run = make_run(tmp_path)
     first = export_voice(run, tmp_path / "voices")
-    (first.root / "stale.txt").write_text("old")
+    (first.root / "stale.txt").write_text("old", encoding="utf-8")
     second = export_voice(run, tmp_path / "voices")
     assert not (second.root / "stale.txt").exists()
 
@@ -143,7 +143,9 @@ def test_export_errors(tmp_path: Path, fake_exporter) -> None:
     with pytest.raises(VocalkeepError, match="isn't a Vocalkeep training run"):
         export_voice(tmp_path, tmp_path / "voices")
     run = make_run(tmp_path)
-    (run / "config.json").write_text(json.dumps({"audio": {"sample_rate": 22050}}))
+    (run / "config.json").write_text(
+        json.dumps({"audio": {"sample_rate": 22050}}), encoding="utf-8"
+    )
     with pytest.raises(VocalkeepError, match="missing settings"):
         export_voice(run, tmp_path / "voices")
     (run / "config.json").unlink()

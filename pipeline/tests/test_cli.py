@@ -191,10 +191,10 @@ def test_build_end_to_end_with_fake_piper(
     assert done["message"].startswith("Your voice is ready")
     assert (work / "dataset" / "metadata.csv").is_file()
     assert (work / "run" / "run.json").is_file()
-    info = json.loads((voices / "en_US-jane_doe-medium" / "voice.json").read_text())
+    info = json.loads((voices / "en_US-jane_doe-medium" / "voice.json").read_text(encoding="utf-8"))
     assert info["bank"]["takes"] == 4
     assert info["base"]["id"] == "en_US-ljspeech-medium"
-    fake_args = json.loads((tmp_path / "fake-args.json").read_text())
+    fake_args = json.loads((tmp_path / "fake-args.json").read_text(encoding="utf-8"))
     assert fake_args[fake_args.index("--trainer.max_epochs") + 1] == "1150"
 
     # Building again reuses the work folder: a fresh dataset, a fresh run.
