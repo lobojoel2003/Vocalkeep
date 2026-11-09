@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { open as openDialog } from '@tauri-apps/plugin-dialog';
   import { onDestroy, onMount } from 'svelte';
   import { api, errorMessage, onLevel } from '../lib/api';
   import Icon from '../lib/components/Icon.svelte';
@@ -88,6 +89,25 @@
     }
   }
 
+  /** Someone moving to a new computer, or recovering, starts from their backup. */
+  async function restore() {
+    const path = await openDialog({
+      title: 'Choose your voice bank backup',
+      filters: [{ name: 'Zip archive', extensions: ['zip'] }],
+    });
+    if (typeof path !== 'string') return;
+    busy = true;
+    try {
+      app.overview = await api.restoreBackup(path);
+      app.notify('Your voice bank is restored.', 'success');
+      await finish();
+    } catch (e) {
+      app.notify(errorMessage(e), 'error');
+    } finally {
+      busy = false;
+    }
+  }
+
   async function finish() {
     await app.updateSettings({ onboarded: true });
     await app.refresh();
@@ -128,6 +148,9 @@
         </li>
       </ul>
       <div class="row end">
+        <button class="btn quiet" onclick={restore} disabled={busy}>
+          <Icon name="upload" size={18} /> I have a backup
+        </button>
         <button class="btn primary big" onclick={() => (step = 1)}>Let's begin</button>
       </div>
     {:else if step === 1}
