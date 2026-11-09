@@ -114,6 +114,9 @@ quote-style = "double"
 
 [tool.mypy]
 python_version = "3.10"
+# Check as if on Linux everywhere: platform branches (sys.platform == "darwin", "win32") would
+# otherwise make the code after them "unreachable" on that runner only.
+platform = "linux"
 files = ["src"]
 strict = true
 warn_unreachable = true
