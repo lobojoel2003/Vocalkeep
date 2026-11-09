@@ -26,6 +26,22 @@ def head(url: str) -> tuple[int, int | None]:
         return response.status, int(length) if length else None
 
 
+def available(url: str) -> list[str]:
+    """For a broken link, the checkpoint files actually in that folder (Hugging Face API)."""
+    marker = "/resolve/main/"
+    if marker not in url:
+        return []
+    folder = url.split(marker, 1)[1].rsplit("/", 1)[0]
+    api = f"https://huggingface.co/api/datasets/rhasspy/piper-checkpoints/tree/main/{folder}"
+    try:
+        request = urllib.request.Request(api, headers={"User-Agent": "vocalkeep-ci"})
+        with urllib.request.urlopen(request, timeout=60) as response:
+            entries = json.load(response)
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return []
+    return [e["path"] for e in entries if str(e.get("path", "")).endswith(".ckpt")]
+
+
 def main() -> None:
     bases = json.loads(REGISTRY.read_text(encoding="utf-8"))["bases"]
     failed = 0
@@ -37,6 +53,8 @@ def main() -> None:
             print(f"✓ {base['id']}: {status}, {size}")
         except (urllib.error.URLError, TimeoutError) as e:
             print(f"✗ {base['id']}: {url}: {e}", file=sys.stderr)
+            for path in available(url):
+                print(f"    available: {path}", file=sys.stderr)
             failed += 1
     if failed:
         raise SystemExit(f"{failed} checkpoint link(s) failed")
