@@ -539,6 +539,10 @@ vocalkeep doctor</pre>
   .note.error {
     background: var(--redo-soft);
   }
+  .note span {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
   .building pre {
     margin: 0.5rem 0;
     max-height: 10rem;

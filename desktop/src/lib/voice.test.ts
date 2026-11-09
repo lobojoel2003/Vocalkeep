@@ -48,6 +48,7 @@ describe('voice helpers', () => {
     expect(normaliseBases({ bases: [{ commercial: 'maybe' }] })).toEqual([]);
     expect(normaliseBases([{ id: 'b', commercial: 'maybe' }])[0]!.commercial).toBe('unknown');
     expect(normaliseBases(null)).toEqual([]);
+    expect(normaliseBases([{ id: 'vctk', canFineTune: false }])).toEqual([]);
   });
 
   it('names build stages', () => {

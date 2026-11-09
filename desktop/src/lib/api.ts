@@ -97,7 +97,10 @@ export const api = {
     invoke<string>('install_voice', { id, target }),
 };
 
-/** Accepts the registry as a list or as `{ bases: [...] }`, with snake_case or camelCase keys. */
+/**
+ * Accepts the registry as a list or as `{ bases: [...] }`, with snake_case or camelCase keys.
+ * Voices that can't be fine-tuned (multi-speaker models) are left out.
+ */
 export function normaliseBases(raw: unknown): BaseVoice[] {
   const list = Array.isArray(raw)
     ? raw
@@ -106,6 +109,7 @@ export function normaliseBases(raw: unknown): BaseVoice[] {
       : [];
   return list
     .filter((b): b is Record<string, unknown> => !!b && typeof b === 'object')
+    .filter((b) => b.canFineTune !== false && b.can_fine_tune !== false)
     .map((b) => {
       const s = (k: string, alt?: string) => String(b[k] ?? (alt ? b[alt] : '') ?? '');
       const commercial = s('commercial');
