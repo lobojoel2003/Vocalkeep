@@ -1,7 +1,12 @@
 name: Starting voice links
 
-# Every starting voice in the registry must still be downloadable from Hugging Face. Runs weekly
-# and whenever the registry changes, separately from CI so an outage elsewhere never blocks a release.
+# Every starting voice in the registry must still be downloadable from Piper's checkpoint
+# repository on Hugging Face. Runs weekly and whenever the registry changes, separately from CI
+# so an outage elsewhere never blocks a release.
+#
+# - A checkpoint that has moved (Piper renames them now and then) is a warning, not a failure:
+#   the voice builder follows the move by itself. The run opens an issue with the fix.
+# - A checkpoint that is gone, or a repository that can't be reached, fails the run.
 on:
   schedule:
     - cron: "17 6 * * 1"
@@ -10,6 +15,7 @@ on:
     paths:
       - pipeline/src/vocalkeep/data/base_models.json
       - scripts/check_base_links.py
+      - .github/workflows/links.yml
   workflow_dispatch:
 
 permissions:
@@ -20,7 +26,48 @@ jobs:
     name: Checkpoint downloads
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v7
-      - name: Every checkpoint link answers
-        run: python3 scripts/check_base_links.py
+      - name: Every checkpoint can be downloaded
+        run: python3 scripts/check_base_links.py --fix --report links-report.json
+      - name: Open or update an issue for moved checkpoints
+        if: success() && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          moved="$(jq '[.[] | select(.status == "moved")] | length' links-report.json)"
+          if [ "$moved" = 0 ]; then
+            echo "Every checkpoint link is up to date."
+            exit 0
+          fi
+          title="Starting voice checkpoints have moved"
+          {
+            echo "The weekly link check found that Piper renamed $moved starting-voice checkpoint(s)."
+            echo "Nothing is broken for people building voices: the voice builder follows the move by itself."
+            echo
+            jq -r '.[] | select(.status == "moved") | "- `\(.id)`: \(.detail)"' links-report.json
+            echo
+            echo "To update the registry, run this and commit the result:"
+            echo
+            echo '```bash'
+            echo 'python3 scripts/check_base_links.py --fix'
+            echo '```'
+            echo
+            echo "<details><summary>The change it makes</summary>"
+            echo
+            echo '```diff'
+            git diff -- pipeline/src/vocalkeep/data/base_models.json
+            echo '```'
+            echo "</details>"
+            echo
+            echo "Found by [run $GITHUB_RUN_NUMBER]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+          } > issue.md
+          existing="$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file issue.md
+          else
+            gh issue create --title "$title" --body-file issue.md
+          fi
