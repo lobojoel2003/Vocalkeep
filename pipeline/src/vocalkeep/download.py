@@ -9,12 +9,14 @@ are published for these files, so none are checked.
 
 from __future__ import annotations
 
+import json
 import re
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote, unquote, urlparse
 
 from vocalkeep import __version__
 from vocalkeep.errors import VocalkeepError
@@ -22,6 +24,12 @@ from vocalkeep.progress import NullReporter, Reporter
 
 CHUNK = 1024 * 1024
 _CONTENT_RANGE = re.compile(r"bytes\s+(\d+)-(\d+)/(\d+|\*)")
+_EPOCH = re.compile(r"epoch=(\d+)")
+_RESOLVE = "/resolve/main/"
+
+
+class NotFoundError(VocalkeepError):
+    """The file isn't at that address any more (HTTP 404)."""
 
 
 def _size(n: float) -> str:
@@ -144,7 +152,7 @@ def download_file(
 def _network_error(url: str, error: Exception) -> VocalkeepError:
     if isinstance(error, urllib.error.HTTPError):
         if error.code == 404:
-            return VocalkeepError(
+            return NotFoundError(
                 f"The file isn't at {url} any more (error 404).",
                 "Update Vocalkeep, or download the checkpoint yourself and pass it with "
                 "--checkpoint PATH.",
@@ -159,3 +167,40 @@ def _network_error(url: str, error: Exception) -> VocalkeepError:
         "Check the internet connection. On a computer without internet, download the "
         f"checkpoint elsewhere ({url}) and pass it with --checkpoint PATH.",
     )
+
+
+def moved_checkpoint_url(url: str, *, timeout: float = 30) -> str | None:
+    """Where a renamed checkpoint went, for Hugging Face ``.../resolve/main/...`` addresses.
+
+    Piper's checkpoint repository is reorganised from time to time, and a file the registry
+    names can be replaced by a newer one in the same folder. This lists that folder with the
+    Hugging Face API and returns the address of its checkpoint (the most trained one, if there
+    are several). ``None`` if the folder can't be read or holds no checkpoint.
+    """
+    parsed = urlparse(url)
+    if _RESOLVE not in parsed.path:
+        return None
+    repo, file_path = parsed.path.split(_RESOLVE, 1)
+    folder = unquote(file_path).rsplit("/", 1)[0] if "/" in file_path else ""
+    api = f"{parsed.scheme}://{parsed.netloc}/api{repo}/tree/main/{quote(folder)}"
+    try:
+        with _open(api, 0, timeout) as response:
+            entries = json.load(response)
+    except (urllib.error.URLError, OSError, ValueError):
+        return None
+    if not isinstance(entries, list):
+        return None
+    names = [
+        str(e["path"])
+        for e in entries
+        if isinstance(e, dict) and str(e.get("path", "")).endswith(".ckpt")
+    ]
+    if not names:
+        return None
+
+    def trained(name: str) -> tuple[int, str]:
+        match = _EPOCH.search(name)
+        return (int(match.group(1)) if match else -1, name)
+
+    best = max(names, key=trained)
+    return f"{parsed.scheme}://{parsed.netloc}{repo}{_RESOLVE}{quote(best)}"

@@ -19,13 +19,14 @@ from conftest import posix_script
 from vocalkeep.bank import open_bank
 from vocalkeep.cli import main
 from vocalkeep.dataset import prepare
-from vocalkeep.download import download_file
+from vocalkeep.download import NotFoundError, download_file, moved_checkpoint_url
 from vocalkeep.errors import VocalkeepError
-from vocalkeep.progress import Reporter
+from vocalkeep.progress import NullReporter, Reporter
 from vocalkeep.train import (
     DEFAULT_EXTRA_EPOCHS,
     QUICK_EXTRA_EPOCHS,
     TrainingMonitor,
+    _follow_moved_checkpoint,
     _stream_lines,
     epoch_from_filename,
     find_latest_checkpoint,
@@ -380,6 +381,9 @@ def test_find_latest_checkpoint_prefers_newest_version(tmp_path: Path) -> None:
 # --- downloads -------------------------------------------------------------------------------
 
 PAYLOAD = bytes(range(256)) * 4096  # 1 MiB
+HF = "/datasets/rhasspy/piper-checkpoints/resolve/main"
+OLD_AMY = f"{HF}/en/en_US/amy/medium/epoch%3D6679-step%3D1554200.ckpt"
+GONE = {OLD_AMY, f"{HF}/en/en_US/gone/medium/x.ckpt"}
 
 
 class _RangeHandler(http.server.BaseHTTPRequestHandler):
@@ -390,7 +394,25 @@ class _RangeHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self) -> None:
         _RangeHandler.calls.append(self.headers.get("Range"))
-        if self.path == "/missing.ckpt":
+        if self.path.startswith("/api/"):
+            # Hugging Face's folder listing: Piper renamed amy's checkpoint; "gone" is empty.
+            listing = (
+                [
+                    {"type": "file", "path": "en/en_US/amy/medium/config.json"},
+                    {"type": "file", "path": "en/en_US/amy/medium/epoch=999-step=1.ckpt"},
+                    {"type": "file", "path": "en/en_US/amy/medium/epoch=1999-step=164000.ckpt"},
+                ]
+                if self.path.endswith("/amy/medium")
+                else []
+            )
+            body = json.dumps(listing).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.path == "/missing.ckpt" or self.path in GONE:
             self.send_error(404)
             return
         if self.path == "/page.ckpt":
@@ -457,3 +479,44 @@ def test_download_errors(server: str, tmp_path: Path, monkeypatch) -> None:
         download_file(f"{server}/page.ckpt", tmp_path / "p.ckpt")
     with pytest.raises(VocalkeepError, match="Couldn't connect"):
         download_file("http://127.0.0.1:9/x.ckpt", tmp_path / "x.ckpt", timeout=2)
+
+
+def test_a_renamed_checkpoint_is_found(server: str, monkeypatch) -> None:
+    monkeypatch.setenv("NO_PROXY", "127.0.0.1")
+    monkeypatch.setenv("no_proxy", "127.0.0.1")
+    # The most trained of the checkpoints now in the folder.
+    assert moved_checkpoint_url(server + OLD_AMY) == (
+        f"{server}{HF}/en/en_US/amy/medium/epoch%3D1999-step%3D164000.ckpt"
+    )
+    assert moved_checkpoint_url(f"{server}{HF}/en/en_US/gone/medium/x.ckpt") is None
+    assert moved_checkpoint_url(f"{server}/missing.ckpt") is None, "not a repository address"
+
+
+def test_training_follows_a_renamed_checkpoint(
+    server: str, home: Path, dataset_dir: Path, monkeypatch
+) -> None:
+    monkeypatch.setenv("NO_PROXY", "127.0.0.1")
+    monkeypatch.setenv("no_proxy", "127.0.0.1")
+    old = server + OLD_AMY
+    plan = plan_training(dataset_dir, "ljspeech", home / "run", checkpoint=old)
+    assert plan.base_epoch == 6679 and plan.needs_download
+    with pytest.raises(NotFoundError):
+        download_file(old, plan.checkpoint)
+    _follow_moved_checkpoint(plan, old, NullReporter())
+    assert plan.checkpoint.name == "epoch=1999-step=164000.ckpt"
+    assert plan.checkpoint.read_bytes() == PAYLOAD
+    assert plan.checkpoint_url and plan.checkpoint_url.endswith("epoch%3D1999-step%3D164000.ckpt")
+    assert (plan.base_epoch, plan.epoch_source) == (1999, "filename")
+    assert "--ckpt_path" in plan.command and str(plan.checkpoint) in plan.command
+
+
+def test_a_vanished_checkpoint_is_explained(
+    server: str, home: Path, dataset_dir: Path, monkeypatch
+) -> None:
+    monkeypatch.setenv("NO_PROXY", "127.0.0.1")
+    monkeypatch.setenv("no_proxy", "127.0.0.1")
+    gone = f"{server}{HF}/en/en_US/gone/medium/x.ckpt"
+    plan = plan_training(dataset_dir, "ljspeech", home / "run", checkpoint=gone)
+    with pytest.raises(NotFoundError, match="isn't in Piper's repository") as e:
+        _follow_moved_checkpoint(plan, gone, NullReporter())
+    assert "--checkpoint" in (e.value.hint or "")

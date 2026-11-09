@@ -45,7 +45,7 @@ from vocalkeep import __version__
 from vocalkeep.bases import BaseVoice, commercial_text, find_base, licence_notice, registry
 from vocalkeep.dataset import load_dataset_info
 from vocalkeep.doctor import python_path, training_ready, training_steps
-from vocalkeep.download import download_file
+from vocalkeep.download import NotFoundError, download_file, moved_checkpoint_url
 from vocalkeep.errors import VocalkeepError
 from vocalkeep.paths import checkpoints_dir
 from vocalkeep.progress import NullReporter, Reporter
@@ -66,6 +66,29 @@ _TQDM_BAR = re.compile(r"\d{1,3}%\|")
 
 def _now() -> str:
     return _dt.datetime.now(_dt.timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _follow_moved_checkpoint(plan: TrainPlan, url: str, reporter: Reporter) -> None:
+    """The registry's checkpoint is gone: use its replacement in the same folder, if any."""
+    moved = moved_checkpoint_url(url)
+    if moved is None or moved == url:
+        raise NotFoundError(
+            f"{plan.base.name}'s checkpoint isn't in Piper's repository any more.",
+            "Update Vocalkeep, choose another starting voice, or download a checkpoint "
+            "yourself and pass it with --checkpoint PATH.",
+        )
+    name = unquote(moved.rsplit("/", 1)[-1])
+    reporter.warn(
+        f"{plan.base.name} has a new checkpoint in Piper's repository; using {name} instead."
+    )
+    plan.checkpoint = plan.checkpoint.with_name(name)
+    plan.checkpoint_url = moved
+    from_name = epoch_from_filename(name)
+    plan.base_epoch, plan.epoch_source = (
+        (from_name, "filename") if from_name is not None else (0, "unknown")
+    )
+    if not plan.checkpoint.is_file():
+        download_file(moved, plan.checkpoint, reporter=reporter, what="the starting voice")
 
 
 def epoch_from_filename(name: str) -> int | None:
@@ -561,7 +584,10 @@ def run_training(
     if plan.needs_download:
         url = plan.checkpoint_url or ""
         reporter.log(f"Downloading {plan.base.name} from {url}")
-        download_file(url, plan.checkpoint, reporter=reporter, what="the starting voice")
+        try:
+            download_file(url, plan.checkpoint, reporter=reporter, what="the starting voice")
+        except NotFoundError:
+            _follow_moved_checkpoint(plan, url, reporter)
     else:
         reporter.progress("download", 1.0, "The starting voice is already downloaded")
 

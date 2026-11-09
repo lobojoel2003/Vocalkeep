@@ -92,6 +92,13 @@ every English sound quickly), everyday conversation (for natural rhythm, questio
 exclamations), short phrases, and the person's own phrases. The **Progress** page shows how many of
 English's speech sounds and sound pairs are covered.
 
+### If a starting voice moves
+
+Piper reorganises its checkpoint repository from time to time. If the file Vocalkeep knows
+about has been renamed, the builder looks in the same folder, downloads the replacement and
+tells you it did. A weekly check in this repository (`scripts/check_base_links.py`) keeps the
+list up to date.
+
 ## Choosing a starting voice
 
 Choose a starting voice in the same language variety, and ideally a similar pitch. Its licence

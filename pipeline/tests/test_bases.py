@@ -19,6 +19,7 @@ from vocalkeep.bases import (
     registry,
 )
 from vocalkeep.errors import VocalkeepError
+from vocalkeep.train import epoch_from_filename
 
 APP_KEYS = {
     "id",
@@ -123,7 +124,15 @@ def test_epochs_from_names() -> None:
     assert find_base("lessac").checkpoint_epoch == 2164
     assert find_base("lessac").checkpoint_filename == "epoch=2164-step=1355540.ckpt"
     assert find_base("ljspeech").checkpoint_epoch == 1000
-    assert find_base("cori").checkpoint_epoch == 640
+    assert find_base("cori").checkpoint_epoch == 149
+    assert find_base("cori").checkpoint_filename == "epoch=149-step=167700.ckpt"
+
+
+def test_every_registry_epoch_matches_its_file_name() -> None:
+    for b in registry():
+        named = epoch_from_filename(b.checkpoint_filename)
+        if named is not None:
+            assert b.checkpoint_epoch == named, b.id
 
 
 def test_lookup_by_id_short_id_or_name() -> None:
