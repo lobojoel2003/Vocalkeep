@@ -1,0 +1,35 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Node
+node_modules/
+desktop/dist/
+desktop/src-tauri/gen/schemas/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+pipeline/dist/
+pipeline/build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editors and OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local data: never commit someone's voice
+*.vkbank/
+voice-bank/
+/runs/
+/dist/

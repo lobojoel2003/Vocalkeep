@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = ["crates/vocalkeep-core", "desktop/src-tauri"]
+default-members = ["crates/vocalkeep-core"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.90"
+license = "GPL-3.0-or-later"
+authors = ["Vocalkeep contributors"]
+repository = "https://github.com/lobojoel2003/Vocalkeep"
+homepage = "https://github.com/lobojoel2003/Vocalkeep"
+
+[workspace.dependencies]
+vocalkeep-core = { path = "crates/vocalkeep-core", version = "0.1.0" }
+anyhow = "1"
+thiserror = "2"
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hound = "3.5"
+chrono = { version = "0.4", default-features = false, features = ["clock", "serde", "std"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+zip = { version = "9", default-features = false, features = ["deflate-flate2-zlib-rs"] }
+cpal = "0.18"
+parking_lot = "0.12"
+dirs = "6"
+env_logger = "0.11"
+tempfile = "3"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3
+strip = "symbols"
+panic = "unwind"
