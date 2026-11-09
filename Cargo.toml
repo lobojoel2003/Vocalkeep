@@ -4,7 +4,7 @@ members = ["crates/vocalkeep-core", "desktop/src-tauri"]
 default-members = ["crates/vocalkeep-core"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 rust-version = "1.90"
 license = "GPL-3.0-or-later"
@@ -13,7 +13,7 @@ repository = "https://github.com/lobojoel2003/Vocalkeep"
 homepage = "https://github.com/lobojoel2003/Vocalkeep"
 
 [workspace.dependencies]
-vocalkeep-core = { path = "crates/vocalkeep-core", version = "0.1.0" }
+vocalkeep-core = { path = "crates/vocalkeep-core", version = "0.1.1" }
 anyhow = "1"
 thiserror = "2"
 log = "0.4"

@@ -7,6 +7,23 @@ number), shown in Settings › About.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-09
+
+### Fixed
+
+- **Six starting voices could not be downloaded.** Piper renamed the checkpoints for Cori, Amy,
+  Joe, Alba, Jenny (Dioco) and HFC female in its repository, so building a voice on them stopped
+  with "error 404". The links and their training epochs are updated.
+
+### Changed
+
+- **The voice builder follows renamed checkpoints.** If a starting voice's file has moved, it
+  downloads the replacement from the same folder and says so, instead of stopping.
+- **The weekly starting-voice check** now tells moved checkpoints (a warning, with an issue
+  opened that shows the exact fix, and `--fix` to apply it) apart from missing ones (a failure),
+  and retries once before calling a server unreachable.
+- CI no longer runs twice for Dependabot updates.
+
 ## [0.1.0] - 2026-11-09
 
 First release: a free, open-source way to bank your own voice, from recording to a system voice.
@@ -47,5 +64,6 @@ First release: a free, open-source way to bank your own voice, from recording to
   for Linux (`.deb`, `.rpm`, AppImage), Windows (`.msi`, `.exe`) and macOS (`.dmg`), the voice
   builder as a Python wheel, SHA-256 checksums, and CI on every push.
 
-[Unreleased]: https://github.com/lobojoel2003/Vocalkeep/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/lobojoel2003/Vocalkeep/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/lobojoel2003/Vocalkeep/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/lobojoel2003/Vocalkeep/releases/tag/v0.1.0

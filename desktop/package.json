@@ -1,7 +1,7 @@
 {
   "name": "vocalkeep-desktop",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vocalkeep desktop app: a calm recording studio for banking your own voice",
   "license": "GPL-3.0-or-later",
   "type": "module",

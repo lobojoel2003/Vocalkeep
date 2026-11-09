@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 [project]
 name = "vocalkeep"
 # Kept equal to ../VERSION and vocalkeep.__version__ by scripts/bump-version.sh (CI checks).
-version = "0.1.0"
+version = "0.1.1"
 description = "Turn a Vocalkeep voice bank into a Piper text-to-speech voice and install it as a system voice."
 readme = "README.md"
 requires-python = ">=3.10"
