@@ -1,0 +1,2010 @@
+{
+  "id": "everyday-en",
+  "language": "en",
+  "title": "Everyday conversation",
+  "description": "Natural sentences for everyday talk, so your voice sounds like you in conversation.",
+  "license": "CC0-1.0",
+  "source": "Written for Vocalkeep",
+  "prompts": [
+    {
+      "id": "everyday-0001",
+      "text": "Could you pass me the blue mug from the top shelf?",
+      "ph": "k_U_d j_u: p_aa_s m_i: D_@2 b_l_u: m_V_g f_r_V_m_D_@2 t2_0_p S_E_l_f"
+    },
+    {
+      "id": "everyday-0002",
+      "text": "Good morning, did you manage to sleep at all last night?",
+      "ph": "g_U_d m_O@_n_I_N d_I_d j_u: m_a_n_I2_dZ t_@ s_l_i:_p a_t# O:_l l_aa_s_t n_aI_t"
+    },
+    {
+      "id": "everyday-0003",
+      "text": "The garden looks lovely after all that rain, especially the roses by the back gate.",
+      "ph": "D_@2 g_A@_d_@_n l_U_k_s l_V_v_l_i aa_f_t_3_r- O:_l D_a_t r_eI_n I2_s_p_E_S_@L_i D_@2 r_oU_z_I#_z b_aI D_@2 b_a_k g_eI_t"
+    },
+    {
+      "id": "everyday-0004",
+      "text": "Please fetch my thick woolly socks, my feet are freezing.",
+      "ph": "p_l_i:_z f_E_tS m_aI T_I_k w_U_l_i s_0_k_s m_aI f_i:_t A@ f_r_i:_z_I_N"
+    },
+    {
+      "id": "everyday-0005",
+      "text": "That's the funniest thing I've heard all week!",
+      "ph": "D_a_t_s D_@2 f_V_n_I_I2_s_t T_I_N aI_v h_3:_d O:_l w_i:_k"
+    },
+    {
+      "id": "everyday-0006",
+      "text": "We should invite Priya and her brother over for lunch on Sunday.",
+      "ph": "w_i: S_U_d I_n_v_aI_t p_r_I_j_@ a_n_d h_3: b_r_V_D_3_r- oU_v_3 f_O@ l_V_n_tS O2_n s_V_n_d_eI"
+    },
+    {
+      "id": "everyday-0007",
+      "text": "What time is the therapist coming on Thursday?",
+      "ph": "w_V_t t2_aI_m I_z D_@2 T_E_r_@_p_I_s_t k_V_m_I2_N O2_n T_3:_z_d_eI"
+    },
+    {
+      "id": "everyday-0008",
+      "text": "Thanks for sitting with me.",
+      "ph": "T_a_N_k_s f_O@ s_I_t#_I_N w_I_D m_i:"
+    },
+    {
+      "id": "everyday-0009",
+      "text": "Grandma always put far too much sugar in her tea, and she'd never admit it.",
+      "ph": "g_r_a_n_d_m_A: O:_l_w_eI_z p_U_t f_A@ t_u: m_V_tS S_U_g_3_r- I_n h_3: t_i: a_n_d S_i:_d n_E_v_3_r- a#_d_m_I_t I_t"
+    },
+    {
+      "id": "everyday-0010",
+      "text": "Have you fed the cat yet this morning, or is she just pretending to be hungry?",
+      "ph": "h_a_v j_u: f_E_d D_@2 k_a_t j_E_t D_I_s m_O@_n_I_N O@_r I_z S_i: dZ_V_s_t p_r_I_t_E_n_d_I_N t_@_b_i h_V_N_g_r_i"
+    },
+    {
+      "id": "everyday-0011",
+      "text": "The usual spot by the window would be perfect, where I can watch the street.",
+      "ph": "D_@2 j_u:_Z_u:_@L s_p_0_t b_aI D_@2 w_I_n_d_oU w_U_d b_i: p_3:_f_E_k_t w_e@_r aI k_a_n w_0_tS D_@2 s_t_r_i:_t"
+    },
+    {
+      "id": "everyday-0012",
+      "text": "Let's watch something light and silly tonight, nothing with complicated plots.",
+      "ph": "l_E_t_s w_0_tS s_V_m_T_I_N l_aI_t a_n_d s_I_l_i t_@_n_aI_t n_V_T_I_N w_I_D k_0_m_p_l_I#_k_eI_t#_I#_d p_l_0_t_s"
+    },
+    {
+      "id": "everyday-0013",
+      "text": "You're looking very smart today, is that a new jacket?",
+      "ph": "j_U@ l_U_k_I_N v_E_r_i s_m_A@_t t_@_d_eI I_z D_a_t#_@ n_u: dZ_a_k_I2_t"
+    },
+    {
+      "id": "everyday-0014",
+      "text": "My shoulders feel stiff, so a gentle stretch would help.",
+      "ph": "m_aI S_oU_l_d_3_z f_i:_l s_t_I_f s_oU a# dZ_E_n_t_@L s_t_r_E_tS w_U_d h_E_l_p"
+    },
+    {
+      "id": "everyday-0015",
+      "text": "Oh, what a treat!",
+      "ph": "oU w_V_t a# t_r_i:_t"
+    },
+    {
+      "id": "everyday-0016",
+      "text": "Three strawberries and a splash of cream, please.",
+      "ph": "T_r_i: s_t_r_O:_b_E_r_i_z a_n_d a# s_p_l_a_S V_v k_r_i:_m p_l_i:_z"
+    },
+    {
+      "id": "everyday-0017",
+      "text": "Sam texted to say he'll be here by half past seven, traffic permitting.",
+      "ph": "s_a_m t_E_k_s_t_I#_d t_@ s_eI h_i:_l b_i: h_i@3 b_aI h_a_f p_aa_s_t s_E_v_@_n t_r_a_f_I_k p_3_m_I_t#_I_N"
+    },
+    {
+      "id": "everyday-0018",
+      "text": "Which film did you pick for Friday night, the comedy or the one about the submarine?",
+      "ph": "w_I_tS f_I_l_m d_I_d j_u: p_I_k f_O@ f_r_aI_d_eI n_aI_t D_@2 k_0_m_@_d_i O@ D_@2 w_V_n a#_b_aU_t D_@2 s_V_b_m_3_r_i:_n"
+    },
+    {
+      "id": "everyday-0019",
+      "text": "We spent two whole months exploring the north of Scotland in that rattly old camper van.",
+      "ph": "w_i: s_p_E_n_t t_u: h_oU_l m_V_n_T_s E_k_s_p_l_o@_r_I_N D_@2 n_O@_T V_v s_k_0_t_l_@_n_d I_n D_a_t r_a_t_l_i oU_l_d k_a_m_p_3 v_a_n"
+    },
+    {
+      "id": "everyday-0020",
+      "text": "Thank you for coming all this way to see me.",
+      "ph": "T_a_N_k j_u: f_O@ k_V_m_I2_N O:_l D_I_s w_eI t_@ s_i: m_i:"
+    },
+    {
+      "id": "everyday-0021",
+      "text": "Would you mind turning the heating up a notch?",
+      "ph": "w_U_d j_u: m_aI_n_d t_3:_n_I_N D_@2 h_i:_t#_I_N V_p a# n_0_tS"
+    },
+    {
+      "id": "everyday-0022",
+      "text": "All the weather forecasts say sunshine for the rest of the week.",
+      "ph": "O:_l D_@2 w_E_D_3 f_O@_k_aa_s_t_s s_eI s_V_n_S_aI_n f_3_D_@2 r_E_s_t V_v_D_@2 w_i:_k"
+    },
+    {
+      "id": "everyday-0023",
+      "text": "It's always a pleasure to see you again, and you're looking so well.",
+      "ph": "I_t_s O:_l_w_eI_z a# p_l_E_Z_3 t_@ s_i: j_u: a#_g_E_n a_n_d j_U@ l_U_k_I_N s_oU w_E_l"
+    },
+    {
+      "id": "everyday-0024",
+      "text": "How did the job interview go?",
+      "ph": "h_aU d_I_d D_@2 dZ_0_b I_n_t_3_v_j_u: g_oU"
+    },
+    {
+      "id": "everyday-0025",
+      "text": "My brother still owes me twenty dollars from nineteen ninety-eight.",
+      "ph": "m_aI b_r_V_D_3 s_t_I_l oU_z m_i: t_w_E_n_t_i d_0_l_3_z f_r_V_m n_aI_n_t_i:_n n_aI_n_t_i_eI_t"
+    },
+    {
+      "id": "everyday-0026",
+      "text": "Hang on, let me think about that for a minute.",
+      "ph": "h_a_N O2_n l_E_t m_i: T_I_N_k a#_b_aU_t D_a_t f_3_r-_@ m_I_n_I_t"
+    },
+    {
+      "id": "everyday-0027",
+      "text": "You always know exactly what to say!",
+      "ph": "j_u: O:_l_w_eI_z n_oU E_g_z_a_k_t_l_i w_V_t t_@ s_eI"
+    },
+    {
+      "id": "everyday-0028",
+      "text": "Please leave the door open a crack so I can hear everyone.",
+      "ph": "p_l_i:_z l_i:_v D_@2 d_o@_r oU_p_@_n a# k_r_a_k s_oU aI k_a_n h_i@3_r E_v_r_I_w_V_n"
+    },
+    {
+      "id": "everyday-0029",
+      "text": "Our neighbors have a ginger cat that thinks it lives here and sleeps on our porch.",
+      "ph": "aU_3 n_eI_b_3_z h_a_v a# dZ_I_n_dZ_3 k_a_t D_a_t T_I_N_k_s I_t l_I_v_z h_i@3 a_n_d s_l_i:_p_s O2_n aU_3 p_O@_tS"
+    },
+    {
+      "id": "everyday-0030",
+      "text": "Is it too early for a cup of coffee, or should I wait until after lunch?",
+      "ph": "I_z I_t t_u: 3:_l_i f_3_r-_@ k_V_p V_v k_O2_f_i O@ S_U_d aI w_eI_t V_n_t_I_l aa_f_t_3 l_V_n_tS"
+    },
+    {
+      "id": "everyday-0031",
+      "text": "The tomatoes are finally turning red.",
+      "ph": "D_@2 t_@_m_eI_t#_oU_z A@ f_aI_n_@L_i t_3:_n_I_N r_E_d"
+    },
+    {
+      "id": "everyday-0032",
+      "text": "I'm so proud of everything you've achieved this year.",
+      "ph": "aI_m s_oU p_r_aU_d V_v E_v_r_I2_T_I_N j_u:_v a#_tS_i:_v_d D_I_s j_i@3"
+    },
+    {
+      "id": "everyday-0033",
+      "text": "Where did we put the spare batteries for the remote?",
+      "ph": "w_e@ d_I_d w_i: p_U_t D_@2 s_p_e@ b_a_t#_3_r_i_z f_3_D_@2 r_I#_m_oU_t"
+    },
+    {
+      "id": "everyday-0034",
+      "text": "Rosie scored the winning goal in the very last minute, and the whole crowd went wild!",
+      "ph": "r_oU_s_i s_k_o@_d D_@2 w_I_n_I_N g_oU_l I_n_D_@2 v_E_r_i l_aa_s_t m_I_n_I_t a_n_d D_@2 h_oU_l k_r_aU_d w_E_n_t w_aI_l_d"
+    },
+    {
+      "id": "everyday-0035",
+      "text": "Could we try the crossword together after breakfast, before my brain gets tired?",
+      "ph": "k_U_d w_i: t_r_aI D_@2 k_r_O2_s_w_3:_d t_@_g_E_D_3_r- aa_f_t_3 b_r_E_k_f_@_s_t b_I#_f_o@ m_aI b_r_eI_n g_E_t_s t_aI3_d"
+    },
+    {
+      "id": "everyday-0036",
+      "text": "That song always reminds me of our first road trip together.",
+      "ph": "D_a_t s_O2_N O:_l_w_eI_z r_I#_m_aI_n_d_z m_i: V_v aU_3 f_3:_s_t r_oU_d t_r_I_p t_@_g_E_D_3"
+    },
+    {
+      "id": "everyday-0037",
+      "text": "My left hand is a bit cold today.",
+      "ph": "m_aI l_E_f_t h_a_n_d I_z a# b_I_t k_oU_l_d t_@_d_eI"
+    },
+    {
+      "id": "everyday-0038",
+      "text": "Tell me everything about the wedding.",
+      "ph": "t_E_l m_i: E_v_r_I2_T_I_N a#_b_aU_t D_@2 w_E_d_I_N"
+    },
+    {
+      "id": "everyday-0039",
+      "text": "We usually go to the coast in late August, when the crowds have thinned out a bit.",
+      "ph": "w_i: j_u:_Z_u:_@L_i g_oU t_@ D_@2 k_oU_s_t I_n l_eI_t O:_g_@_s_t w_E_n D_@2 k_r_aU_d_z h_a_v T_I_n_d aU_t a# b_I_t"
+    },
+    {
+      "id": "everyday-0040",
+      "text": "What do you fancy for dinner tonight?",
+      "ph": "w_V_t d_u: j_u: f_a_n_s_i f_O@ d_I_n_3 t_@_n_aI_t"
+    },
+    {
+      "id": "everyday-0041",
+      "text": "Lunch was delicious, thank you so much.",
+      "ph": "l_V_n_tS w_V_z d_I#_l_I_S_@_s T_a_N_k j_u: s_oU m_V_tS"
+    },
+    {
+      "id": "everyday-0042",
+      "text": "The clinic moved my appointment to Tuesday at quarter to ten.",
+      "ph": "D_@2 k_l_I_n_I_k m_u:_v_d m_aI a#_p_OI_n_t_m_@_n_t t_@ t_u:_z_d_eI a_t k_w_O@_t#_3 t_@ t_E_n"
+    },
+    {
+      "id": "everyday-0043",
+      "text": "Honestly, the ending of that book drove me up the wall.",
+      "ph": "0_n_I_s_t_l_i D_I2 E_n_d_I_N V_v D_a_t b_U_k d_r_oU_v m_i: V_p D_@2 w_O:_l"
+    },
+    {
+      "id": "everyday-0044",
+      "text": "Shall we sit outside while the sun's still out?",
+      "ph": "S_a_l w_i: s_I_t aU_t_s_aI_d w_aI_l D_@2 s_V_n_z s_t_I_l aU_t"
+    },
+    {
+      "id": "everyday-0045",
+      "text": "Pop the kettle on, would you?",
+      "ph": "p_0_p D_@2 k_E_t#_@L O2_n w_U_d j_u:"
+    },
+    {
+      "id": "everyday-0046",
+      "text": "Leo's learning to ride his bike without training wheels, and he's wobbling less every day.",
+      "ph": "l_i:_oU_z l_3:_n_I_N t_@ r_aI_d h_I_z b_aI_k w_I_D_aU_t t_r_eI_n_I_N w_i:_l_z a_n_d h_i:_z w_0_b_l_I2_N l_E_s E_v_r_i d_eI"
+    },
+    {
+      "id": "everyday-0047",
+      "text": "You've done a brilliant job with the hedge!",
+      "ph": "j_u:_v d_V_n a# b_r_I_l_i@_n_t dZ_0_b w_I_D_D_@2 h_E_dZ"
+    },
+    {
+      "id": "everyday-0048",
+      "text": "It feels strange being indoors on such a bright afternoon.",
+      "ph": "I_t f_i:_l_z s_t_r_eI_n_dZ b_i:_I_N I_n_d_o@_z O2_n s_V_tS a# b_r_aI_t aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0049",
+      "text": "Do you remember the name of that little cafe in Lisbon with the blue and yellow tiles?",
+      "ph": "d_u: j_u: r_I#_m_E_m_b_3 D_@2 n_eI_m V_v D_a_t l_I_t#_@L k_a_f_eI I_n l_I_s_b_@_n w_I_D_D_@2 b_l_u: a_n_d j_E_l_oU t_aI_l_z"
+    },
+    {
+      "id": "everyday-0050",
+      "text": "Auntie Jo's birthday is on the fourth of June, so we'll need to post her card by Monday.",
+      "ph": "aa_n_t_i dZ_oU_z b_3:_T_d_eI I_z O2_n_D_@2 f_o@_T V_v dZ_u:_n s_oU w_i:_l n_i:_d t_@ p_oU_s_t h_3: k_A@_d b_aI m_V_n_d_eI"
+    },
+    {
+      "id": "everyday-0051",
+      "text": "A little more pillow behind my back would be wonderful.",
+      "ph": "a# l_I_t#_@L m_o@ p_I_l_oU b_I#_h_aI_n_d m_aI b_a_k w_U_d b_i: w_V_n_d_3_f_@L"
+    },
+    {
+      "id": "everyday-0052",
+      "text": "Nobody makes scrambled eggs quite like you do.",
+      "ph": "n_oU_b_0_d_i m_eI_k_s s_k_r_a_m_b_@L_d E_g_z k_w_aI_t l_aI_k j_u: d_u:"
+    },
+    {
+      "id": "everyday-0053",
+      "text": "Why is the printer making that awful grinding noise again, just when I need it?",
+      "ph": "w_aI I_z D_@2 p_r_I_n_t_3 m_eI_k_I_N D_a_t O:_f_@L g_r_aI_n_d_I_N n_OI_z a#_g_E_n dZ_V_s_t w_E_n aI n_i:_d I_t"
+    },
+    {
+      "id": "everyday-0054",
+      "text": "We'll need milk, bread, a bag of onions, and something nice for pudding.",
+      "ph": "w_i:_l n_i:_d m_I_l_k b_r_E_d a# b_a_g V_v V_n_i@_n_z a_n_d s_V_m_T_I_N n_aI_s f_O@ p_U_d_I_N"
+    },
+    {
+      "id": "everyday-0055",
+      "text": "Happy anniversary, my darling!",
+      "ph": "h_a_p_i a_n_I_v_3:_s_3_r_i m_aI d_A@_l_I_N"
+    },
+    {
+      "id": "everyday-0056",
+      "text": "It's so frustrating when the app logs me out for no reason.",
+      "ph": "I_t_s s_oU f_r_V_s_t_r_eI_t#_I_N w_E_n D_I2 a_p l_O2_g_z m_i: aU_t f_O@ n_oU r_i:_z_@_n"
+    },
+    {
+      "id": "everyday-0057",
+      "text": "Is the match on the radio or the television this afternoon?",
+      "ph": "I_z D_@2 m_a_tS O2_n_D_@2 r_eI_d_I2_oU O@ D_@2 t_E_l_I#_v_I_Z_@_n D_I_s aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0058",
+      "text": "The children built an enormous sandcastle on the beach, complete with a moat and a drawbridge.",
+      "ph": "D_@2 tS_I_l_d_r_@_n b_I_l_t a#_n I2_n_o@_m_@_s s_a_n_d_k_aa_s_@L O2_n_D_@2 b_i:_tS k_@_m_p_l_i:_t w_I_D a# m_oU_t a_n_d a# d_r_O:_b_r_I_dZ"
+    },
+    {
+      "id": "everyday-0059",
+      "text": "Please turn the big light off and the lamp on.",
+      "ph": "p_l_i:_z t_3:_n D_@2 b_I_g l_aI_t O2_f a_n_d D_@2 l_a_m_p O2_n"
+    },
+    {
+      "id": "everyday-0060",
+      "text": "Kofi says the new bakery on the corner does amazing croissants, so let's go there for breakfast tomorrow.",
+      "ph": "k_oU_f_i s_E_z D_@2 n_u: b_eI_k_3_r_i O2_n_D_@2 k_O@_n_3 d_V_z a#_m_eI_z_I_N k_w_A:_s_A~_s s_oU l_E_t_s g_oU D_e@ f_O@ b_r_E_k_f_@_s_t t_@_m_A:_r_oU"
+    },
+    {
+      "id": "everyday-0061",
+      "text": "Whose turn is it to choose the music, and please, can it not be that song again?",
+      "ph": "h_u:_z t_3:_n I_z I_t t_@ tS_u:_z D_@2 m_j_u:_z_I_k a_n_d p_l_i:_z k_a_n I_t n_0_t b_i: D_a_t s_O2_N a#_g_E_n"
+    },
+    {
+      "id": "everyday-0062",
+      "text": "That's very kind of you, but I'm fine for now.",
+      "ph": "D_a_t_s v_E_r_i k_aI_n_d V_v j_u: b_V_t aI_m f_aI_n f_O@ n_aU"
+    },
+    {
+      "id": "everyday-0063",
+      "text": "Breathe slowly, there's no rush at all.",
+      "ph": "b_r_i:_D s_l_oU_l_i D_e@_z n_oU r_V_S a_t# O:_l"
+    },
+    {
+      "id": "everyday-0064",
+      "text": "Your hair looks gorgeous like that!",
+      "ph": "j_U@ h_e@ l_U_k_s g_o@_dZ_@_s l_aI_k D_a_t"
+    },
+    {
+      "id": "everyday-0065",
+      "text": "My tablets are in the little drawer by the bed, next to my reading glasses.",
+      "ph": "m_aI t_a_b_l_@_t_s A@_r- I_n_D_@2 l_I_t#_@L d_r_O@ b_aI D_@2 b_E_d n_E_k_s_t t_@ m_aI r_i:_d_I_N g_l_aa_s_I#_z"
+    },
+    {
+      "id": "everyday-0066",
+      "text": "Did anybody remember to water the plants on the balcony?",
+      "ph": "d_I_d E_n_I2_b_0_d_i r_I#_m_E_m_b_3 t_@ w_O:_t#_3 D_@2 p_l_aa_n_t_s O2_n_D_@2 b_a_l_k_@_n_i"
+    },
+    {
+      "id": "everyday-0067",
+      "text": "We could take the scenic route along the river and stop for an ice cream.",
+      "ph": "w_i: k_U_d t_eI_k D_@2 s_i:_n_I_k r_aU_t a#_l_O2_N D_@2 r_I_v_3 a_n_d s_t2_0_p f_3_r-_@_n aI_s k_r_i:_m"
+    },
+    {
+      "id": "everyday-0068",
+      "text": "There's a chilly breeze coming from somewhere near the window.",
+      "ph": "D_e@_z a# tS_I_l_i b_r_i:_z k_V_m_I2_N f_r_V_m s_V_m_w_e@ n_i@3 D_@2 w_I_n_d_oU"
+    },
+    {
+      "id": "everyday-0069",
+      "text": "How many guests are coming to the party on Saturday, and do we have enough chairs?",
+      "ph": "h_aU m_E_n_i g_E_s_t_s A@ k_V_m_I2_N t_@ D_@2 p_A@_t#_i O2_n s_a_t#_3_d_eI a_n_d d_u: w_i: h_a_v I2_n_V_f tS_e@_z"
+    },
+    {
+      "id": "everyday-0070",
+      "text": "Fresh bread and butter is all I want right now.",
+      "ph": "f_r_E_S b_r_E_d a_n_d b_V_t#_3_r- I_z O:_l aI w_O2_n_t r_aI_t n_aU"
+    },
+    {
+      "id": "everyday-0071",
+      "text": "Aisha and I used to sing in the same choir, and we always giggled during the quiet bits.",
+      "ph": "eI_S_@ a_n_d aI j_u:_z_d t_@ s_I_N I_n_D_@2 s_eI_m k_w_aI3 a_n_d w_i: O:_l_w_eI_z g_I_g_@L_d d_U@_r_I_N D_@2 k_w_aI@_t b_I_t_s"
+    },
+    {
+      "id": "everyday-0072",
+      "text": "Could you scratch the top of my back, just there?",
+      "ph": "k_U_d j_u: s_k_r_a_tS D_@2 t2_0_p V_v m_aI b_a_k dZ_V_s_t D_e@"
+    },
+    {
+      "id": "everyday-0073",
+      "text": "Every autumn the squirrels steal all our walnuts and bury them in the neighbors' lawn.",
+      "ph": "E_v_r_i O:_t#_V_m D_@2 s_k_w_3:_l_z s_t_i:_l O:_l aU_3 w_O:_l_n_V_t_s a_n_d b_E_r_i D_E_m I_n_D_@2 n_eI_b_3_z l_O:_n"
+    },
+    {
+      "id": "everyday-0074",
+      "text": "The traffic was terrible on the way to the dentist.",
+      "ph": "D_@2 t_r_a_f_I_k w_V_z t_E_r_I#_b_@L O2_n_D_@2 w_eI t_@ D_@2 d_E_n_t_I_s_t"
+    },
+    {
+      "id": "everyday-0075",
+      "text": "Let's not talk about work today.",
+      "ph": "l_E_t_s n_0_t t_O:_k a#_b_aU_t w_3:_k t_@_d_eI"
+    },
+    {
+      "id": "everyday-0076",
+      "text": "What a glorious sunset!",
+      "ph": "w_V_t a# g_l_o@_r_i@_s s_V_n_s_E_t"
+    },
+    {
+      "id": "everyday-0077",
+      "text": "You're very welcome, it was no trouble at all.",
+      "ph": "j_U@ v_E_r_i w_E_l_k_V_m I_t w_V_z n_oU t_r_V_b_@L a_t# O:_l"
+    },
+    {
+      "id": "everyday-0078",
+      "text": "My favorite season has always been spring, when everything starts growing again.",
+      "ph": "m_aI f_eI_v_3_r_I#_t s_i:_z_@_n h_a#_z O:_l_w_eI_z b_I_n s_p_r_I_N w_E_n E_v_r_I2_T_I_N s_t_A@_t_s g_r_oU_I_N a#_g_E_n"
+    },
+    {
+      "id": "everyday-0079",
+      "text": "When does the new series start?",
+      "ph": "w_E_n d_V_z D_@2 n_u: s_i@3_r_i_z s_t_A@_t"
+    },
+    {
+      "id": "everyday-0080",
+      "text": "A cup of hot chocolate would really hit the spot.",
+      "ph": "a# k_V_p V_v h_0_t tS_0_k_l_@_t w_U_d r_i@_l_i h_I_t D_@2 s_p_0_t"
+    },
+    {
+      "id": "everyday-0081",
+      "text": "Does this soup need a bit more salt, or is it just my taste buds?",
+      "ph": "d_V_z D_I_s s_u:_p n_i:_d a# b_I_t m_o@ s_O2_l_t O@_r I_z I_t dZ_V_s_t m_aI t_eI_s_t b_V_d_z"
+    },
+    {
+      "id": "everyday-0082",
+      "text": "My cousin Mateo just moved to a tiny apartment in Edinburgh, right next to the castle.",
+      "ph": "m_aI k_V_z_@_n m_a#_t_eI_oU dZ_V_s_t m_u:_v_d t_U a# t_aI_n_i a#_p_A@_t_m_@_n_t I_n E_d_I_n_b_V_r_@ r_aI_t n_E_k_s_t t_@ D_@2 k_aa_s_@L"
+    },
+    {
+      "id": "everyday-0083",
+      "text": "Hold my hand for a moment, would you?",
+      "ph": "h_oU_l_d m_aI h_a_n_d f_3_r-_@ m_oU_m_@_n_t w_U_d j_u:"
+    },
+    {
+      "id": "everyday-0084",
+      "text": "Wow, you got here quickly!",
+      "ph": "w_aU j_u: g_0_t h_i@3 k_w_I_k_l_i"
+    },
+    {
+      "id": "everyday-0085",
+      "text": "The washing machine has been beeping at me all morning, and I have no idea why.",
+      "ph": "D_@2 w_0_S_I_N m_@_S_i:_n h_a_z_b_i:_n b_i:_p_I_N a_t m_i: O:_l m_O@_n_I_N a_n_d aI h_a_v n_oU aI_d_i@ w_aI"
+    },
+    {
+      "id": "everyday-0086",
+      "text": "Are you warm enough, or shall I grab you a blanket?",
+      "ph": "A@ j_u: w_O@_m I2_n_V_f O@ S_a_l aI g_r_a_b j_u: a# b_l_a_N_k_I2_t"
+    },
+    {
+      "id": "everyday-0087",
+      "text": "Thursday works better for me than Wednesday, because the morning is usually my best time.",
+      "ph": "T_3:_z_d_eI w_3:_k_s b_E_t#_3 f_O@ m_i: D_a#_n w_E_n_z_d_eI b_I_k_V_z D_@2 m_O@_n_I_N I_z j_u:_Z_u:_@L_i m_aI b_E_s_t t2_aI_m"
+    },
+    {
+      "id": "everyday-0088",
+      "text": "You can't possibly have eaten all the cookies already!",
+      "ph": "j_u: k_a_n_t p_0_s_I#_b_l_i h_a_v i:_n- O:_l D_@2 k_U_k_i_z O:_l_r_E_d_i"
+    },
+    {
+      "id": "everyday-0089",
+      "text": "Thirty-three thousand steps in one day, and my legs still remember it.",
+      "ph": "T_3:_t#_i_T_r_i: T_aU_z_@_n_d s_t_E_p_s I_n w_V_n d_eI a_n_d m_aI l_E_g_z s_t_I_l r_I#_m_E_m_b_3_r- I_t"
+    },
+    {
+      "id": "everyday-0090",
+      "text": "I'd rather have the window open, if that's all right with everyone.",
+      "ph": "aI_d r_a_D_3 h_a_v D_@2 w_I_n_d_oU oU_p_@_n I_f D_a_t_s O:_l r_aI_t w_I_D E_v_r_I_w_V_n"
+    },
+    {
+      "id": "everyday-0091",
+      "text": "Who taught you to make pastry like this?",
+      "ph": "h_u: t_O:_t j_u: t_@ m_eI_k p_eI_s_t_r_i l_aI_k D_I_s"
+    },
+    {
+      "id": "everyday-0092",
+      "text": "There's a splinter in my thumb that's driving me mad.",
+      "ph": "D_e@_z a# s_p_l_I_n_t_3_r- I_n m_aI T_V_m D_a_t_s d_r_aI_v_I_N m_i: m_a_d"
+    },
+    {
+      "id": "everyday-0093",
+      "text": "Let's video call Grandma on Sunday so she can see the baby.",
+      "ph": "l_E_t_s v_I_d_I2_oU k_O:_l g_r_a_n_d_m_A: O2_n s_V_n_d_eI s_oU S_i: k_a_n s_i: D_@2 b_eI_b_i"
+    },
+    {
+      "id": "everyday-0094",
+      "text": "The library has a whole shelf of new mysteries, so could you pick me out a couple?",
+      "ph": "D_@2 l_aI_b_r_e@_r_i h_a#_z a# h_oU_l S_E_l_f V_v n_u: m_I_s_t_3_r_i_z s_oU k_U_d j_u: p_I_k m_i: aU_t a# k_V_p_@L"
+    },
+    {
+      "id": "everyday-0095",
+      "text": "Please speak up a little, the television is quite loud.",
+      "ph": "p_l_i:_z s_p_i:_k V_p a# l_I_t#_@L D_@2 t_E_l_I#_v_I_Z_@_n I_z k_w_aI_t l_aU_d"
+    },
+    {
+      "id": "everyday-0096",
+      "text": "We've saved enough for a long weekend by the sea in May.",
+      "ph": "w_i:_v s_eI_v_d I2_n_V_f f_3_r-_@ l_O2_N w_i:_k_E_n_d b_aI D_@2 s_i: I_n m_eI"
+    },
+    {
+      "id": "everyday-0097",
+      "text": "Is it raining, or is that just the wind?",
+      "ph": "I_z I_t r_eI_n_I_N O@_r I_z D_a_t dZ_V_s_t D_@2 w_I_n_d"
+    },
+    {
+      "id": "everyday-0098",
+      "text": "Nadia knits the warmest scarves I've ever owned.",
+      "ph": "n_A:_d_j_@ n_I_t_s D_@2 w_O@_m_I2_s_t s_k_A@_v_z aI_v E_v_3_r- oU_n_d"
+    },
+    {
+      "id": "everyday-0099",
+      "text": "My medicine is due at noon.",
+      "ph": "m_aI m_E_d_@_s_@_n I_z d_u: a_t n_u:_n"
+    },
+    {
+      "id": "everyday-0100",
+      "text": "Don't let me forget to call the plumber tomorrow morning about the leaky pipe under the sink.",
+      "ph": "d_oU_n_t l_E_t m_i: f_3_g_E_t t_@ k_O:_l D_@2 p_l_V_m_3 t_@_m_A:_r_oU m_O@_n_I_N a#_b_aU_t D_@2 l_i:_k_i p_aI_p V_n_d_3 D_@2 s_I_N_k"
+    },
+    {
+      "id": "everyday-0101",
+      "text": "What on earth is that dog doing in the flowerbed?",
+      "ph": "w_V_t O2_n 3:_T I_z D_a_t d_0_g d_u:_I_N I_n_D_@2 f_l_aU_3_b_E_d"
+    },
+    {
+      "id": "everyday-0102",
+      "text": "That was a really lovely surprise, thank you!",
+      "ph": "D_a_t w_V_z_a# r_i@_l_i l_V_v_l_i s_3_p_r_aI_z T_a_N_k j_u:"
+    },
+    {
+      "id": "everyday-0103",
+      "text": "Our first apartment had a kitchen the size of a cupboard.",
+      "ph": "aU_3 f_3:_s_t a#_p_A@_t_m_@_n_t h_a_d a# k_I_tS_@_n D_@2 s_aI_z @_v_@ k_V_b_@_d"
+    },
+    {
+      "id": "everyday-0104",
+      "text": "Could you move my feet a little to the left?",
+      "ph": "k_U_d j_u: m_u:_v m_aI f_i:_t a# l_I_t#_@L t_@ D_@2 l_E_f_t"
+    },
+    {
+      "id": "everyday-0105",
+      "text": "Sunday mornings are for pancakes, slow coffee and reading the paper from cover to cover.",
+      "ph": "s_V_n_d_eI m_O@_n_I_N_z A@ f_O@ p_a_N_k_eI_k_s s_l_oU k_O2_f_i a_n_d r_i:_d_I_N D_@2 p_eI_p_3 f_r_V_m k_V_v_3 t_@ k_V_v_3"
+    },
+    {
+      "id": "everyday-0106",
+      "text": "Tell Ellie I said congratulations on passing her driving test.",
+      "ph": "t_E_l E_l_i aI s_E_d k_@_N_g_r_a_tS_U_l_eI_S_@_n_z O2_n p_aa_s_I_N h_3: d_r_aI_v_I_N t_E_s_t"
+    },
+    {
+      "id": "everyday-0107",
+      "text": "You're not seriously wearing those socks with sandals?",
+      "ph": "j_U@ n_0_t s_i@3_r_i_@_s_l_i w_e@_r_I_N D_oU_z s_0_k_s w_I_D s_a_n_d_@L_z"
+    },
+    {
+      "id": "everyday-0108",
+      "text": "The geese fly south in big noisy arrows every October.",
+      "ph": "D_@2 g_i:_s f_l_aI s_aU_T I_n b_I_g n_OI_z_i a_r_oU_z E_v_r_i 0_k_t_oU_b_3"
+    },
+    {
+      "id": "everyday-0109",
+      "text": "Feeling a bit tired this afternoon.",
+      "ph": "f_i:_l_I_N a# b_I_t t_aI3_d D_I_s aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0110",
+      "text": "The new fridge ended up costing far more than we planned.",
+      "ph": "D_@2 n_u: f_r_I_dZ E_n_d_I#_d V_p k_O2_s_t_I_N f_A@_m_o@ D_a#_n w_i: p_l_a_n_d"
+    },
+    {
+      "id": "everyday-0111",
+      "text": "The best part of my day is when the house goes quiet.",
+      "ph": "D_@2 b_E_s_t p_A@_t V_v m_aI d_eI I_z w_E_n D_@2 h_aU_s g_oU_z k_w_aI@_t"
+    },
+    {
+      "id": "everyday-0112",
+      "text": "We laughed so hard that Priya snorted lemonade out of her nose!",
+      "ph": "w_i: l_aa_f_t s_oU h_A@_d D_a_t p_r_I_j_@ s_n_O@_t#_I#_d l_E_m_@_n_eI_d aU_t#_@_v h_3: n_oU_z"
+    },
+    {
+      "id": "everyday-0113",
+      "text": "Shall we put the garden chairs away before the storm arrives this evening?",
+      "ph": "S_a_l w_i: p_U_t D_@2 g_A@_d_@_n tS_e@_z a#_w_eI b_I#_f_o@ D_@2 s_t_o@_m 3_r_aI_v_z D_I_s i:_v_n_I_N"
+    },
+    {
+      "id": "everyday-0114",
+      "text": "Please put a little music on while I rest.",
+      "ph": "p_l_i:_z p_U_t a# l_I_t#_@L m_j_u:_z_I_k O2_n w_aI_l aI r_E_s_t"
+    },
+    {
+      "id": "everyday-0115",
+      "text": "Honestly, these new phones are far too clever for me, they keep changing the settings on their own.",
+      "ph": "0_n_I_s_t_l_i D_i:_z n_u: f_oU_n_z A@ f_A@ t_u: k_l_E_v_3 f_O@ m_i: D_eI k_i:_p tS_eI_n_dZ_I_N D_@2 s_E_t#_I_N_z O2_n D_e@_r oU_n"
+    },
+    {
+      "id": "everyday-0116",
+      "text": "It's twenty past four, so the kids will be home soon.",
+      "ph": "I_t_s t_w_E_n_t_i p_aa_s_t f_o@ s_oU D_@2 k_I_d_z w_I_l b_i: h_oU_m s_u:_n"
+    },
+    {
+      "id": "everyday-0117",
+      "text": "Have you finished that thriller I lent you, or are you still stuck on chapter three?",
+      "ph": "h_a_v j_u: f_I_n_I_S_t D_a_t T_r_I_l_3_r- aI l_E_n_t j_u: O@_r A@ j_u: s_t_I_l s_t_V_k O2_n tS_a_p_t_3 T_r_i:"
+    },
+    {
+      "id": "everyday-0118",
+      "text": "Jam spread thickly on hot toast is my idea of a perfect snack.",
+      "ph": "dZ_a_m s_p_r_E_d T_I_k_l_i O2_n h_0_t t_oU_s_t I_z m_aI aI_d_i@ @_v_@ p_3:_f_E_k_t s_n_a_k"
+    },
+    {
+      "id": "everyday-0119",
+      "text": "The clouds over the hills look like they mean business.",
+      "ph": "D_@2 k_l_aU_d_z oU_v_3 D_@2 h_I_l_z l_U_k l_aI_k D_eI m_i:_n b_I_z_n_@_s"
+    },
+    {
+      "id": "everyday-0120",
+      "text": "You make the best gravy in the whole family!",
+      "ph": "j_u: m_eI_k D_@2 b_E_s_t g_r_eI_v_i I_n_D_@2 h_oU_l f_a_m_I_l_i"
+    },
+    {
+      "id": "everyday-0121",
+      "text": "If you could travel anywhere at all next year, where would you go?",
+      "ph": "I_f j_u: k_U_d t_r_a_v_@L E_n_I2_w_e@_r a_t# O:_l n_E_k_s_t j_i@3 w_e@ w_U_d j_u: g_oU"
+    },
+    {
+      "id": "everyday-0122",
+      "text": "My knees ache a little when it's damp outside.",
+      "ph": "m_aI n_i:_z eI_k a# l_I_t#_@L w_E_n I_t_s d_a_m_p aU_t_s_aI_d"
+    },
+    {
+      "id": "everyday-0123",
+      "text": "Let's split the bill three ways.",
+      "ph": "l_E_t_s s_p_l_I_t D_@2 b_I_l T_r_i: w_eI_z"
+    },
+    {
+      "id": "everyday-0124",
+      "text": "The delivery driver left a parcel next door, so could you go and collect it?",
+      "ph": "D_@2 d_I#_l_I_v_3_r_i d_r_aI_v_3 l_E_f_t a# p_A@_s_@L n_E_k_s_t d_o@ s_oU k_U_d j_u: g_oU a_n_d k_@_l_E_k_t I_t"
+    },
+    {
+      "id": "everyday-0125",
+      "text": "Can you believe it's already the middle of November?",
+      "ph": "k_a_n j_u: b_I#_l_i:_v I_t_s O:_l_r_E_d_i D_@2 m_I_d_@L V_v n_oU_v_E_m_b_3"
+    },
+    {
+      "id": "everyday-0126",
+      "text": "Hannah's twins started school this September.",
+      "ph": "h_a_n_@_z t_w_I_n_z s_t_A@_t#_I#_d s_k_u:_l D_I_s s_E_p_t_E_m_b_3"
+    },
+    {
+      "id": "everyday-0127",
+      "text": "Thank you for being so patient with me today.",
+      "ph": "T_a_N_k j_u: f_O@ b_i:_I_N s_oU p_eI_S_@_n_t w_I_D m_i: t_@_d_eI"
+    },
+    {
+      "id": "everyday-0128",
+      "text": "Just a sip of water, please.",
+      "ph": "dZ_V_s_t a# s_I_p V_v w_O:_t#_3 p_l_i:_z"
+    },
+    {
+      "id": "everyday-0129",
+      "text": "Did you see the news about the new bridge opening across the river next spring?",
+      "ph": "d_I_d j_u: s_i: D_@2 n_u:_z a#_b_aU_t D_@2 n_u: b_r_I_dZ oU_p_@_n_I_N @_k_r_0_s D_@2 r_I_v_3 n_E_k_s_t s_p_r_I_N"
+    },
+    {
+      "id": "everyday-0130",
+      "text": "We should frame that photo of the boats in the harbor.",
+      "ph": "w_i: S_U_d f_r_eI_m D_a_t f_oU_t#_oU V_v_D_@2 b_oU_t_s I_n_D_@2 h_A@_b_3"
+    },
+    {
+      "id": "everyday-0131",
+      "text": "Ooh, that smells absolutely amazing!",
+      "ph": "u: D_a_t s_m_E_l_z a_b_s_@_l_u:_t_l_i a#_m_eI_z_I_N"
+    },
+    {
+      "id": "everyday-0132",
+      "text": "My sister insists that pineapple belongs on pizza, and frankly, I think she's onto something.",
+      "ph": "m_aI s_I_s_t_3_r- I_n_s_I_s_t_s D_a_t p_aI_n_a_p_@L b_I#_l_O2_N_z O2_n p_i:_t_s_@ a_n_d f_r_a_N_k_l_i aI T_I_N_k S_i:_z 0_n_t2_U s_V_m_T_I_N"
+    },
+    {
+      "id": "everyday-0133",
+      "text": "What did the doctor say about your ankle?",
+      "ph": "w_V_t d_I_d D_@2 d_0_k_t_3 s_eI a#_b_aU_t j_U@_r- a_N_k_@L"
+    },
+    {
+      "id": "everyday-0134",
+      "text": "The kitchen tap has been dripping since Tuesday.",
+      "ph": "D_@2 k_I_tS_@_n t2_a_p h_a_z_b_i:_n d_r_I_p_I_N s_I_n_s t_u:_z_d_eI"
+    },
+    {
+      "id": "everyday-0135",
+      "text": "Wrap up warm, it's bitter out there.",
+      "ph": "r_a_p V_p w_O@_m I_t_s b_I_t#_3_r- aU_t D_e@"
+    },
+    {
+      "id": "everyday-0136",
+      "text": "You look like you've had a long day.",
+      "ph": "j_u: l_U_k l_aI_k j_u:_v_h_a_d a# l_O2_N d_eI"
+    },
+    {
+      "id": "everyday-0137",
+      "text": "Every Friday we'd get fish and chips and eat them by the sea.",
+      "ph": "E_v_r_i f_r_aI_d_eI w_i:_d g_E_t f_I_S a_n_d tS_I_p_s a_n_d i:_t D_E_m b_aI D_@2 s_i:"
+    },
+    {
+      "id": "everyday-0138",
+      "text": "Do you think we'll need umbrellas tomorrow, or will a hat and scarf do?",
+      "ph": "d_u: j_u: T_I_N_k w_i:_l n_i:_d V_m_b_r_E_l_@_z t_@_m_A:_r_oU O@ w_I2_l a# h_a_t a_n_d s_k_A@_f d_u:"
+    },
+    {
+      "id": "everyday-0139",
+      "text": "Oliver's band is playing at the pub on Saturday night.",
+      "ph": "0_l_I_v_3_z b_a_n_d I_z p_l_eI_I_N a_t D_@2 p_V_b O2_n s_a_t#_3_d_eI n_aI_t"
+    },
+    {
+      "id": "everyday-0140",
+      "text": "The sixth of March suits everyone, so let's book it.",
+      "ph": "D_@2 s_I_k_s_T V_v m_A@_tS s_u:_t_s E_v_r_I_w_V_n s_oU l_E_t_s b_U_k I_t"
+    },
+    {
+      "id": "everyday-0141",
+      "text": "Whose idea was it to paint the bathroom orange?",
+      "ph": "h_u:_z aI_d_i@ w_V_z I_t t_@ p_eI_n_t D_@2 b_aa_T_r_u:_m O2_r_I_n_dZ"
+    },
+    {
+      "id": "everyday-0142",
+      "text": "It's lovely and quiet in here.",
+      "ph": "I_t_s l_V_v_l_i a_n_d k_w_aI@_t I_n h_i@3"
+    },
+    {
+      "id": "everyday-0143",
+      "text": "Tilt the screen towards me a little, please.",
+      "ph": "t_I_l_t D_@2 s_k_r_i:_n t_@_w_O@_d_z m_i: a# l_I_t#_@L p_l_i:_z"
+    },
+    {
+      "id": "everyday-0144",
+      "text": "My mother's recipe calls for six cloves of garlic, but I usually sneak in an extra one.",
+      "ph": "m_aI m_V_D_3_z r_E_s_I#_p_i: k_O:_l_z f_O@ s_I_k_s k_l_oU_v_z V_v g_A@_l_I_k b_V_t aI j_u:_Z_u:_@L_i s_n_i:_k I_n a#_n E_k_s_t_r_@ w_V_n"
+    },
+    {
+      "id": "everyday-0145",
+      "text": "That's brilliant news, I'm so happy for you!",
+      "ph": "D_a_t_s b_r_I_l_i@_n_t n_u:_z aI_m s_oU h_a_p_i f_O@ j_u:"
+    },
+    {
+      "id": "everyday-0146",
+      "text": "Are you coming to the school play next week?",
+      "ph": "A@ j_u: k_V_m_I2_N t_@ D_@2 s_k_u:_l p_l_eI n_E_k_s_t w_i:_k"
+    },
+    {
+      "id": "everyday-0147",
+      "text": "We both prefer the mountains to the beach, especially in the spring when the streams are full.",
+      "ph": "w_i: b_oU_T p_r_I_f_3: D_@2 m_aU_n_t_I_n_z t_@ D_@2 b_i:_tS I2_s_p_E_S_@L_i I_n_D_@2 s_p_r_I_N w_E_n D_@2 s_t_r_i:_m_z A@ f_U_l"
+    },
+    {
+      "id": "everyday-0148",
+      "text": "The cushion keeps slipping down behind my hip.",
+      "ph": "D_@2 k_U_S_@_n k_i:_p_s s_l_I_p_I_N d_aU_n b_I#_h_aI_n_d m_aI h_I_p"
+    },
+    {
+      "id": "everyday-0149",
+      "text": "Why don't we order takeout tonight?",
+      "ph": "w_aI d_oU_n_t w_i: O@_d_3 t_eI_k_aU_t t_@_n_aI_t"
+    },
+    {
+      "id": "everyday-0150",
+      "text": "Mei grows the hottest chili peppers I've ever tasted, and she eats them raw like apples.",
+      "ph": "m_eI g_r_oU_z D_@2 h_0_t#_I2_s_t tS_I_l_i p_E_p_3_z aI_v E_v_3 t_eI_s_t_I#_d a_n_d S_i: i:_t_s D_E_m r_O: l_aI_k a_p_@L_z"
+    },
+    {
+      "id": "everyday-0151",
+      "text": "Remind me what the password is for the internet.",
+      "ph": "r_I#_m_aI_n_d m_i: w_V_t D_@2 p_aa_s_w_3:_d I_z f_3_D_I2 I_n_t_3_n_E_t"
+    },
+    {
+      "id": "everyday-0152",
+      "text": "You'd never guess how old that tortoise is, he's older than both of us put together.",
+      "ph": "j_u:_d n_E_v_3 g_E_s h_aU oU_l_d D_a_t t_O@_t#_@_s I_z h_i:_z oU_l_d_3 D_a#_n b_oU_T V_v V_s p_U_t t_@_g_E_D_3"
+    },
+    {
+      "id": "everyday-0153",
+      "text": "Jack's wedding is in Dublin at the end of April, so we should book the flights soon.",
+      "ph": "dZ_a_k_s w_E_d_I_N I_z I_n d_V_b_l_I_n a_t D_I2 E_n_d V_v eI_p_r_@L s_oU w_i: S_U_d b_U_k D_@2 f_l_aI_t_s s_u:_n"
+    },
+    {
+      "id": "everyday-0154",
+      "text": "How do you take your tea these days?",
+      "ph": "h_aU d_u: j_u: t_eI_k j_U@ t_i: D_i:_z d_eI_z"
+    },
+    {
+      "id": "everyday-0155",
+      "text": "Nothing beats a hot bath after a long walk.",
+      "ph": "n_V_T_I_N b_i:_t_s a# h_0_t b_aa_T aa_f_t_3_r- a# l_O2_N w_O:_k"
+    },
+    {
+      "id": "everyday-0156",
+      "text": "It's been an absolute joy watching you grow up!",
+      "ph": "I_t_s b_I_n a#_n a_b_s_@_l_u:_t dZ_OI w_0_tS_I_N j_u: g_r_oU V_p"
+    },
+    {
+      "id": "everyday-0157",
+      "text": "Let me know when the taxi gets here.",
+      "ph": "l_E_t m_i: n_oU w_E_n D_@2 t_a_k_s_i g_E_t_s h_i@3"
+    },
+    {
+      "id": "everyday-0158",
+      "text": "That jigsaw has a thousand pieces and most of them are sky.",
+      "ph": "D_a_t dZ_I_g_s_O: h_a#_z a# T_aU_z_@_n_d p_i:_s_I#_z a_n_d m_oU_s_t @_v D_E_m A@ s_k_aI"
+    },
+    {
+      "id": "everyday-0159",
+      "text": "Was that lightning I saw a moment ago?",
+      "ph": "w_V_z D_a_t l_aI_t_n_I_N aI s_O: a# m_oU_m_@_n_t a#_g_oU"
+    },
+    {
+      "id": "everyday-0160",
+      "text": "A heavy blanket on my legs makes all the difference.",
+      "ph": "a# h_E_v_i b_l_a_N_k_I2_t O2_n m_aI l_E_g_z m_eI_k_s O:_l D_@2 d_I_f_r_@_n_s"
+    },
+    {
+      "id": "everyday-0161",
+      "text": "Who's winning at the moment?",
+      "ph": "h_u:_z w_I_n_I_N a_t D_@2 m_oU_m_@_n_t"
+    },
+    {
+      "id": "everyday-0162",
+      "text": "We drove through the night to catch the early ferry, and the kids slept the whole way.",
+      "ph": "w_i: d_r_oU_v T_r_u: D_@2 n_aI_t t_@ k_a_tS D_I2 3:_l_i f_E_r_i a_n_d D_@2 k_I_d_z s_l_E_p_t D_@2 h_oU_l w_eI"
+    },
+    {
+      "id": "everyday-0163",
+      "text": "Your laugh is my favorite sound in the world.",
+      "ph": "j_U@ l_aa_f I_z m_aI f_eI_v_3_r_I#_t s_aU_n_d I_n_D_@2 w_3:_l_d"
+    },
+    {
+      "id": "everyday-0164",
+      "text": "My exam results come out on the fifteenth of January, and I'm trying not to think about it.",
+      "ph": "m_aI E_g_z_a_m r_I2_z_V_l_t_s k_V_m aU_t O2_n_D_@2 f_I_f_t_i:_n_T V_v dZ_a_n_j_u:_e@_r_i a_n_d aI_m t_r_aI_I_N n_0_t t_@ T_I_N_k a#_b_aU_t I_t"
+    },
+    {
+      "id": "everyday-0165",
+      "text": "Could you read me the next chapter?",
+      "ph": "k_U_d j_u: r_i:_d m_i: D_@2 n_E_k_s_t tS_a_p_t_3"
+    },
+    {
+      "id": "everyday-0166",
+      "text": "Thirteen people have replied to the invitation so far, and only two of them can't come.",
+      "ph": "T_3:_t_i:_n p_i:_p_@L h_a_v r_I#_p_l_aI_d t_@ D_I2 I_n_v_I_t_eI_S_@_n s_oU f_A@ a_n_d oU_n_l_i t_u: V_v D_E_m k_a_n_t k_V_m"
+    },
+    {
+      "id": "everyday-0167",
+      "text": "Stop teasing me, I'm doing my best!",
+      "ph": "s_t2_0_p t_i:_z_I_N m_i: aI_m d_u:_I_N m_aI b_E_s_t"
+    },
+    {
+      "id": "everyday-0168",
+      "text": "My lips are dry, so could you pass the lip balm?",
+      "ph": "m_aI l_I_p_s A@ d_r_aI s_oU k_U_d j_u: p_aa_s D_@2 l_I_p b_A:_m"
+    },
+    {
+      "id": "everyday-0169",
+      "text": "How was the drive back from the airport?",
+      "ph": "h_aU w_V_z_D_@2 d_r_aI_v b_a_k f_r_V_m_D_I2 e@_p_o@_t"
+    },
+    {
+      "id": "everyday-0170",
+      "text": "Casual clothes are fine, it's only a family barbecue.",
+      "ph": "k_a_Z_u:_@L k_l_oU_D_z A@ f_aI_n I_t_s oU_n_l_i a# f_a_m_I_l_i b_A@_b_I2_k_j_u:"
+    },
+    {
+      "id": "everyday-0171",
+      "text": "Please give the dog a treat from me.",
+      "ph": "p_l_i:_z g_I_v D_@2 d_0_g a# t_r_i:_t f_r_V_m m_i:"
+    },
+    {
+      "id": "everyday-0172",
+      "text": "Is anyone else hungry, or is it just me?",
+      "ph": "I_z E_n_I_w_V_n E_l_s h_V_N_g_r_i O@_r I_z I_t dZ_V_s_t m_i:"
+    },
+    {
+      "id": "everyday-0173",
+      "text": "The first frost always catches the dahlias by surprise.",
+      "ph": "D_@2 f_3:_s_t f_r_O2_s_t O:_l_w_eI_z k_a_tS_I#_z D_@2 d_eI_l_i:_@_z b_aI s_3_p_r_aI_z"
+    },
+    {
+      "id": "everyday-0174",
+      "text": "You were right and I was wrong, just this once.",
+      "ph": "j_u: w_3: r_aI_t a_n_d aI w_V_z r_O2_N dZ_V_s_t D_I_s w_V_n_s"
+    },
+    {
+      "id": "everyday-0175",
+      "text": "We're thinking of repainting the hallway a soft shade of beige.",
+      "ph": "w_i@3 T_I_N_k_I_N V_v r_I#_p_eI_n_t_I_N D_@2 h_O:_l_w_eI a# s_O2_f_t S_eI_d V_v b_eI_Z"
+    },
+    {
+      "id": "everyday-0176",
+      "text": "Happy birthday, sweetheart, I hope it's a wonderful one!",
+      "ph": "h_a_p_i b_3:_T_d_eI s_w_i:_t_h_A@_t aI h_oU_p I_t_s a# w_V_n_d_3_f_@L w_V_n"
+    },
+    {
+      "id": "everyday-0177",
+      "text": "My back's fine now, thanks for asking.",
+      "ph": "m_aI b_a_k_s f_aI_n n_aU T_a_N_k_s f_O@_r aa_s_k_I_N"
+    },
+    {
+      "id": "everyday-0178",
+      "text": "What book are you reading?",
+      "ph": "w_V_t b_U_k A@ j_u: r_i:_d_I_N"
+    },
+    {
+      "id": "everyday-0179",
+      "text": "Quarter past eight is a perfectly reasonable bedtime, whatever the teenagers in this house might say.",
+      "ph": "k_w_O@_t#_3 p_aa_s_t eI_t I_z a# p_3:_f_E_k_t_l_i r_i:_z_@_n_@_b_@L b_E_d_t2_aI_m w_V_t_E_v_3 D_@2 t_i:_n_eI_dZ_3_z I_n D_I_s h_aU_s m_aI_t s_eI"
+    },
+    {
+      "id": "everyday-0180",
+      "text": "Sit with me a little longer.",
+      "ph": "s_I_t w_I_D m_i: a# l_I_t#_@L l_O2_N_g_3"
+    },
+    {
+      "id": "everyday-0181",
+      "text": "Have you heard from Uncle Dev since he got back from his three weeks in India?",
+      "ph": "h_a_v j_u: h_3:_d f_r_V_m V_N_k_@L d_E_v s_I_n_s h_i: g_0_t b_a_k f_r_V_m h_I_z T_r_i: w_i:_k_s I_n I_n_d_i_@"
+    },
+    {
+      "id": "everyday-0182",
+      "text": "The cricket went on for five whole days, and in the end nobody even won.",
+      "ph": "D_@2 k_r_I_k_I2_t w_E_n_t O2_n f_O@ f_aI_v h_oU_l d_eI_z a_n_d I_n_D_I2 E_n_d n_oU_b_0_d_i i:_v_@_n w_V_n"
+    },
+    {
+      "id": "everyday-0183",
+      "text": "Oh no, I've spilled tea all down my front!",
+      "ph": "oU n_oU aI_v s_p_I_l_d t_i: O:_l d_aU_n m_aI f_r_V_n_t"
+    },
+    {
+      "id": "everyday-0184",
+      "text": "My eyes are tired, so let's dim the lights.",
+      "ph": "m_aI aI_z A@ t_aI3_d s_oU l_E_t_s d_I_m D_@2 l_aI_t_s"
+    },
+    {
+      "id": "everyday-0185",
+      "text": "We met at a friend's barbecue on a scorching July afternoon.",
+      "ph": "w_i: m_E_t a_t#_@ f_r_E_n_d_z b_A@_b_I2_k_j_u: O2_n a# s_k_O@_tS_I_N dZ_u:_l_aI aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0186",
+      "text": "Would you like the last slice of cake?",
+      "ph": "w_U_d j_u: l_aI_k D_@2 l_aa_s_t s_l_aI_s V_v k_eI_k"
+    },
+    {
+      "id": "everyday-0187",
+      "text": "There's a hole in this sock big enough for my whole foot.",
+      "ph": "D_e@_z a# h_oU_l I_n D_I_s s_0_k b_I_g I2_n_V_f f_O@ m_aI h_oU_l f_U_t"
+    },
+    {
+      "id": "everyday-0188",
+      "text": "Please don't fuss, I'm perfectly comfortable.",
+      "ph": "p_l_i:_z d_oU_n_t f_V_s aI_m p_3:_f_E_k_t_l_i k_V_m_f_t_@_b_@L"
+    },
+    {
+      "id": "everyday-0189",
+      "text": "How long have you two been together now?",
+      "ph": "h_aU l_O2_N h_a_v j_u: t_u: b_I_n t_@_g_E_D_3 n_aU"
+    },
+    {
+      "id": "everyday-0190",
+      "text": "The radio said there's a big storm heading our way, so let's bring the laundry in.",
+      "ph": "D_@2 r_eI_d_I2_oU s_E_d D_e@_z a# b_I_g s_t_o@_m h_E_d_I_N aU_3 w_eI s_oU l_E_t_s b_r_I_N D_@2 l_O:_n_d_r_i I_n"
+    },
+    {
+      "id": "everyday-0191",
+      "text": "You're the most stubborn person I know, and I adore you for it.",
+      "ph": "j_U@ D_@2 m_oU_s_t s_t_V_b_3_n p_3:_s_@_n aI n_oU a_n_d aI a#_d_o@ j_u: f_O@_r I_t"
+    },
+    {
+      "id": "everyday-0192",
+      "text": "Shall I tell you a secret?",
+      "ph": "S_a_l aI t_E_l j_u: a# s_i:_k_r_I#_t"
+    },
+    {
+      "id": "everyday-0193",
+      "text": "Dad's trying to grow pumpkins again this year, even though the slugs ate every single one last time.",
+      "ph": "d_a_d_z t_r_aI_I_N t_@ g_r_oU p_V_m_p_k_I_n_z a#_g_E_n D_I_s j_i@3 i:_v_@_n D_oU D_@2 s_l_V_g_z eI_t E_v_r_i s_I_N_g_@L w_V_n l_aa_s_t t2_aI_m"
+    },
+    {
+      "id": "everyday-0194",
+      "text": "What a clever little puppy!",
+      "ph": "w_V_t a# k_l_E_v_3 l_I_t#_@L p_V_p_i"
+    },
+    {
+      "id": "everyday-0195",
+      "text": "The dentist can fit me in on the twelfth.",
+      "ph": "D_@2 d_E_n_t_I_s_t k_a_n f_I_t m_i: I_n O2_n_D_@2 t_w_E_l_f_T"
+    },
+    {
+      "id": "everyday-0196",
+      "text": "Do you prefer cats or dogs?",
+      "ph": "d_u: j_u: p_r_I_f_3: k_a_t_s O@ d_0_g_z"
+    },
+    {
+      "id": "everyday-0197",
+      "text": "We spent the whole afternoon sorting through old photographs and laughing at our terrible haircuts.",
+      "ph": "w_i: s_p_E_n_t D_@2 h_oU_l aa_f_t_3_n_u:_n s_O@_t#_I_N T_r_u: oU_l_d f_oU_t#_@_g_r_aa_f_z a_n_d l_aa_f_I_N a_t# aU_3 t_E_r_I#_b_@L h_e@_k_V_t_s"
+    },
+    {
+      "id": "everyday-0198",
+      "text": "Leave the dishes, we'll do them later.",
+      "ph": "l_i:_v D_@2 d_I_S_I#_z w_i:_l d_u: D_E_m l_eI_t#_3"
+    },
+    {
+      "id": "everyday-0199",
+      "text": "Zoe's painting won first prize at the village show.",
+      "ph": "z_oU_i_z p_eI_n_t_I_N w_V_n f_3:_s_t p_r_aI_z a_t D_@2 v_I_l_I2_dZ S_oU"
+    },
+    {
+      "id": "everyday-0200",
+      "text": "It's far too hot in here, could we open a window?",
+      "ph": "I_t_s f_A@ t_u: h_0_t I_n h_i@3 k_U_d w_i: oU_p_@_n a# w_I_n_d_oU"
+    },
+    {
+      "id": "everyday-0201",
+      "text": "Where's the best place to see the stars around here?",
+      "ph": "w_e@_z D_@2 b_E_s_t p_l_eI_s t_@ s_i: D_@2 s_t_A@_z 3_r_aU_n_d h_i@3"
+    },
+    {
+      "id": "everyday-0202",
+      "text": "A cool cloth on my forehead would feel nice.",
+      "ph": "a# k_u:_l k_l_O2_T O2_n m_aI f_O@_h_E_d w_U_d f_i:_l n_aI_s"
+    },
+    {
+      "id": "everyday-0203",
+      "text": "That was the strangest dream I've had in years, something about a giraffe driving a bus.",
+      "ph": "D_a_t w_V_z_D_@2 s_t_r_eI_n_dZ_I2_s_t d_r_i:_m aI_v_h_a_d I_n j_i@3_z s_V_m_T_I_N a#_b_aU_t a# dZ_I#_r_aa_f d_r_aI_v_I_N a# b_V_s"
+    },
+    {
+      "id": "everyday-0204",
+      "text": "Bring a sweater, it gets chilly by the lake.",
+      "ph": "b_r_I_N a# s_w_E_t#_3 I_t g_E_t_s tS_I_l_i b_aI D_@2 l_eI_k"
+    },
+    {
+      "id": "everyday-0205",
+      "text": "Are the tickets for the concert on your phone or mine?",
+      "ph": "A@ D_@2 t_I_k_I2_t_s f_3_D_@2 k_0_n_s_3_t O2_n j_U@ f_oU_n O@ m_aI_n"
+    },
+    {
+      "id": "everyday-0206",
+      "text": "My granddad could whistle any tune after hearing it just once, which used to drive Grandma mad.",
+      "ph": "m_aI g_r_a_n_d_a_d k_U_d w_I_s_@L E_n_i t_u:_n aa_f_t_3 h_i@3_r_I_N I_t dZ_V_s_t w_V_n_s w_I_tS j_u:_z_d t_@ d_r_aI_v g_r_a_n_d_m_A: m_a_d"
+    },
+    {
+      "id": "everyday-0207",
+      "text": "Splendid, that's exactly what I was hoping for!",
+      "ph": "s_p_l_E_n_d_I_d D_a_t_s E_g_z_a_k_t_l_i w_V_t aI w_V_z h_oU_p_I_N f_O@"
+    },
+    {
+      "id": "everyday-0208",
+      "text": "We're out of eggs, so pancakes are off the menu.",
+      "ph": "w_i@3_r aU_t#_@_v E_g_z s_oU p_a_N_k_eI_k_s A@_r- O2_f D_@2 m_E_n_j_u:"
+    },
+    {
+      "id": "everyday-0209",
+      "text": "Listen, you can hear the birds singing in the hedge.",
+      "ph": "l_I_s_@_n j_u: k_a_n h_i@3 D_@2 b_3:_d_z s_I_N_I_N I_n_D_@2 h_E_dZ"
+    },
+    {
+      "id": "everyday-0210",
+      "text": "You've got flour on your nose.",
+      "ph": "j_u:_v g_0_t f_l_aU_3_r- O2_n j_U@ n_oU_z"
+    },
+    {
+      "id": "everyday-0211",
+      "text": "Last summer we swam in the lake every single morning, even when it was freezing cold.",
+      "ph": "l_aa_s_t s_V_m_3 w_i: s_w_a_m I_n_D_@2 l_eI_k E_v_r_i s_I_N_g_@L m_O@_n_I_N i:_v_@_n w_E_n I_t w_V_z f_r_i:_z_I_N k_oU_l_d"
+    },
+    {
+      "id": "everyday-0212",
+      "text": "Is the medicine before or after food?",
+      "ph": "I_z D_@2 m_E_d_@_s_@_n b_I#_f_o@ O@_r aa_f_t_3 f_u:_d"
+    },
+    {
+      "id": "everyday-0213",
+      "text": "The new laptop is great, but the keys are tiny.",
+      "ph": "D_@2 n_u: l_a_p_t2_0_p I_z g_r_eI_t b_V_t D_@2 k_i:_z A@ t_aI_n_i"
+    },
+    {
+      "id": "everyday-0214",
+      "text": "Tell the twins I'm saving them a seat.",
+      "ph": "t_E_l D_@2 t_w_I_n_z aI_m s_eI_v_I_N D_E_m a# s_i:_t"
+    },
+    {
+      "id": "everyday-0215",
+      "text": "How did you sleep?",
+      "ph": "h_aU d_I_d j_u: s_l_i:_p"
+    },
+    {
+      "id": "everyday-0216",
+      "text": "My phone keeps freezing whenever I try to send photos.",
+      "ph": "m_aI f_oU_n k_i:_p_s f_r_i:_z_I_N w_E_n_E_v_3_r- aI t_r_aI t_@ s_E_n_d f_oU_t#_oU_z"
+    },
+    {
+      "id": "everyday-0217",
+      "text": "What lovely news to wake up to!",
+      "ph": "w_V_t l_V_v_l_i n_u:_z t_@ w_eI_k V_p t_u:"
+    },
+    {
+      "id": "everyday-0218",
+      "text": "Pepper the cat has decided the laundry basket is her bed, and nobody dares to argue.",
+      "ph": "p_E_p_3 D_@2 k_a_t h_a#_z d_I#_s_aI_d_I#_d D_@2 l_O:_n_d_r_i b_aa_s_k_I2_t I_z h_3: b_E_d a_n_d n_oU_b_0_d_i d_e@_z t_U A@_g_j_u:"
+    },
+    {
+      "id": "everyday-0219",
+      "text": "Our train leaves at ten past nine, so we'll need to be quick.",
+      "ph": "aU_3 t_r_eI_n l_i:_v_z a_t t_E_n p_aa_s_t n_aI_n s_oU w_i:_l n_i:_d t_@_b_i k_w_I_k"
+    },
+    {
+      "id": "everyday-0220",
+      "text": "Please tuck the blanket around my shoulders.",
+      "ph": "p_l_i:_z t_V_k D_@2 b_l_a_N_k_I2_t 3_r_aU_n_d m_aI S_oU_l_d_3_z"
+    },
+    {
+      "id": "everyday-0221",
+      "text": "Who's that singer with the beautiful deep voice?",
+      "ph": "h_u:_z D_a_t s_I_N_3 w_I_D_D_@2 b_j_u:_t#_i_f_@L d_i:_p v_OI_s"
+    },
+    {
+      "id": "everyday-0222",
+      "text": "That's a big decision, so let's sleep on it.",
+      "ph": "D_a_t_s a# b_I_g d_I#_s_I_Z_@_n s_oU l_E_t_s s_l_i:_p O2_n I_t"
+    },
+    {
+      "id": "everyday-0223",
+      "text": "We should plant some sunflowers and a few shrubs along the fence this spring.",
+      "ph": "w_i: S_U_d p_l_aa_n_t s_V_m s_V_n_f_l_aU_3_z a_n_d a# f_j_u: S_r_V_b_z a#_l_O2_N D_@2 f_E_n_s D_I_s s_p_r_I_N"
+    },
+    {
+      "id": "everyday-0224",
+      "text": "Do you need a hand with the shopping bags?",
+      "ph": "d_u: j_u: n_i:_d a# h_a_n_d w_I_D_D_@2 S_0_p_I_N b_a_g_z"
+    },
+    {
+      "id": "everyday-0225",
+      "text": "You should do stand-up, honestly!",
+      "ph": "j_u: S_U_d d_u: s_t_a_n_d_V_p 0_n_I_s_t_l_i"
+    },
+    {
+      "id": "everyday-0226",
+      "text": "My niece is studying marine biology in Plymouth, and she's already been diving with seals.",
+      "ph": "m_aI n_i:_s I_z s_t_V_d_i_I_N m_3_r_i:_n b_aI_0_l_@_dZ_i I_n p_l_I_m_@_T a_n_d S_i:_z O:_l_r_E_d_i b_I_n d_aI_v_I_N w_I_D s_i:_l_z"
+    },
+    {
+      "id": "everyday-0227",
+      "text": "Please check whether the oven is still on.",
+      "ph": "p_l_i:_z tS_E_k w_E_D_3 D_I2 V_v_@_n I_z s_t_I_l O2_n"
+    },
+    {
+      "id": "everyday-0228",
+      "text": "The afternoon light on the kitchen wall is warm and golden.",
+      "ph": "D_I2 aa_f_t_3_n_u:_n l_aI_t O2_n_D_@2 k_I_tS_@_n w_O:_l I_z w_O@_m a_n_d g_oU_l_d_@_n"
+    },
+    {
+      "id": "everyday-0229",
+      "text": "Monday was frustrating, but today's been much better.",
+      "ph": "m_V_n_d_eI w_V_z f_r_V_s_t_r_eI_t#_I_N b_V_t t_@_d_eI_z b_I_n m_V_tS b_E_t#_3"
+    },
+    {
+      "id": "everyday-0230",
+      "text": "Let's put the beach videos from Portugal on the big screen.",
+      "ph": "l_E_t_s p_U_t D_@2 b_i:_tS v_I_d_I2_oU_z f_r_V_m p_o@_tS_@_g_@L O2_n_D_@2 b_I_g s_k_r_i:_n"
+    },
+    {
+      "id": "everyday-0231",
+      "text": "When's the next bus into town?",
+      "ph": "w_E_n_z D_@2 n_E_k_s_t b_V_s I_n_t2_U t_aU_n"
+    },
+    {
+      "id": "everyday-0232",
+      "text": "You've been such a rock for me these past few months.",
+      "ph": "j_u:_v b_I_n s_V_tS a# r_0_k f_O@ m_i: D_i:_z p_aa_s_t f_j_u: m_V_n_T_s"
+    },
+    {
+      "id": "everyday-0233",
+      "text": "The marmalade jar is impossible to open.",
+      "ph": "D_@2 m_A@_m_a#_l_eI_d dZ_A@_r- I_z I_m_p_0_s_I#_b_@L t_U oU_p_@_n"
+    },
+    {
+      "id": "everyday-0234",
+      "text": "Is this the episode where they find the treasure?",
+      "ph": "I_z D_I_s D_I2 E_p_I2_s_oU_d w_e@ D_eI f_aI_n_d D_@2 t_r_E_Z_3"
+    },
+    {
+      "id": "everyday-0235",
+      "text": "Fifty-five years married, and he still makes me laugh.",
+      "ph": "f_I_f_t_i_f_aI_v j_i@3_z m_a_r_i_d a_n_d h_i: s_t_I_l m_eI_k_s m_i: l_aa_f"
+    },
+    {
+      "id": "everyday-0236",
+      "text": "Ask Tom whether he wants mustard or ketchup.",
+      "ph": "aa_s_k t_0_m w_E_D_3 h_i: w_O2_n_t_s m_V_s_t_3_d O@ k_E_tS_V_p"
+    },
+    {
+      "id": "everyday-0237",
+      "text": "My mouth is quite dry this morning.",
+      "ph": "m_aI m_aU_T I_z k_w_aI_t d_r_aI D_I_s m_O@_n_I_N"
+    },
+    {
+      "id": "everyday-0238",
+      "text": "Wouldn't it be wonderful to see the northern lights from a cabin somewhere in Norway?",
+      "ph": "w_U_d_@-_n_t I_t b_i: w_V_n_d_3_f_@L t_@ s_i: D_@2 n_O@_D_3_n l_aI_t_s f_r_V_m a# k_a_b_I_n s_V_m_w_e@_r I_n n_o@_w_eI"
+    },
+    {
+      "id": "everyday-0239",
+      "text": "Well done you, that's fantastic!",
+      "ph": "w_E_l d_V_n j_u: D_a_t_s f_a_n_t_a_s_t_I_k"
+    },
+    {
+      "id": "everyday-0240",
+      "text": "Three of my oldest friends are flying over in October.",
+      "ph": "T_r_i: V_v m_aI oU_l_d_I2_s_t f_r_E_n_d_z A@ f_l_aI_I_N oU_v_3_r- I_n 0_k_t_oU_b_3"
+    },
+    {
+      "id": "everyday-0241",
+      "text": "Can you hear me now, or am I still frozen?",
+      "ph": "k_a_n j_u: h_i@3 m_i: n_aU O@_r a#_m aI s_t_I_l f_r_oU_z_@_n"
+    },
+    {
+      "id": "everyday-0242",
+      "text": "The garage is full of things we'll never use again.",
+      "ph": "D_@2 g_3_r_A:_Z I_z f_U_l V_v T_I_N_z w_i:_l n_E_v_3 j_u:_z a#_g_E_n"
+    },
+    {
+      "id": "everyday-0243",
+      "text": "Please read the instructions out loud for me.",
+      "ph": "p_l_i:_z r_i:_d D_I2 I_n_s_t_r_V_k_S_@_n_z aU_t l_aU_d f_O@ m_i:"
+    },
+    {
+      "id": "everyday-0244",
+      "text": "You've outdone yourself with this pie!",
+      "ph": "j_u:_v aU_t_d_V_n j_o@_s_E_l_f w_I_D D_I_s p_aI"
+    },
+    {
+      "id": "everyday-0245",
+      "text": "Our hairdresser has the gentlest hands in the world.",
+      "ph": "aU_3 h_e@_d_r_E_s_3 h_a#_z D_@2 dZ_E_n_t_@L_I2_s_t h_a_n_d_z I_n_D_@2 w_3:_l_d"
+    },
+    {
+      "id": "everyday-0246",
+      "text": "Do you want to go for a walk later, once the rain has cleared?",
+      "ph": "d_u: j_u: w_O2_n_t t_@ g_oU f_3_r-_@ w_O:_k l_eI_t#_3 w_V_n_s D_@2 r_eI_n h_a#_z k_l_i@3_d"
+    },
+    {
+      "id": "everyday-0247",
+      "text": "Tea with lemon, no sugar, thanks.",
+      "ph": "t_i: w_I_D l_E_m_@_n n_oU S_U_g_3 T_a_N_k_s"
+    },
+    {
+      "id": "everyday-0248",
+      "text": "Hearing the rain on the roof makes me sleepy.",
+      "ph": "h_i@3_r_I_N D_@2 r_eI_n O2_n_D_@2 r_u:_f m_eI_k_s m_i: s_l_i:_p_i"
+    },
+    {
+      "id": "everyday-0249",
+      "text": "What's the score in the rugby?",
+      "ph": "w_V_t_s D_@2 s_k_o@_r I_n_D_@2 r_V_g_b_i"
+    },
+    {
+      "id": "everyday-0250",
+      "text": "I'm going to miss you while you're away.",
+      "ph": "aI_m g_oU_I_N t_@ m_I_s j_u: w_aI_l j_U@_r- a#_w_eI"
+    },
+    {
+      "id": "everyday-0251",
+      "text": "Seven o'clock tomorrow would be ideal.",
+      "ph": "s_E_v_@_n @_k_l_0_k t_@_m_A:_r_oU w_U_d b_i: aI_d_i@_l"
+    },
+    {
+      "id": "everyday-0252",
+      "text": "Look at the size of that pumpkin!",
+      "ph": "l_U_k a_t D_@2 s_aI_z V_v D_a_t p_V_m_p_k_I_n"
+    },
+    {
+      "id": "everyday-0253",
+      "text": "We stayed in a cottage with a thatched roof and a crooked chimney.",
+      "ph": "w_i: s_t_eI_d I_n a# k_0_t#_I2_dZ w_I_D a# T_a_tS_t r_u:_f a_n_d a# k_r_U_k_I_d tS_I_m_n_i"
+    },
+    {
+      "id": "everyday-0254",
+      "text": "Could you adjust my pillow so I'm sitting up a bit more?",
+      "ph": "k_U_d j_u: a#_dZ_V_s_t m_aI p_I_l_oU s_oU aI_m s_I_t#_I_N V_p a# b_I_t m_o@"
+    },
+    {
+      "id": "everyday-0255",
+      "text": "Arithmetic was never my strongest subject at school, but I was rather good at spelling.",
+      "ph": "3_r_I_T_m_@_t_I_k w_V_z n_E_v_3 m_aI s_t_r_O2_N_g_I2_s_t s_V_b_dZ_E_k_t a_t s_k_u:_l b_V_t aI w_V_z r_a_D_3 g_U_d a_t s_p_E_l_I_N"
+    },
+    {
+      "id": "everyday-0256",
+      "text": "The baby giggles every time the dog sneezes.",
+      "ph": "D_@2 b_eI_b_i g_I_g_@L_z E_v_r_i t2_aI_m D_@2 d_0_g s_n_i:_z_I#_z"
+    },
+    {
+      "id": "everyday-0257",
+      "text": "Where are my reading glasses hiding this time?",
+      "ph": "w_e@_r A@ m_aI r_i:_d_I_N g_l_aa_s_I#_z h_aI_d_I_N D_I_s t2_aI_m"
+    },
+    {
+      "id": "everyday-0258",
+      "text": "Don't rush, take all the time you need.",
+      "ph": "d_oU_n_t r_V_S t_eI_k O:_l D_@2 t2_aI_m j_u: n_i:_d"
+    },
+    {
+      "id": "everyday-0259",
+      "text": "Plums, pears, and a bunch of grapes, please.",
+      "ph": "p_l_V_m_z p_e@_z a_n_d a# b_V_n_tS V_v g_r_eI_p_s p_l_i:_z"
+    },
+    {
+      "id": "everyday-0260",
+      "text": "Our shopping lists seem to get longer every week, but the bags somehow get lighter.",
+      "ph": "aU_3 S_0_p_I_N l_I_s_t_s s_i:_m t_@ g_E_t l_O2_N_g_3_r- E_v_r_i w_i:_k b_V_t D_@2 b_a_g_z s_V_m_h_aU g_E_t l_aI_t#_3"
+    },
+    {
+      "id": "everyday-0261",
+      "text": "Have you tried the new Thai place on Station Road?",
+      "ph": "h_a_v j_u: t_r_aI_d D_@2 n_u: t_aI p_l_eI_s O2_n s_t_eI_S_@_n r_oU_d"
+    },
+    {
+      "id": "everyday-0262",
+      "text": "The kids want a trampoline, but the garden's far too small unless we dig up the vegetable patch.",
+      "ph": "D_@2 k_I_d_z w_O2_n_t a# t_r_a_m_p_@_l_i:_n b_V_t D_@2 g_A@_d_@_n_z f_A@ t_u: s_m_O:_l V_n_l_E_s w_i: d_I_g V_p D_@2 v_E_dZ_I2_t#_@_b_@L p_a_tS"
+    },
+    {
+      "id": "everyday-0263",
+      "text": "Help me find the remote, it's vanished again.",
+      "ph": "h_E_l_p m_i: f_aI_n_d D_@2 r_I#_m_oU_t I_t_s v_a_n_I_S_t a#_g_E_n"
+    },
+    {
+      "id": "everyday-0264",
+      "text": "What a genius idea that was!",
+      "ph": "w_V_t a# dZ_i:_n_I2_@_s aI_d_i@ D_a#_t w_V_z"
+    },
+    {
+      "id": "everyday-0265",
+      "text": "My hands get shaky when I'm tired, so let's stop there.",
+      "ph": "m_aI h_a_n_d_z g_E_t S_eI_k_i w_E_n aI_m t_aI3_d s_oU l_E_t_s s_t2_0_p D_e@"
+    },
+    {
+      "id": "everyday-0266",
+      "text": "What's the weather doing in Sydney right now?",
+      "ph": "w_V_t_s D_@2 w_E_D_3 d_u:_I_N I_n s_I_d_n_i r_aI_t n_aU"
+    },
+    {
+      "id": "everyday-0267",
+      "text": "We bought a secondhand piano last spring, and so far nobody in the house can play it.",
+      "ph": "w_i: b_O:_t a# s_E_k_@_n_d_h_a_n_d p_i_a_n_oU l_aa_s_t s_p_r_I_N a_n_d s_oU f_A@ n_oU_b_0_d_i I_n_D_@2 h_aU_s k_a_n p_l_eI I_t"
+    },
+    {
+      "id": "everyday-0268",
+      "text": "Is it Tuesday or Wednesday today?",
+      "ph": "I_z I_t t_u:_z_d_eI O@ w_E_n_z_d_eI t_@_d_eI"
+    },
+    {
+      "id": "everyday-0269",
+      "text": "A whisper of wind is coming through the curtains.",
+      "ph": "a# w_I_s_p_3_r- V_v w_I_n_d I_z k_V_m_I2_N T_r_u: D_@2 k_3:_t_@_n_z"
+    },
+    {
+      "id": "everyday-0270",
+      "text": "Please wipe my glasses, they're a bit smudged.",
+      "ph": "p_l_i:_z w_aI_p m_aI g_l_aa_s_I#_z D_eI_3_r- a# b_I_t s_m_V_dZ_d"
+    },
+    {
+      "id": "everyday-0271",
+      "text": "The smell of cut grass takes me straight back to childhood.",
+      "ph": "D_@2 s_m_E_l V_v k_V_t g_r_aa_s t_eI_k_s m_i: s_t_r_eI_t b_a_k t_@ tS_aI_l_d_h_U_d"
+    },
+    {
+      "id": "everyday-0272",
+      "text": "How exciting, a brand new baby girl!",
+      "ph": "h_aU E_k_s_aI_t#_I_N a# b_r_a_n_d n_u: b_eI_b_i g_3:_l"
+    },
+    {
+      "id": "everyday-0273",
+      "text": "Gran's pearl earrings are in the velvet box upstairs, on the left side of the wardrobe.",
+      "ph": "g_r_a_n_z p_3:_l i@3_r_I_N_z A@_r- I_n_D_@2 v_E_l_v_I2_t b_0_k_s V_p_s_t_e@_z O2_n_D_@2 l_E_f_t s_aI_d V_v_D_@2 w_O@_d_r_oU_b"
+    },
+    {
+      "id": "everyday-0274",
+      "text": "Did the plumber ever call you back?",
+      "ph": "d_I_d D_@2 p_l_V_m_3_r- E_v_3 k_O:_l j_u: b_a_k"
+    },
+    {
+      "id": "everyday-0275",
+      "text": "We'll celebrate properly when you get home.",
+      "ph": "w_i:_l s_E_l_@_b_r_eI_t p_r_0_p_3_l_i w_E_n j_u: g_E_t h_oU_m"
+    },
+    {
+      "id": "everyday-0276",
+      "text": "We'll have to agree to disagree on that one.",
+      "ph": "w_i:_l h_a_v t_U a#_g_r_i: t_@ d_I_s_a#_g_r_i: O2_n D_a_t_w_V_n"
+    },
+    {
+      "id": "everyday-0277",
+      "text": "Everything tastes better when someone else has cooked it.",
+      "ph": "E_v_r_I2_T_I_N t_eI_s_t_s b_E_t#_3 w_E_n s_V_m_w_V_n E_l_s h_a#_z k_U_k_t I_t"
+    },
+    {
+      "id": "everyday-0278",
+      "text": "Shall we save the rest for tomorrow?",
+      "ph": "S_a_l w_i: s_eI_v D_@2 r_E_s_t f_O@ t_@_m_A:_r_oU"
+    },
+    {
+      "id": "everyday-0279",
+      "text": "Ninety minutes of football and not a single goal, what a waste of an afternoon.",
+      "ph": "n_aI_n_t_i m_I_n_I_t_s V_v f_U_t_b_O:_l a_n_d n_0_t#_@ s_I_N_g_@L g_oU_l w_V_t a# w_eI_s_t @_v_@_n aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0280",
+      "text": "Thanks for the flowers, they've brightened the whole room.",
+      "ph": "T_a_N_k_s f_3_D_@2 f_l_aU_3_z D_eI_v b_r_aI_n-_d D_@2 h_oU_l r_u:_m"
+    },
+    {
+      "id": "everyday-0281",
+      "text": "Which one of you ate the last of the cheese?",
+      "ph": "w_I_tS w_V_n V_v j_u: eI_t D_@2 l_aa_s_t V_v_D_@2 tS_i:_z"
+    },
+    {
+      "id": "everyday-0282",
+      "text": "My feet feel much warmer now.",
+      "ph": "m_aI f_i:_t f_i:_l m_V_tS w_O@_m_3 n_aU"
+    },
+    {
+      "id": "everyday-0283",
+      "text": "Turn left at the lights, then it's the second right.",
+      "ph": "t_3:_n l_E_f_t a_t D_@2 l_aI_t_s D_E_n I_t_s D_@2 s_E_k_@_n_d r_aI_t"
+    },
+    {
+      "id": "everyday-0284",
+      "text": "Oh, how utterly wonderful!",
+      "ph": "oU h_aU V_t#_3_l_i w_V_n_d_3_f_@L"
+    },
+    {
+      "id": "everyday-0285",
+      "text": "We went camping in the rain and loved every soggy minute.",
+      "ph": "w_i: w_E_n_t k_a_m_p_I_N I_n_D_@2 r_eI_n a_n_d l_V_v_d E_v_r_i s_0_g_i m_I_n_I_t"
+    },
+    {
+      "id": "everyday-0286",
+      "text": "Are you free for a video call on Sunday afternoon?",
+      "ph": "A@ j_u: f_r_i: f_3_r-_@ v_I_d_I2_oU k_O:_l O2_n s_V_n_d_eI aa_f_t_3_n_u:_n"
+    },
+    {
+      "id": "everyday-0287",
+      "text": "The grandchildren are coming for a sleepover this weekend, so we'd better stock up on popcorn.",
+      "ph": "D_@2 g_r_a_n_d_tS_I_l_d_r_@_n A@ k_V_m_I2_N f_3_r-_@ s_l_i:_p_oU_v_3 D_I_s w_i:_k_E_n_d s_oU w_i:_d b_E_t#_3 s_t_0_k V_p O2_n p_0_p_k_O@_n"
+    },
+    {
+      "id": "everyday-0288",
+      "text": "Speak slowly for me, the line keeps breaking up.",
+      "ph": "s_p_i:_k s_l_oU_l_i f_O@ m_i: D_@2 l_aI_n k_i:_p_s b_r_eI_k_I_N V_p"
+    },
+    {
+      "id": "everyday-0289",
+      "text": "You're braver than you think.",
+      "ph": "j_U@ b_r_eI_v_3 D_a#_n j_u: T_I_N_k"
+    },
+    {
+      "id": "everyday-0290",
+      "text": "I'm bored of these four walls, can we go somewhere?",
+      "ph": "aI_m b_o@_d V_v D_i:_z f_o@ w_O:_l_z k_a_n w_i: g_oU s_V_m_w_e@"
+    },
+    {
+      "id": "everyday-0291",
+      "text": "Someone's been at the chocolate stash again.",
+      "ph": "s_V_m_w_V_n_z b_I_n a_t D_@2 tS_0_k_l_@_t s_t_a_S a#_g_E_n"
+    },
+    {
+      "id": "everyday-0292",
+      "text": "I think I've finally worked out how to send a voice message.",
+      "ph": "aI T_I_N_k aI_v f_aI_n_@L_i w_3:_k_t aU_t h_aU t_@ s_E_n_d a# v_OI_s m_E_s_I2_dZ"
+    },
+    {
+      "id": "everyday-0293",
+      "text": "Please put the fan on, I'm a little too warm.",
+      "ph": "p_l_i:_z p_U_t D_@2 f_a_n O2_n aI_m a# l_I_t#_@L t_u: w_O@_m"
+    },
+    {
+      "id": "everyday-0294",
+      "text": "The paths in the park are thick with fallen leaves.",
+      "ph": "D_@2 p_aa_T_s I_n_D_@2 p_A@_k A@ T_I_k w_I_D f_O:_l_@_n l_i:_v_z"
+    },
+    {
+      "id": "everyday-0295",
+      "text": "Is your back still bothering you?",
+      "ph": "I_z j_U@ b_a_k s_t_I_l b_0_D_3_r-_I_N j_u:"
+    },
+    {
+      "id": "everyday-0296",
+      "text": "Strong coffee and a crossword, that's my kind of morning.",
+      "ph": "s_t_r_O2_N k_O2_f_i a_n_d a# k_r_O2_s_w_3:_d D_a_t_s m_aI k_aI_n_d V_v m_O@_n_I_N"
+    },
+    {
+      "id": "everyday-0297",
+      "text": "My sister's sending postcards from every stop on her trip.",
+      "ph": "m_aI s_I_s_t_3_z s_E_n_d_I_N p_oU_s_t_k_A@_d_z f_r_V_m E_v_r_i s_t2_0_p O2_n h_3: t_r_I_p"
+    },
+    {
+      "id": "everyday-0298",
+      "text": "Who wants to hear about my thrilling trip to the eye doctor?",
+      "ph": "h_u: w_O2_n_t_s t_@ h_i@3_r a#_b_aU_t m_aI T_r_I_l_I_N t_r_I_p t_@ D_I2 aI d_0_k_t_3"
+    },
+    {
+      "id": "everyday-0299",
+      "text": "Look how much the baby's grown!",
+      "ph": "l_U_k h_aU m_V_tS D_@2 b_eI_b_i_z g_r_oU_n"
+    },
+    {
+      "id": "everyday-0300",
+      "text": "We'll leave around eleven and stop for lunch on the way.",
+      "ph": "w_i:_l l_i:_v 3_r_aU_n_d I#_l_E_v_@_n a_n_d s_t2_0_p f_O@ l_V_n_tS O2_n_D_@2 w_eI"
+    },
+    {
+      "id": "everyday-0301",
+      "text": "What's your favorite thing about this time of year?",
+      "ph": "w_V_t_s j_U@ f_eI_v_3_r_I#_t T_I_N a#_b_aU_t D_I_s t2_aI_m V_v j_i@3"
+    },
+    {
+      "id": "everyday-0302",
+      "text": "It's usually quieter here after the lunchtime rush.",
+      "ph": "I_t_s j_u:_Z_u:_@L_i k_w_aI@_t#_3 h_i@3_r aa_f_t_3 D_@2 l_V_n_tS_t2_aI_m r_V_S"
+    },
+    {
+      "id": "everyday-0303",
+      "text": "Please fasten the top button for me.",
+      "ph": "p_l_i:_z f_aa_s_@_n D_@2 t2_0_p b_V_n- f_O@ m_i:"
+    },
+    {
+      "id": "everyday-0304",
+      "text": "The puppy chewed through the charger cable again, so we'll need to buy another one.",
+      "ph": "D_@2 p_V_p_i tS_u:_d T_r_u: D_@2 tS_A@_dZ_3 k_eI_b_@L a#_g_E_n s_oU w_i:_l n_i:_d t_@ b_aI a#_n_V_D_3 w_V_n"
+    },
+    {
+      "id": "everyday-0305",
+      "text": "Your garden is a real picture this year!",
+      "ph": "j_U@ g_A@_d_@_n I_z a# r_i:_@-_l p_I_k_tS_3 D_I_s j_i@3"
+    },
+    {
+      "id": "everyday-0306",
+      "text": "Friday's forecast is cold and blustery with sleet.",
+      "ph": "f_r_aI_d_eI_z f_O@_k_aa_s_t I_z k_oU_l_d a_n_d b_l_V_s_t_3_r_i w_I_D s_l_i:_t"
+    },
+    {
+      "id": "everyday-0307",
+      "text": "Please tell Grandma the scarf she knitted is perfect and I wear it every day.",
+      "ph": "p_l_i:_z t_E_l g_r_a_n_d_m_A: D_@2 s_k_A@_f S_i: n_I_t#_I#_d I_z p_3:_f_E_k_t a_n_d aI w_e@_r I_t# E_v_r_i d_eI"
+    },
+    {
+      "id": "everyday-0308",
+      "text": "How's the new job treating you?",
+      "ph": "h_aU_z D_@2 n_u: dZ_0_b t_r_i:_t#_I_N j_u:"
+    },
+    {
+      "id": "everyday-0309",
+      "text": "She swims thirty lengths before breakfast every day.",
+      "ph": "S_i: s_w_I_m_z T_3:_t#_i l_E_N_T_s b_I#_f_o@ b_r_E_k_f_@_s_t E_v_r_i d_eI"
+    },
+    {
+      "id": "everyday-0310",
+      "text": "Stop it, that really tickles!",
+      "ph": "s_t2_0_p I_t D_a_t r_i@_l_i t_I_k_@L_z"
+    },
+    {
+      "id": "everyday-0311",
+      "text": "I've been looking forward to this all week.",
+      "ph": "aI_v b_I_n l_U_k_I_N f_O@_w_3_d t_@ D_I_s O:_l w_i:_k"
+    },
+    {
+      "id": "everyday-0312",
+      "text": "The shop on the corner is open until ten on Sundays now.",
+      "ph": "D_@2 S_0_p O2_n_D_@2 k_O@_n_3_r- I_z oU_p_@_n V_n_t_I_l t_E_n O2_n s_V_n_d_eI_z n_aU"
+    },
+    {
+      "id": "everyday-0313",
+      "text": "My mother kept every birthday card anyone ever sent her.",
+      "ph": "m_aI m_V_D_3 k_E_p_t E_v_r_i b_3:_T_d_eI k_A@_d E_n_I_w_V_n E_v_3 s_E_n_t h_3:"
+    },
+    {
+      "id": "everyday-0314",
+      "text": "Thanks for listening, it really helps.",
+      "ph": "T_a_N_k_s f_O@ l_I_s_@_n_I_N I_t r_i@_l_i h_E_l_p_s"
+    },
+    {
+      "id": "everyday-0315",
+      "text": "Where did you find such beautiful tulips in February?",
+      "ph": "w_e@ d_I_d j_u: f_aI_n_d s_V_tS b_j_u:_t#_i_f_@L t_j_u:_l_I_p_s I_n f_E_b_r_u:_e@_r_i"
+    },
+    {
+      "id": "everyday-0316",
+      "text": "The crackers are in the cupboard above the toaster.",
+      "ph": "D_@2 k_r_a_k_3_z A@_r- I_n_D_@2 k_V_b_@_d @_b_V_v D_@2 t_oU_s_t_3"
+    },
+    {
+      "id": "everyday-0317",
+      "text": "Pass me that cushion, would you?",
+      "ph": "p_aa_s m_i: D_a_t k_U_S_@_n w_U_d j_u:"
+    },
+    {
+      "id": "everyday-0318",
+      "text": "We've got so much to catch up on.",
+      "ph": "w_i:_v g_0_t s_oU m_V_tS t_@ k_a_tS V_p O2_n"
+    },
+    {
+      "id": "everyday-0319",
+      "text": "The car will need filling up before the trip.",
+      "ph": "D_@2 k_A@ w_I_l n_i:_d f_I_l_I_N V_p b_I#_f_o@ D_@2 t_r_I_p"
+    },
+    {
+      "id": "everyday-0320",
+      "text": "Honestly, you're the best neighbor anyone could ask for.",
+      "ph": "0_n_I_s_t_l_i j_U@ D_@2 b_E_s_t n_eI_b_3_r- E_n_I_w_V_n k_U_d aa_s_k f_O@"
+    },
+    {
+      "id": "everyday-0321",
+      "text": "The wasps have built a nest under the shed roof, so let's keep the door closed for now.",
+      "ph": "D_@2 w_0_s_p_s h_a_v b_I_l_t a# n_E_s_t V_n_d_3 D_@2 S_E_d r_u:_f s_oU l_E_t_s k_i:_p D_@2 d_o@ k_l_oU_z_d f_O@ n_aU"
+    },
+    {
+      "id": "everyday-0322",
+      "text": "Are you sure you don't mind driving?",
+      "ph": "A@ j_u: S_U@ j_u: d_oU_n_t m_aI_n_d d_r_aI_v_I_N"
+    },
+    {
+      "id": "everyday-0323",
+      "text": "Could you measure the gap between the bed and the wall?",
+      "ph": "k_U_d j_u: m_E_Z_3 D_@2 g_a_p b_I#_t_w_i:_n D_@2 b_E_d a_n_d D_@2 w_O:_l"
+    },
+    {
+      "id": "everyday-0324",
+      "text": "What a charming little cottage!",
+      "ph": "w_V_t a# tS_A@_m_I_N l_I_t#_@L k_0_t#_I2_dZ"
+    },
+    {
+      "id": "everyday-0325",
+      "text": "My cousin has three dogs, two cats and a very bossy goose.",
+      "ph": "m_aI k_V_z_@_n h_a#_z T_r_i: d_0_g_z t_u: k_a_t_s a_n_d a# v_E_r_i b_O2_s_i g_u:_s"
+    },
+    {
+      "id": "everyday-0326",
+      "text": "Do you think it'll snow before the end of December?",
+      "ph": "d_u: j_u: T_I_N_k I_t#_@L s_n_oU b_I#_f_o@ D_I2 E_n_d V_v d_I#_s_E_m_b_3"
+    },
+    {
+      "id": "everyday-0327",
+      "text": "Our street has the friendliest neighbors in the city.",
+      "ph": "aU_3 s_t_r_i:_t h_a#_z D_@2 f_r_E_n_d_l_i_I2_s_t n_eI_b_3_z I_n_D_@2 s_I_t#_i"
+    },
+    {
+      "id": "everyday-0328",
+      "text": "My shoulder's a bit sore, so go gently.",
+      "ph": "m_aI S_oU_l_d_3_z a# b_I_t s_o@ s_oU g_oU dZ_E_n_t_l_i"
+    },
+    {
+      "id": "everyday-0329",
+      "text": "Why does the toast always land butter side down?",
+      "ph": "w_aI d_V_z D_@2 t_oU_s_t O:_l_w_eI_z l_a_n_d b_V_t#_3 s_aI_d d_aU_n"
+    },
+    {
+      "id": "everyday-0330",
+      "text": "We could play cards or dominoes after tea.",
+      "ph": "w_i: k_U_d p_l_eI k_A@_d_z O@ d_0_m_I2_n_oU_z aa_f_t_3 t_i:"
+    },
+    {
+      "id": "everyday-0331",
+      "text": "Priya's been promoted to head of the science department!",
+      "ph": "p_r_I_j_@_z b_I_n p_r_@_m_oU_t#_I#_d t_@ h_E_d V_v_D_@2 s_aI@_n_s d_I#_p_A@_t_m_@_n_t"
+    },
+    {
+      "id": "everyday-0332",
+      "text": "Let the phone ring, they'll leave a message.",
+      "ph": "l_E_t D_@2 f_oU_n r_I_N D_eI_l l_i:_v a# m_E_s_I2_dZ"
+    },
+    {
+      "id": "everyday-0333",
+      "text": "How was your first day at the new school?",
+      "ph": "h_aU w_V_z j_U@ f_3:_s_t d_eI a_t D_@2 n_u: s_k_u:_l"
+    },
+    {
+      "id": "everyday-0334",
+      "text": "A gentle hand massage would really help my fingers.",
+      "ph": "a# dZ_E_n_t_@L h_a_n_d m_a#_s_A:_Z w_U_d r_i@_l_i h_E_l_p m_aI f_I_N_g_3_z"
+    },
+    {
+      "id": "everyday-0335",
+      "text": "Thank you, that's much more comfortable.",
+      "ph": "T_a_N_k j_u: D_a_t_s m_V_tS m_o@ k_V_m_f_t_@_b_@L"
+    },
+    {
+      "id": "everyday-0336",
+      "text": "Is that a new haircut, or have you just washed it?",
+      "ph": "I_z D_a_t#_@ n_u: h_e@_k_V_t O@ h_a_v j_u: dZ_V_s_t w_0_S_t I_t"
+    },
+    {
+      "id": "everyday-0337",
+      "text": "Twelve months ago we were sitting on a beach in Greece, eating olives and watching the fishermen.",
+      "ph": "t_w_E_l_v m_V_n_T_s a#_g_oU w_i: w_3: s_I_t#_I_N O2_n a# b_i:_tS I_n g_r_i:_s i:_t#_I_N 0_l_I_v_z a_n_d w_0_tS_I_N D_@2 f_I_S_3_m_E_n"
+    },
+    {
+      "id": "everyday-0338",
+      "text": "Please put my slippers where I can reach them.",
+      "ph": "p_l_i:_z p_U_t m_aI s_l_I_p_3_z w_e@_r aI k_a_n r_i:_tS D_E_m"
+    },
+    {
+      "id": "everyday-0339",
+      "text": "That band sounded even better live than on the album.",
+      "ph": "D_a_t b_a_n_d s_aU_n_d_I#_d i:_v_@_n b_E_t#_3 l_aI_v D_a#_n O2_n_D_I2 a_l_b_@_m"
+    },
+    {
+      "id": "everyday-0340",
+      "text": "It's so good to hear your voice!",
+      "ph": "I_t_s s_oU g_U_d t_@ h_i@3 j_U@ v_OI_s"
+    },
+    {
+      "id": "everyday-0341",
+      "text": "Where shall we go for your birthday dinner?",
+      "ph": "w_e@ S_a_l w_i: g_oU f_O@ j_U@ b_3:_T_d_eI d_I_n_3"
+    },
+    {
+      "id": "everyday-0342",
+      "text": "My nephew asked me whether computers existed when I was little, and I pretended to be offended.",
+      "ph": "m_aI n_E_f_j_u: aa_s_k_t m_i: w_E_D_3 k_@_m_p_j_u:_t#_3_z E_g_z_I_s_t_I#_d w_E_n aI w_V_z l_I_t#_@L a_n_d aI p_r_I_t_E_n_d_I#_d t_@_b_i @_f_E_n_d_I#_d"
+    },
+    {
+      "id": "everyday-0343",
+      "text": "Honey in hot water is just what I need.",
+      "ph": "h_V_n_i I_n h_0_t w_O:_t#_3_r- I_z dZ_V_s_t w_V_t aI n_i:_d"
+    },
+    {
+      "id": "everyday-0344",
+      "text": "We're running low on bandages in the first aid kit.",
+      "ph": "w_i@3 r_V_n_I_N l_oU O2_n b_a_n_d_I2_dZ_I#_z I_n_D_@2 f_3:_s_t eI_d k_I_t"
+    },
+    {
+      "id": "everyday-0345",
+      "text": "You were so funny at the party last night!",
+      "ph": "j_u: w_3: s_oU f_V_n_i a_t D_@2 p_A@_t#_i l_aa_s_t n_aI_t"
+    },
+    {
+      "id": "everyday-0346",
+      "text": "My manager said I can work from home on Fridays, which will save me hours of commuting.",
+      "ph": "m_aI m_a_n_I2_dZ_3 s_E_d aI k_a_n w_3:_k f_r_V_m h_oU_m O2_n f_r_aI_d_eI_z w_I_tS w_I_l s_eI_v m_i: aU_3_z V_v k_@_m_j_u:_t#_I_N"
+    },
+    {
+      "id": "everyday-0347",
+      "text": "The grandkids think my old records are hilarious.",
+      "ph": "D_@2 g_r_a_n_d_k_I_d_z T_I_N_k m_aI oU_l_d r_E_k_3_d_z A@ h_I_l_e@_r_i@_s"
+    },
+    {
+      "id": "everyday-0348",
+      "text": "Put the subtitles on, please, so I can follow along.",
+      "ph": "p_U_t D_@2 s_V_b_t_aI_t#_@L_z O2_n p_l_i:_z s_oU aI k_a_n f_0_l_oU a#_l_O2_N"
+    },
+    {
+      "id": "everyday-0349",
+      "text": "Watching the waves crash against the rocks is so soothing.",
+      "ph": "w_0_tS_I_N D_@2 w_eI_v_z k_r_a_S a#_g_E_n_s_t D_@2 r_0_k_s I_z s_oU s_u:_D_I_N"
+    },
+    {
+      "id": "everyday-0350",
+      "text": "Hurry up, the film starts in five minutes!",
+      "ph": "h_3:_r_i V_p D_@2 f_I_l_m s_t_A@_t_s I_n f_aI_v m_I_n_I_t_s"
+    },
+    {
+      "id": "everyday-0351",
+      "text": "My neck is stiff, so let's take a little break.",
+      "ph": "m_aI n_E_k I_z s_t_I_f s_oU l_E_t_s t_eI_k a# l_I_t#_@L b_r_eI_k"
+    },
+    {
+      "id": "everyday-0352",
+      "text": "Who do you think will win the baking competition?",
+      "ph": "h_u: d_u: j_u: T_I_N_k w_I_l w_I_n D_@2 b_eI_k_I_N k_0_m_p_@_t_I_S_@_n"
+    },
+    {
+      "id": "everyday-0353",
+      "text": "Is it my turn to host the book club next month?",
+      "ph": "I_z I_t m_aI t_3:_n t_@ h_oU_s_t D_@2 b_U_k k_l_V_b n_E_k_s_t m_V_n_T"
+    },
+    {
+      "id": "everyday-0354",
+      "text": "Tell me about your trip to Japan.",
+      "ph": "t_E_l m_i: a#_b_aU_t j_U@ t_r_I_p t_@ dZ_@_p_a_n"
+    },
+    {
+      "id": "everyday-0355",
+      "text": "The mail tends to come at about half past three.",
+      "ph": "D_@2 m_eI_l t_E_n_d_z t_@ k_V_m a_t# a#_b_aU_t h_a_f p_aa_s_t T_r_i:"
+    },
+    {
+      "id": "everyday-0356",
+      "text": "Do you like my new glasses?",
+      "ph": "d_u: j_u: l_aI_k m_aI n_u: g_l_aa_s_I#_z"
+    },
+    {
+      "id": "everyday-0357",
+      "text": "Which artists are on at the gallery this month?",
+      "ph": "w_I_tS A@_t#_I_s_t_s A@_r- O2_n a_t D_@2 g_a_l_3_r_i D_I_s m_V_n_T"
+    },
+    {
+      "id": "everyday-0358",
+      "text": "We kept chickens when the children were small, and every one of them had a silly name.",
+      "ph": "w_i: k_E_p_t tS_I_k_I_n_z w_E_n D_@2 tS_I_l_d_r_@_n w_3: s_m_O:_l a_n_d E_v_r_i w_V_n V_v D_E_m h_a_d a# s_I_l_i n_eI_m"
+    },
+    {
+      "id": "everyday-0359",
+      "text": "Your timing is perfect, the kettle's just boiled!",
+      "ph": "j_U@ t2_aI_m_I_N I_z p_3:_f_E_k_t D_@2 k_E_t#_@L_z dZ_V_s_t b_OI_l_d"
+    },
+    {
+      "id": "everyday-0360",
+      "text": "Please let everyone know I'm feeling much brighter today.",
+      "ph": "p_l_i:_z l_E_t E_v_r_I_w_V_n n_oU aI_m f_i:_l_I_N m_V_tS b_r_aI_t#_3 t_@_d_eI"
+    },
+    {
+      "id": "everyday-0361",
+      "text": "How much should we spend on Sam's present?",
+      "ph": "h_aU m_V_tS S_U_d w_i: s_p_E_n_d O2_n s_a_m_z p_r_E_z_@_n_t"
+    },
+    {
+      "id": "everyday-0362",
+      "text": "The orchestra played that slow piece you love, and I got goosebumps.",
+      "ph": "D_I2 O@_k_I#_s_t_r_@ p_l_eI_d D_a_t s_l_oU p_i:_s j_u: l_V_v a_n_d aI g_0_t g_u:_s_b_V_m_p_s"
+    },
+    {
+      "id": "everyday-0363",
+      "text": "Gosh, is it that time already?",
+      "ph": "g_0_S I_z I_t D_a_t t2_aI_m O:_l_r_E_d_i"
+    },
+    {
+      "id": "everyday-0364",
+      "text": "My wrist is aching, so I'll type less today.",
+      "ph": "m_aI r_I_s_t I_z eI_k_I_N s_oU aI_l t2_aI_p l_E_s t_@_d_eI"
+    },
+    {
+      "id": "everyday-0365",
+      "text": "We went to the same summer camp, thirty years apart.",
+      "ph": "w_i: w_E_n_t t_@ D_@2 s_eI_m s_V_m_3 k_a_m_p T_3:_t#_i j_i@3_z a#_p_A@_t"
+    },
+    {
+      "id": "everyday-0366",
+      "text": "Open the blinds halfway so the sun isn't in my eyes.",
+      "ph": "oU_p_@_n D_@2 b_l_aI_n_d_z h_a_f_w_eI s_oU D_@2 s_V_n I_z_@_n_t I_n m_aI aI_z"
+    },
+    {
+      "id": "everyday-0367",
+      "text": "Lovely to see you, come in and sit down!",
+      "ph": "l_V_v_l_i t_@ s_i: j_u: k_V_m I_n a_n_d s_I_t d_aU_n"
+    },
+    {
+      "id": "everyday-0368",
+      "text": "The cat sleeps in a sunbeam every afternoon without fail.",
+      "ph": "D_@2 k_a_t s_l_i:_p_s I_n a# s_V_n_b_i:_m E_v_r_i aa_f_t_3_n_u:_n w_I_D_aU_t f_eI_l"
+    },
+    {
+      "id": "everyday-0369",
+      "text": "Did you lock the back door?",
+      "ph": "d_I_d j_u: l_0_k D_@2 b_a_k d_o@"
+    },
+    {
+      "id": "everyday-0370",
+      "text": "Fresh sheets on the bed are pure bliss.",
+      "ph": "f_r_E_S S_i:_t_s O2_n_D_@2 b_E_d A@ p_j_U@ b_l_I_s"
+    },
+    {
+      "id": "everyday-0371",
+      "text": "I don't need anything else, thanks.",
+      "ph": "aI d_oU_n_t n_i:_d E_n_I2_T_I_N E_l_s T_a_N_k_s"
+    },
+    {
+      "id": "everyday-0372",
+      "text": "What did you think of the ending?",
+      "ph": "w_V_t d_I_d j_u: T_I_N_k V_v_D_I2 E_n_d_I_N"
+    },
+    {
+      "id": "everyday-0373",
+      "text": "Bring the photo album over here so we can look together.",
+      "ph": "b_r_I_N D_@2 f_oU_t#_oU a_l_b_@_m oU_v_3 h_i@3 s_oU w_i: k_a_n l_U_k t_@_g_E_D_3"
+    },
+    {
+      "id": "everyday-0374",
+      "text": "The highway was closed, so we went the long way round through all the little villages.",
+      "ph": "D_@2 h_aI_w_eI w_V_z k_l_oU_z_d s_oU w_i: w_E_n_t D_@2 l_O2_N w_eI r_aU_n_d T_r_u: O:_l D_@2 l_I_t#_@L v_I_l_I2_dZ_I#_z"
+    },
+    {
+      "id": "everyday-0375",
+      "text": "Drop by any time, the door's always open.",
+      "ph": "d_r_0_p b_aI E_n_i t2_aI_m D_@2 d_o@_z O:_l_w_eI_z oU_p_@_n"
+    },
+    {
+      "id": "everyday-0376",
+      "text": "Oh, you shouldn't have, it's beautiful!",
+      "ph": "oU j_u: S_U_d_@-_n_t_h_@_v I_t_s b_j_u:_t#_i_f_@L"
+    },
+    {
+      "id": "everyday-0377",
+      "text": "Our wedding song was playing in the supermarket today.",
+      "ph": "aU_3 w_E_d_I_N s_O2_N w_V_z p_l_eI_I_N I_n_D_@2 s_u:_p_3_m_A@_k_I_t t_@_d_eI"
+    },
+    {
+      "id": "everyday-0378",
+      "text": "Is everybody comfortable over there?",
+      "ph": "I_z E_v_r_I2_b_0_d_i k_V_m_f_t_@_b_@L oU_v_3 D_e@"
+    },
+    {
+      "id": "everyday-0379",
+      "text": "Hot milk with a pinch of cinnamon helps me sleep.",
+      "ph": "h_0_t m_I_l_k w_I_D a# p_I_n_tS V_v s_I_n_@_m_@_n h_E_l_p_s m_i: s_l_i:_p"
+    },
+    {
+      "id": "everyday-0380",
+      "text": "Let's book the restaurant for half past six.",
+      "ph": "l_E_t_s b_U_k D_@2 r_E_s_t_r_0_n_t f_O@ h_a_f p_aa_s_t s_I_k_s"
+    },
+    {
+      "id": "everyday-0381",
+      "text": "Where did you learn to dance like that?",
+      "ph": "w_e@ d_I_d j_u: l_3:_n t_@ d_aa_n_s l_aI_k D_a_t"
+    },
+    {
+      "id": "everyday-0382",
+      "text": "Seventeen candles on the cake, and she blew them all out at once.",
+      "ph": "s_E_v_@_n_t_i:_n k_a_n_d_@L_z O2_n_D_@2 k_eI_k a_n_d S_i: b_l_u: D_E_m O:_l aU_t a#_t_w_V_n_s"
+    },
+    {
+      "id": "everyday-0383",
+      "text": "You're doing really well, keep going.",
+      "ph": "j_U@ d_u:_I_N r_i@_l_i w_E_l k_i:_p g_oU_I_N"
+    },
+    {
+      "id": "everyday-0384",
+      "text": "My legs are restless, could you help me shift position?",
+      "ph": "m_aI l_E_g_z A@ r_E_s_t_l_@_s k_U_d j_u: h_E_l_p m_i: S_I_f_t p_@_z_I_S_@_n"
+    },
+    {
+      "id": "everyday-0385",
+      "text": "The museum has a whole room full of dinosaur bones, and the little ones couldn't stop talking about it.",
+      "ph": "D_@2 m_j_u:_z_i@_m h_a#_z a# h_oU_l r_u:_m f_U_l V_v d_aI_n_@_s_O@ b_oU_n_z a_n_d D_@2 l_I_t#_@L w_V_n_z k_U_d_@-_n_t s_t2_0_p t_O:_k_I_N a#_b_aU_t I_t"
+    },
+    {
+      "id": "everyday-0386",
+      "text": "Who's picking the kids up from football practice?",
+      "ph": "h_u:_z p_I_k_I_N D_@2 k_I_d_z V_p f_r_V_m f_U_t_b_O:_l p_r_a_k_t_I_s"
+    },
+    {
+      "id": "everyday-0387",
+      "text": "Thanks for always making me laugh.",
+      "ph": "T_a_N_k_s f_O@_r O:_l_w_eI_z m_eI_k_I_N m_i: l_aa_f"
+    },
+    {
+      "id": "everyday-0388",
+      "text": "The electricity bill was much lower than I expected this quarter.",
+      "ph": "D_I2 I#_l_E_k_t_r_I_s_I#_t#_i b_I_l w_V_z m_V_tS l_oU_3 D_a#_n aI E_k_s_p_E_k_t_I#_d D_I_s k_w_O@_t#_3"
+    },
+    {
+      "id": "everyday-0389",
+      "text": "Please, no more cake, I'm absolutely stuffed!",
+      "ph": "p_l_i:_z n_oU_m_o@ k_eI_k aI_m a_b_s_@_l_u:_t_l_i s_t_V_f_t"
+    },
+    {
+      "id": "everyday-0390",
+      "text": "How was the weather in Cornwall?",
+      "ph": "h_aU w_V_z_D_@2 w_E_D_3_r- I_n k_O@_n_w_O:_l"
+    },
+    {
+      "id": "everyday-0391",
+      "text": "Saturday is market day, so the town will be packed with stalls selling cheese, flowers and fresh fish.",
+      "ph": "s_a_t#_3_d_eI I_z m_A@_k_I_t d_eI s_oU D_@2 t_aU_n w_I_l b_i: p_a_k_t w_I_D s_t_O:_l_z s_E_l_I_N tS_i:_z f_l_aU_3_z a_n_d f_r_E_S f_I_S"
+    },
+    {
+      "id": "everyday-0392",
+      "text": "Those tiny birds at the feeder are goldfinches, I think.",
+      "ph": "D_oU_z t_aI_n_i b_3:_d_z a_t D_@2 f_i:_d_3_r- A@ g_oU_l_d_f_I_n_tS_I#_z aI T_I_N_k"
+    },
+    {
+      "id": "everyday-0393",
+      "text": "Change the channel if you like, I don't mind.",
+      "ph": "tS_eI_n_dZ D_@2 tS_a_n_@L I_f j_u: l_aI_k aI d_oU_n_t m_aI_n_d"
+    },
+    {
+      "id": "everyday-0394",
+      "text": "My nephew's crawling now, and he's into everything!",
+      "ph": "m_aI n_E_f_j_u:_z k_r_O:_l_I_N n_aU a_n_d h_i:_z I_n_t2_U E_v_r_I2_T_I_N"
+    },
+    {
+      "id": "everyday-0395",
+      "text": "Is it worth taking a coat?",
+      "ph": "I_z I_t w_3:_T t_eI_k_I_N a# k_oU_t"
+    },
+    {
+      "id": "everyday-0396",
+      "text": "The streetlights flicker on just as the sun goes down.",
+      "ph": "D_@2 s_t_r_i:_t_l_aI_t_s f_l_I_k_3_r- O2_n dZ_V_s_t a_z D_@2 s_V_n g_oU_z d_aU_n"
+    },
+    {
+      "id": "everyday-0397",
+      "text": "Everyone sends their love from the office.",
+      "ph": "E_v_r_I_w_V_n s_E_n_d_z D_e@ l_V_v f_r_V_m_D_I2 0_f_I_s"
+    },
+    {
+      "id": "everyday-0398",
+      "text": "That's enough for me, thank you.",
+      "ph": "D_a_t_s I2_n_V_f f_O@ m_i: T_a_N_k j_u:"
+    },
+    {
+      "id": "everyday-0399",
+      "text": "We'll need to leave by quarter past eight at the latest.",
+      "ph": "w_i:_l n_i:_d t_@ l_i:_v b_aI k_w_O@_t#_3 p_aa_s_t eI_t a_t D_@2 l_eI_t#_I_s_t"
+    },
+    {
+      "id": "everyday-0400",
+      "text": "Goodnight, sleep tight, and I'll see you in the morning.",
+      "ph": "g_U_d_n_aI_t s_l_i:_p t_aI_t a_n_d aI_l s_i: j_u: I_n_D_@2 m_O@_n_I_N"
+    }
+  ]
+}

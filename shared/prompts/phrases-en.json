@@ -1,0 +1,760 @@
+{
+  "id": "phrases-en",
+  "language": "en",
+  "title": "Short phrases",
+  "description": "Short phrases you'll say every day, in your own tone of voice. Good for tired days.",
+  "license": "CC0-1.0",
+  "source": "Written for Vocalkeep",
+  "prompts": [
+    {
+      "id": "phrases-0001",
+      "text": "Hello there!",
+      "ph": "h_@_l_oU D_e@"
+    },
+    {
+      "id": "phrases-0002",
+      "text": "Yes, please.",
+      "ph": "j_E_s p_l_i:_z"
+    },
+    {
+      "id": "phrases-0003",
+      "text": "Thank you so much.",
+      "ph": "T_a_N_k j_u: s_oU m_V_tS"
+    },
+    {
+      "id": "phrases-0004",
+      "text": "Hang on a second.",
+      "ph": "h_a_N O2_n a# s_E_k_@_n_d"
+    },
+    {
+      "id": "phrases-0005",
+      "text": "Oh, that's lovely!",
+      "ph": "oU D_a_t_s l_V_v_l_i"
+    },
+    {
+      "id": "phrases-0006",
+      "text": "No, thank you.",
+      "ph": "n_oU T_a_N_k j_u:"
+    },
+    {
+      "id": "phrases-0007",
+      "text": "Could I have some water?",
+      "ph": "k_U_d aI h_a_v s_V_m w_O:_t#_3"
+    },
+    {
+      "id": "phrases-0008",
+      "text": "Love you lots.",
+      "ph": "l_V_v j_u: l_0_t_s"
+    },
+    {
+      "id": "phrases-0009",
+      "text": "How are you doing?",
+      "ph": "h_aU A@ j_u: d_u:_I_N"
+    },
+    {
+      "id": "phrases-0010",
+      "text": "Not right now.",
+      "ph": "n_0_t r_aI_t n_aU"
+    },
+    {
+      "id": "phrases-0011",
+      "text": "Ha, that's hilarious!",
+      "ph": "h_A: D_a_t_s h_I_l_e@_r_i@_s"
+    },
+    {
+      "id": "phrases-0012",
+      "text": "Can you help me, please?",
+      "ph": "k_a_n j_u: h_E_l_p m_i: p_l_i:_z"
+    },
+    {
+      "id": "phrases-0013",
+      "text": "I'm a bit cold.",
+      "ph": "aI_m a# b_I_t k_oU_l_d"
+    },
+    {
+      "id": "phrases-0014",
+      "text": "Good morning!",
+      "ph": "g_U_d m_O@_n_I_N"
+    },
+    {
+      "id": "phrases-0015",
+      "text": "Maybe later.",
+      "ph": "m_eI_b_i: l_eI_t#_3"
+    },
+    {
+      "id": "phrases-0016",
+      "text": "No way!",
+      "ph": "n_oU w_eI"
+    },
+    {
+      "id": "phrases-0017",
+      "text": "Please wait.",
+      "ph": "p_l_i:_z w_eI_t"
+    },
+    {
+      "id": "phrases-0018",
+      "text": "I'm feeling tired.",
+      "ph": "aI_m f_i:_l_I_N t_aI3_d"
+    },
+    {
+      "id": "phrases-0019",
+      "text": "Absolutely!",
+      "ph": "a_b_s_@_l_u:_t_l_i"
+    },
+    {
+      "id": "phrases-0020",
+      "text": "What's the matter?",
+      "ph": "w_V_t_s D_@2 m_a_t#_3"
+    },
+    {
+      "id": "phrases-0021",
+      "text": "See you soon.",
+      "ph": "s_i: j_u: s_u:_n"
+    },
+    {
+      "id": "phrases-0022",
+      "text": "Stop, please.",
+      "ph": "s_t2_0_p p_l_i:_z"
+    },
+    {
+      "id": "phrases-0023",
+      "text": "Well done!",
+      "ph": "w_E_l d_V_n"
+    },
+    {
+      "id": "phrases-0024",
+      "text": "I'm not sure.",
+      "ph": "aI_m n_0_t S_U@"
+    },
+    {
+      "id": "phrases-0025",
+      "text": "Come here, sweetheart.",
+      "ph": "k_V_m h_i@3 s_w_i:_t_h_A@_t"
+    },
+    {
+      "id": "phrases-0026",
+      "text": "It's too hot.",
+      "ph": "I_t_s t_u: h_0_t"
+    },
+    {
+      "id": "phrases-0027",
+      "text": "Really?",
+      "ph": "r_i@_l_i"
+    },
+    {
+      "id": "phrases-0028",
+      "text": "That hurts a bit.",
+      "ph": "D_a_t h_3:_t_s a# b_I_t"
+    },
+    {
+      "id": "phrases-0029",
+      "text": "Night night, sleep well.",
+      "ph": "n_aI_t n_aI_t s_l_i:_p w_E_l"
+    },
+    {
+      "id": "phrases-0030",
+      "text": "Of course.",
+      "ph": "V_v k_o@_s"
+    },
+    {
+      "id": "phrases-0031",
+      "text": "Just a minute.",
+      "ph": "dZ_V_s_t a# m_I_n_I_t"
+    },
+    {
+      "id": "phrases-0032",
+      "text": "I'm comfortable now.",
+      "ph": "aI_m k_V_m_f_t_@_b_@L n_aU"
+    },
+    {
+      "id": "phrases-0033",
+      "text": "Oh dear.",
+      "ph": "oU d_i@3"
+    },
+    {
+      "id": "phrases-0034",
+      "text": "Where are you going?",
+      "ph": "w_e@_r A@ j_u: g_oU_I_N"
+    },
+    {
+      "id": "phrases-0035",
+      "text": "Thanks, that's better.",
+      "ph": "T_a_N_k_s D_a_t_s b_E_t#_3"
+    },
+    {
+      "id": "phrases-0036",
+      "text": "Brilliant!",
+      "ph": "b_r_I_l_i@_n_t"
+    },
+    {
+      "id": "phrases-0037",
+      "text": "Not quite.",
+      "ph": "n_0_t k_w_aI_t"
+    },
+    {
+      "id": "phrases-0038",
+      "text": "I'm hungry.",
+      "ph": "aI_m h_V_N_g_r_i"
+    },
+    {
+      "id": "phrases-0039",
+      "text": "Lovely to see you!",
+      "ph": "l_V_v_l_i t_@ s_i: j_u:"
+    },
+    {
+      "id": "phrases-0040",
+      "text": "Can you say that again?",
+      "ph": "k_a_n j_u: s_eI D_a_t a#_g_E_n"
+    },
+    {
+      "id": "phrases-0041",
+      "text": "Yes!",
+      "ph": "j_E_s"
+    },
+    {
+      "id": "phrases-0042",
+      "text": "Please don't.",
+      "ph": "p_l_i:_z d_oU_n_t"
+    },
+    {
+      "id": "phrases-0043",
+      "text": "So proud of you.",
+      "ph": "s_oU p_r_aU_d V_v j_u:"
+    },
+    {
+      "id": "phrases-0044",
+      "text": "Ouch!",
+      "ph": "aU_tS"
+    },
+    {
+      "id": "phrases-0045",
+      "text": "What time is it?",
+      "ph": "w_V_t t2_aI_m I_z I_t"
+    },
+    {
+      "id": "phrases-0046",
+      "text": "I need the bathroom.",
+      "ph": "aI n_i:_d D_@2 b_aa_T_r_u:_m"
+    },
+    {
+      "id": "phrases-0047",
+      "text": "You're joking!",
+      "ph": "j_U@ dZ_oU_k_I_N"
+    },
+    {
+      "id": "phrases-0048",
+      "text": "Sorry, my mistake.",
+      "ph": "s_A:_r_i m_aI m_I2_s_t_eI_k"
+    },
+    {
+      "id": "phrases-0049",
+      "text": "Big hugs!",
+      "ph": "b_I_g h_V_g_z"
+    },
+    {
+      "id": "phrases-0050",
+      "text": "That's enough, thanks.",
+      "ph": "D_a_t_s I2_n_V_f T_a_N_k_s"
+    },
+    {
+      "id": "phrases-0051",
+      "text": "Hi, how's it going?",
+      "ph": "h_aI h_aU_z I_t g_oU_I_N"
+    },
+    {
+      "id": "phrases-0052",
+      "text": "No.",
+      "ph": "n_oU"
+    },
+    {
+      "id": "phrases-0053",
+      "text": "Wait for me.",
+      "ph": "w_eI_t f_O@ m_i:"
+    },
+    {
+      "id": "phrases-0054",
+      "text": "Me too.",
+      "ph": "m_i: t_u:"
+    },
+    {
+      "id": "phrases-0055",
+      "text": "Morning, sunshine!",
+      "ph": "m_O@_n_I_N s_V_n_S_aI_n"
+    },
+    {
+      "id": "phrases-0056",
+      "text": "I don't know.",
+      "ph": "aI d_oU_n_t n_oU"
+    },
+    {
+      "id": "phrases-0057",
+      "text": "Fair enough.",
+      "ph": "f_e@_r I2_n_V_f"
+    },
+    {
+      "id": "phrases-0058",
+      "text": "Can you move me?",
+      "ph": "k_a_n j_u: m_u:_v m_i:"
+    },
+    {
+      "id": "phrases-0059",
+      "text": "Cheers!",
+      "ph": "tS_i@3_z"
+    },
+    {
+      "id": "phrases-0060",
+      "text": "That's not what I meant.",
+      "ph": "D_a_t_s n_0_t w_V_t aI m_E_n_t"
+    },
+    {
+      "id": "phrases-0061",
+      "text": "Bye for now.",
+      "ph": "b_aI f_O@ n_aU"
+    },
+    {
+      "id": "phrases-0062",
+      "text": "Oh, wow!",
+      "ph": "oU w_aU"
+    },
+    {
+      "id": "phrases-0063",
+      "text": "Bear with me.",
+      "ph": "b_e@ w_I_D m_i:"
+    },
+    {
+      "id": "phrases-0064",
+      "text": "I'm in some pain.",
+      "ph": "aI_m I_n s_V_m p_eI_n"
+    },
+    {
+      "id": "phrases-0065",
+      "text": "Thank goodness.",
+      "ph": "T_a_N_k g_U_d_n_@_s"
+    },
+    {
+      "id": "phrases-0066",
+      "text": "Is that right?",
+      "ph": "I_z D_a_t r_aI_t"
+    },
+    {
+      "id": "phrases-0067",
+      "text": "Leave it there.",
+      "ph": "l_i:_v I_t D_e@"
+    },
+    {
+      "id": "phrases-0068",
+      "text": "Good idea!",
+      "ph": "g_U_d aI_d_i@"
+    },
+    {
+      "id": "phrases-0069",
+      "text": "I'm okay.",
+      "ph": "aI_m oU_k_eI"
+    },
+    {
+      "id": "phrases-0070",
+      "text": "Sweet dreams.",
+      "ph": "s_w_i:_t d_r_i:_m_z"
+    },
+    {
+      "id": "phrases-0071",
+      "text": "How was your day?",
+      "ph": "h_aU w_V_z j_U@ d_eI"
+    },
+    {
+      "id": "phrases-0072",
+      "text": "Never mind.",
+      "ph": "n_E_v_3 m_aI_n_d"
+    },
+    {
+      "id": "phrases-0073",
+      "text": "Help, please!",
+      "ph": "h_E_l_p p_l_i:_z"
+    },
+    {
+      "id": "phrases-0074",
+      "text": "I love that!",
+      "ph": "aI l_V_v D_a_t"
+    },
+    {
+      "id": "phrases-0075",
+      "text": "Turn it down, please.",
+      "ph": "t_3:_n I_t d_aU_n p_l_i:_z"
+    },
+    {
+      "id": "phrases-0076",
+      "text": "Exactly!",
+      "ph": "E_g_z_a_k_t_l_i"
+    },
+    {
+      "id": "phrases-0077",
+      "text": "Yes, I think so.",
+      "ph": "j_E_s aI T_I_N_k s_oU"
+    },
+    {
+      "id": "phrases-0078",
+      "text": "Not too bad, thanks.",
+      "ph": "n_0_t t_u: b_a_d T_a_N_k_s"
+    },
+    {
+      "id": "phrases-0079",
+      "text": "Ooh, exciting!",
+      "ph": "u: E_k_s_aI_t#_I_N"
+    },
+    {
+      "id": "phrases-0080",
+      "text": "I'm bored.",
+      "ph": "aI_m b_o@_d"
+    },
+    {
+      "id": "phrases-0081",
+      "text": "Can I have a cuddle?",
+      "ph": "k_a_n aI h_a_v a# k_V_d_@L"
+    },
+    {
+      "id": "phrases-0082",
+      "text": "Hurry up!",
+      "ph": "h_3:_r_i V_p"
+    },
+    {
+      "id": "phrases-0083",
+      "text": "Please call me later.",
+      "ph": "p_l_i:_z k_O:_l m_i: l_eI_t#_3"
+    },
+    {
+      "id": "phrases-0084",
+      "text": "Take care.",
+      "ph": "t_eI_k k_e@"
+    },
+    {
+      "id": "phrases-0085",
+      "text": "Sounds good to me.",
+      "ph": "s_aU_n_d_z g_U_d t_@ m_i:"
+    },
+    {
+      "id": "phrases-0086",
+      "text": "Hmm, let me think.",
+      "ph": "h_@_m l_E_t m_i: T_I_N_k"
+    },
+    {
+      "id": "phrases-0087",
+      "text": "Who is it?",
+      "ph": "h_u: I_z I_t"
+    },
+    {
+      "id": "phrases-0088",
+      "text": "That's so kind.",
+      "ph": "D_a_t_s s_oU k_aI_n_d"
+    },
+    {
+      "id": "phrases-0089",
+      "text": "Pardon?",
+      "ph": "p_A@_d_@_n"
+    },
+    {
+      "id": "phrases-0090",
+      "text": "Stop that!",
+      "ph": "s_t2_0_p D_a_t"
+    },
+    {
+      "id": "phrases-0091",
+      "text": "I'm feeling better.",
+      "ph": "aI_m f_i:_l_I_N b_E_t#_3"
+    },
+    {
+      "id": "phrases-0092",
+      "text": "Lots of love.",
+      "ph": "l_0_t_s V_v l_V_v"
+    },
+    {
+      "id": "phrases-0093",
+      "text": "Definitely not.",
+      "ph": "d_E_f_I2_n_@_t_l_i n_0_t"
+    },
+    {
+      "id": "phrases-0094",
+      "text": "My medicine, please.",
+      "ph": "m_aI m_E_d_@_s_@_n p_l_i:_z"
+    },
+    {
+      "id": "phrases-0095",
+      "text": "Don't worry about it.",
+      "ph": "d_oU_n_t w_V_r_i a#_b_aU_t I_t"
+    },
+    {
+      "id": "phrases-0096",
+      "text": "Are you sure?",
+      "ph": "A@ j_u: S_U@"
+    },
+    {
+      "id": "phrases-0097",
+      "text": "Oh, poor you.",
+      "ph": "oU p_U@ j_u:"
+    },
+    {
+      "id": "phrases-0098",
+      "text": "Shh, I'm listening.",
+      "ph": "E_s_eI_tS_eI_tS aI_m l_I_s_@_n_I_N"
+    },
+    {
+      "id": "phrases-0099",
+      "text": "Welcome home!",
+      "ph": "w_E_l_k_V_m h_oU_m"
+    },
+    {
+      "id": "phrases-0100",
+      "text": "A little higher.",
+      "ph": "a# l_I_t#_@L h_aI_3"
+    },
+    {
+      "id": "phrases-0101",
+      "text": "Fantastic news!",
+      "ph": "f_a_n_t_a_s_t_I_k n_u:_z"
+    },
+    {
+      "id": "phrases-0102",
+      "text": "Is it time?",
+      "ph": "I_z I_t t2_aI_m"
+    },
+    {
+      "id": "phrases-0103",
+      "text": "I'll be fine.",
+      "ph": "aI_l b_i: f_aI_n"
+    },
+    {
+      "id": "phrases-0104",
+      "text": "Excuse me.",
+      "ph": "E_k_s_k_j_u:_s m_i:"
+    },
+    {
+      "id": "phrases-0105",
+      "text": "Go on, then.",
+      "ph": "g_oU O2_n D_E_n"
+    },
+    {
+      "id": "phrases-0106",
+      "text": "That was delicious!",
+      "ph": "D_a_t w_V_z d_I#_l_I_S_@_s"
+    },
+    {
+      "id": "phrases-0107",
+      "text": "Not today, thanks.",
+      "ph": "n_0_t t_@_d_eI T_a_N_k_s"
+    },
+    {
+      "id": "phrases-0108",
+      "text": "I miss you.",
+      "ph": "aI m_I_s j_u:"
+    },
+    {
+      "id": "phrases-0109",
+      "text": "Ready when you are.",
+      "ph": "r_E_d_i w_E_n j_u: A@"
+    },
+    {
+      "id": "phrases-0110",
+      "text": "What happened?",
+      "ph": "w_V_t h_a_p_@_n_d"
+    },
+    {
+      "id": "phrases-0111",
+      "text": "It's okay, don't panic.",
+      "ph": "I_t_s oU_k_eI d_oU_n_t p_a_n_I_k"
+    },
+    {
+      "id": "phrases-0112",
+      "text": "Yes, that's right.",
+      "ph": "j_E_s D_a_t_s r_aI_t"
+    },
+    {
+      "id": "phrases-0113",
+      "text": "I'm so frustrated!",
+      "ph": "aI_m s_oU f_r_V_s_t_r_eI_t#_I#_d"
+    },
+    {
+      "id": "phrases-0114",
+      "text": "Gently, please.",
+      "ph": "dZ_E_n_t_l_i p_l_i:_z"
+    },
+    {
+      "id": "phrases-0115",
+      "text": "Congratulations!",
+      "ph": "k_@_N_g_r_a_tS_U_l_eI_S_@_n_z"
+    },
+    {
+      "id": "phrases-0116",
+      "text": "Talk to you later.",
+      "ph": "t_O:_k t_@ j_u: l_eI_t#_3"
+    },
+    {
+      "id": "phrases-0117",
+      "text": "Can you scratch my nose?",
+      "ph": "k_a_n j_u: s_k_r_a_tS m_aI n_oU_z"
+    },
+    {
+      "id": "phrases-0118",
+      "text": "Oh, for goodness' sake!",
+      "ph": "oU f_O@ g_U_d_n_@_s s_eI_k"
+    },
+    {
+      "id": "phrases-0119",
+      "text": "Tell me more.",
+      "ph": "t_E_l m_i: m_o@"
+    },
+    {
+      "id": "phrases-0120",
+      "text": "Happy birthday!",
+      "ph": "h_a_p_i b_3:_T_d_eI"
+    },
+    {
+      "id": "phrases-0121",
+      "text": "I need a rest.",
+      "ph": "aI n_i:_d a# r_E_s_t"
+    },
+    {
+      "id": "phrases-0122",
+      "text": "Okay, no problem.",
+      "ph": "oU_k_eI n_oU p_r_0_b_l_@_m"
+    },
+    {
+      "id": "phrases-0123",
+      "text": "Where's my phone?",
+      "ph": "w_e@_z m_aI f_oU_n"
+    },
+    {
+      "id": "phrases-0124",
+      "text": "You're the best.",
+      "ph": "j_U@ D_@2 b_E_s_t"
+    },
+    {
+      "id": "phrases-0125",
+      "text": "One more time, please.",
+      "ph": "w_V_n m_o@ t2_aI_m p_l_i:_z"
+    },
+    {
+      "id": "phrases-0126",
+      "text": "That's a shame.",
+      "ph": "D_a_t_s a# S_eI_m"
+    },
+    {
+      "id": "phrases-0127",
+      "text": "Hello, darling.",
+      "ph": "h_@_l_oU d_A@_l_I_N"
+    },
+    {
+      "id": "phrases-0128",
+      "text": "Nope!",
+      "ph": "n_oU_p"
+    },
+    {
+      "id": "phrases-0129",
+      "text": "Mind your head!",
+      "ph": "m_aI_n_d j_U@ h_E_d"
+    },
+    {
+      "id": "phrases-0130",
+      "text": "What do you think?",
+      "ph": "w_V_t d_u: j_u: T_I_N_k"
+    },
+    {
+      "id": "phrases-0131",
+      "text": "Absolutely not!",
+      "ph": "a_b_s_@_l_u:_t_l_i n_0_t"
+    },
+    {
+      "id": "phrases-0132",
+      "text": "You made my day.",
+      "ph": "j_u: m_eI_d m_aI d_eI"
+    },
+    {
+      "id": "phrases-0133",
+      "text": "Sit me up, please.",
+      "ph": "s_I_t m_i: V_p p_l_i:_z"
+    },
+    {
+      "id": "phrases-0134",
+      "text": "Ha, very funny.",
+      "ph": "h_A: v_E_r_i f_V_n_i"
+    },
+    {
+      "id": "phrases-0135",
+      "text": "Come in!",
+      "ph": "k_V_m I_n"
+    },
+    {
+      "id": "phrases-0136",
+      "text": "I'm a bit sore.",
+      "ph": "aI_m a# b_I_t s_o@"
+    },
+    {
+      "id": "phrases-0137",
+      "text": "Good luck!",
+      "ph": "g_U_d l_V_k"
+    },
+    {
+      "id": "phrases-0138",
+      "text": "Nearly there.",
+      "ph": "n_i@3_l_i D_e@"
+    },
+    {
+      "id": "phrases-0139",
+      "text": "Love you too.",
+      "ph": "l_V_v j_u: t_u:"
+    },
+    {
+      "id": "phrases-0140",
+      "text": "How lovely!",
+      "ph": "h_aU l_V_v_l_i"
+    },
+    {
+      "id": "phrases-0141",
+      "text": "Could you open the window?",
+      "ph": "k_U_d j_u: oU_p_@_n D_@2 w_I_n_d_oU"
+    },
+    {
+      "id": "phrases-0142",
+      "text": "Not yet.",
+      "ph": "n_0_t j_E_t"
+    },
+    {
+      "id": "phrases-0143",
+      "text": "Oh, I see.",
+      "ph": "oU aI s_i:"
+    },
+    {
+      "id": "phrases-0144",
+      "text": "Please slow down.",
+      "ph": "p_l_i:_z s_l_oU d_aU_n"
+    },
+    {
+      "id": "phrases-0145",
+      "text": "Afternoon, everyone!",
+      "ph": "aa_f_t_3_n_u:_n E_v_r_I_w_V_n"
+    },
+    {
+      "id": "phrases-0146",
+      "text": "Have fun!",
+      "ph": "h_a_v f_V_n"
+    },
+    {
+      "id": "phrases-0147",
+      "text": "Thanks for coming.",
+      "ph": "T_a_N_k_s f_O@ k_V_m_I2_N"
+    },
+    {
+      "id": "phrases-0148",
+      "text": "Would you like some?",
+      "ph": "w_U_d j_u: l_aI_k s_V_m"
+    },
+    {
+      "id": "phrases-0149",
+      "text": "Easy does it.",
+      "ph": "i:_z_i d_V_z I_t"
+    },
+    {
+      "id": "phrases-0150",
+      "text": "Goodbye, my love.",
+      "ph": "g_U_d_b_aI m_aI l_V_v"
+    }
+  ]
+}

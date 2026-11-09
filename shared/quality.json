@@ -1,0 +1,36 @@
+{
+  "$comment": "Recording quality thresholds shared by the desktop app (Rust) and the training pipeline (Python). Levels are dBFS. Edit here, then run scripts/sync-shared.py.",
+  "version": 1,
+  "frame_ms": 20,
+  "min_speech_run_frames": 3,
+  "speech_margin_db": 10.0,
+  "speech_floor_dbfs": -60.0,
+  "clip_level": 0.995,
+  "clip_run_samples": 2,
+  "clip_runs_redo": 1,
+  "near_clip_peak_dbfs": -0.5,
+  "quiet_warn_dbfs": -30.0,
+  "quiet_redo_dbfs": -40.0,
+  "loud_warn_dbfs": -9.0,
+  "noise_warn_dbfs": -50.0,
+  "noise_redo_dbfs": -38.0,
+  "snr_warn_db": 25.0,
+  "snr_redo_db": 15.0,
+  "dc_offset_warn": 0.02,
+  "min_speech_ms": 250,
+  "edge_margin_ms": 40,
+  "long_silence_warn_ms": 2500,
+  "chars_per_second_max": 28.0,
+  "chars_per_second_min": 3.0,
+  "room": {
+    "seconds": 4,
+    "quiet_dbfs": -60.0,
+    "fine_dbfs": -50.0,
+    "noisy_dbfs": -40.0
+  },
+  "training": {
+    "trim_pad_ms": 120,
+    "target_dbfs": -20.0,
+    "min_verdict": "okay"
+  }
+}

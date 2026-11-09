@@ -1,0 +1,88 @@
+[
+  {
+    "file": "good.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "good",
+    "issues": []
+  },
+  {
+    "file": "quiet.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "okay",
+    "issues": [
+      "too-quiet"
+    ]
+  },
+  {
+    "file": "very-quiet.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "redo",
+    "issues": [
+      "too-quiet"
+    ]
+  },
+  {
+    "file": "clipped.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "redo",
+    "issues": [
+      "clipping"
+    ]
+  },
+  {
+    "file": "noisy.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "redo",
+    "issues": [
+      "noisy"
+    ]
+  },
+  {
+    "file": "low-snr.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "okay",
+    "issues": [
+      "low-snr"
+    ]
+  },
+  {
+    "file": "cut-off-end.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "redo",
+    "issues": [
+      "cut-off-end"
+    ]
+  },
+  {
+    "file": "early-start.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "okay",
+    "issues": [
+      "cut-off-start"
+    ]
+  },
+  {
+    "file": "long-pause.wav",
+    "text": "The quick brown fox jumps.",
+    "verdict": "okay",
+    "issues": [
+      "long-pause"
+    ]
+  },
+  {
+    "file": "too-fast.wav",
+    "text": "This sentence has far too many letters to fit in a little over half a second.",
+    "verdict": "okay",
+    "issues": [
+      "too-fast"
+    ]
+  },
+  {
+    "file": "silence.wav",
+    "text": null,
+    "verdict": "redo",
+    "issues": [
+      "no-speech"
+    ]
+  }
+]
